@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "schedule": "Ablauf",
+    "venue": "Ort & Region",
+    "travel": "Anreise",
+    "accommodation": "Unterkunft",
+    "gifts": "Geschenke",
+    "rsvp": "RSVP"
+  },
+  "home": {
+    "saveTheDate": "Save the Date",
+    "names": "Amalie Wilke & Pierre Blanchet",
+    "dateAnnouncement": "freuen sich, Sie zu ihrer Hochzeit einzuladen",
+    "date": "Samstag, 3. Oktober 2026",
+    "location": "Burg Schwarzenstein, Geisenheim, Deutschland",
+    "welcome": "Wir freuen uns darauf, mit Ihnen zu feiern!",
+    "ourStory": "Unsere Geschichte",
+    "ourStoryText": "Von einer zufälligen Begegnung bis zu einem magischen Heiratsantrag unter den Nordlichtern war unsere Reise außergewöhnlich. Wir freuen uns sehr, diesen besonderen Tag mit den Menschen zu teilen, die uns am wichtigsten sind."
+  },
+  "schedule": {
+    "title": "Hochzeitsablauf",
+    "subtitle": "Feiern Sie mit uns ein unvergessliches Wochenende",
+    "saturday": "Samstag, 3. Oktober",
+    "sunday": "Sonntag, 4. Oktober",
+    "ceremony": {
+      "title": "Kirchliche Trauung",
+      "time": "12:00 Uhr",
+      "location": "Rheingauer Dom",
+      "description": "Seien Sie bei unserer kirchlichen Trauung im wunderschönen Rheingauer Dom in Geisenheim dabei."
+    },
+    "reception": {
+      "title": "Empfang & Feier",
+      "time": "Im Anschluss an die Zeremonie",
+      "location": "Burg Schwarzenstein",
+      "description": "Nach einer kurzen Fahrt setzen wir die Feier auf Burg Schwarzenstein fort – mit Abendessen, Tanz und Festlichkeiten bis tief in die Nacht."
+    },
+    "brunch": {
+      "title": "Sonntagsbrunch",
+      "time": "11:00 Uhr",
+      "location": "In der Nähe des Rheins",
+      "description": "Treffen Sie uns am nächsten Morgen zu einem entspannten Brunch in einem schönen Restaurant in der Nähe der Kirche mit Blick auf den Rhein. Eine perfekte Art, unsere Feier ausklingen zu lassen."
+    }
+  },
+  "venue": {
+    "title": "Der Veranstaltungsort",
+    "subtitle": "Burg Schwarzenstein",
+    "description": "Ein atemberaubendes Relais & Châteaux Hotel im Herzen des Rheingaus. Diese historische Burg, umgeben von sanften Weinbergen, bietet atemberaubende Ausblicke und erstklassige Gastfreundschaft.",
+    "region": {
+      "title": "Die Rheingau-Region",
+      "description": "Der Rheingau ist eine der prestigeträchtigsten Weinregionen Deutschlands, berühmt für seine außergewöhnlichen Riesling-Weine. Entlang des Rheins gelegen, bietet diese malerische Region charmante Dörfer, historische Klöster und endlose Weinberge an sonnenbeschienenen Hängen.",
+      "highlights": {
+        "title": "Regionale Höhepunkte",
+        "wine": "Weltberühmter Riesling-Wein",
+        "scenery": "Atemberaubende Ausblicke auf das Rheintal",
+        "history": "Reiche mittelalterliche Geschichte und Architektur",
+        "cuisine": "Ausgezeichnete lokale Gastronomie"
+      }
+    }
+  },
+  "travel": {
+    "title": "Anreise",
+    "subtitle": "So erreichen Sie Burg Schwarzenstein",
+    "intro": "Der Veranstaltungsort liegt etwa 30 Minuten von Frankfurt entfernt und ist mit verschiedenen Verkehrsmitteln gut erreichbar.",
+    "byAir": {
+      "title": "Mit dem Flugzeug",
+      "description": "Fliegen Sie zum Flughafen Frankfurt (FRA), einem der größten Drehkreuze Europas mit hervorragenden internationalen Verbindungen. Der Flughafen verfügt auch über einen großen Fernbahnhof für eine bequeme Weiterreise."
+    },
+    "byTrain": {
+      "title": "Mit dem Zug",
+      "description": "Nehmen Sie einen Zug zum Frankfurt Hauptbahnhof oder zum Flughafen Fernbahnhof. Von dort können Sie ein Auto mieten, ein Taxi nehmen oder einen Transfer zum Veranstaltungsort organisieren."
+    },
+    "byCar": {
+      "title": "Mit dem Auto",
+      "description": "Mit dem Auto ist der Veranstaltungsort über die A66 gut erreichbar. Auf Burg Schwarzenstein stehen ausreichend Parkplätze zur Verfügung.",
+      "address": "Rosengasse 32, 65366 Geisenheim, Deutschland"
+    },
+    "lastMile": {
+      "title": "Zum Veranstaltungsort",
+      "description": "Da die Burg etwa 30 Minuten von Frankfurt entfernt liegt, empfehlen wir:",
+      "options": {
+        "rental": "Ein Auto mieten – gibt Ihnen Flexibilität, die schöne Region zu erkunden",
+        "taxi": "Ein Taxi oder Uber von Frankfurt nehmen"
+      }
+    }
+  },
+  "accommodation": {
+    "title": "Übernachtung",
+    "subtitle": "Unterkunftsmöglichkeiten für jeden Geschmack und jedes Budget",
+    "castle": {
+      "title": "Auf der Burg übernachten",
+      "description": "Wir haben eine begrenzte Anzahl von Zimmern auf Burg Schwarzenstein für unsere Gäste reserviert. Dies ist eine wunderbare Gelegenheit, dort zu übernachten, wo die Feier stattfindet, und das volle Erlebnis zu genießen.",
+      "booking": "Um ein Zimmer auf der Burg zu buchen, kontaktieren Sie uns bitte direkt:",
+      "note": "Die Zimmer sind begrenzt und werden nach dem Windhundprinzip vergeben."
+    },
+    "airbnb": {
+      "title": "Airbnb & Ferienwohnungen",
+      "description": "Die Rheingau-Weinregion bietet fantastische Airbnb-Optionen! Übernachten Sie in einem charmanten Winzerhäuschen, einem traditionellen deutschen Weingut oder einer gemütlichen Wohnung mit atemberaubendem Talblick. Eine großartige Möglichkeit, in die lokale Atmosphäre einzutauchen."
+    },
+    "hotels": {
+      "title": "Hotels in der Nähe",
+      "description": "Es gibt ausgezeichnete Hotels in der Umgebung in verschiedenen Preisklassen, von gemütlichen Pensionen bis zu Luxusunterkünften. Einige Optionen sind Hotels in Geisenheim, Rüdesheim und Wiesbaden."
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Für Zimmerreservierungen auf der Burg oder Fragen zur Unterkunft:",
+      "email": "E-Mail",
+      "phone": "Telefon/WhatsApp"
+    }
+  },
+  "gifts": {
+    "title": "Geschenke",
+    "subtitle": "Ihre Anwesenheit ist das schönste Geschenk",
+    "intro": "Ihre Anwesenheit bei unserer Hochzeit ist das bedeutungsvollste Geschenk, das wir uns wünschen können. Wenn Sie uns jedoch mit einem Geschenk ehren möchten, hier einige Möglichkeiten:",
+    "monetary": {
+      "title": "Hochzeitsreise-Kasse",
+      "description": "Wir würden uns über Beiträge zu unserer Hochzeitsreise-Kasse freuen. Während wir unser neues Leben zusammen beginnen, wird Ihre Großzügigkeit uns helfen, unvergessliche Erinnerungen auf unserem ersten Abenteuer als verheiratetes Paar zu schaffen.",
+      "details": "Bankverbindung auf Anfrage."
+    },
+    "giftList": {
+      "title": "Geschenkideen",
+      "description": "Wenn Sie lieber ein physisches Geschenk machen möchten, hier einige Dinge, die wir uns wünschen:",
+      "note": "Bitte teilen Sie uns mit, welchen Artikel Sie schenken möchten, damit wir Doppelungen vermeiden können.",
+      "items": [
+        { "name": "Le Creuset Bräter", "description": "Klassisches französisches Kochgeschirr für unsere neue Küche", "price": "350 €" },
+        { "name": "KitchenAid Küchenmaschine", "description": "Zum gemeinsamen Backen", "price": "500 €" },
+        { "name": "Luxus-Bettwäsche-Set", "description": "Ägyptische Baumwolllaken und Kissenbezüge", "price": "300 €" },
+        { "name": "Weinkaraffe mit Gläsern", "description": "Kristallkaraffe mit passenden Gläsern", "price": "150 €" },
+        { "name": "Espressomaschine", "description": "Für unser morgendliches Kaffeeritual", "price": "600 €" },
+        { "name": "Picknickkorb-Set", "description": "Für romantische Ausflüge aufs Land", "price": "120 €" },
+        { "name": "Kunstdruck", "description": "Ein schönes Stück für unser Zuhause", "price": "200 €" },
+        { "name": "Gartenwerkzeug-Set", "description": "Für unseren zukünftigen Garten", "price": "180 €" }
+      ]
+    },
+    "contact": "Zur Koordination von Geschenken oder für Bankdaten kontaktieren Sie uns bitte."
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Bitte teilen Sie uns mit, ob Sie dabei sein können",
+    "deadline": "Bitte antworten Sie bis zum 1. August 2026",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "attending": "Werden Sie teilnehmen?",
+      "yes": "Nimmt mit Freude an",
+      "no": "Muss leider absagen",
+      "guests": "Anzahl der Gäste (Sie eingeschlossen)",
+      "dietary": "Ernährungseinschränkungen oder Allergien",
+      "dietaryPlaceholder": "Bitte teilen Sie uns Ihre Ernährungsanforderungen mit...",
+      "message": "Nachricht an das Brautpaar (optional)",
+      "messagePlaceholder": "Teilen Sie Ihre Glückwünsche...",
+      "submit": "RSVP senden",
+      "success": "Vielen Dank! Ihre Antwort wurde empfangen.",
+      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
+    }
+  },
+  "footer": {
+    "madeWith": "Mit Liebe gemacht",
+    "copyright": "Amalie & Pierre, 2026"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "de": "Deutsch"
+  }
+}

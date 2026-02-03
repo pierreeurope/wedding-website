@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "home": "Home",
+    "schedule": "Schedule",
+    "venue": "Venue & Region",
+    "travel": "Getting There",
+    "accommodation": "Accommodation",
+    "gifts": "Gift Registry",
+    "rsvp": "RSVP"
+  },
+  "home": {
+    "saveTheDate": "Save the Date",
+    "names": "Amalie Wilke & Pierre Blanchet",
+    "dateAnnouncement": "are delighted to invite you to their wedding",
+    "date": "Saturday, October 3rd, 2026",
+    "location": "Burg Schwarzenstein, Geisenheim, Germany",
+    "welcome": "We can't wait to celebrate with you!",
+    "ourStory": "Our Story",
+    "ourStoryText": "From a chance encounter to a magical proposal under the Northern Lights, our journey has been nothing short of extraordinary. We're thrilled to share our special day with the people who matter most to us."
+  },
+  "schedule": {
+    "title": "Wedding Schedule",
+    "subtitle": "Join us for a weekend of celebration",
+    "saturday": "Saturday, October 3rd",
+    "sunday": "Sunday, October 4th",
+    "ceremony": {
+      "title": "Church Ceremony",
+      "time": "12:00 PM",
+      "location": "Rheingauer Dom",
+      "description": "Join us for our church wedding ceremony at the beautiful Rheingauer Dom in Geisenheim."
+    },
+    "reception": {
+      "title": "Reception & Celebration",
+      "time": "Following the ceremony",
+      "location": "Burg Schwarzenstein",
+      "description": "After a short drive, we'll continue the celebration at Burg Schwarzenstein with dinner, dancing, and festivities that will go deep into the night."
+    },
+    "brunch": {
+      "title": "Sunday Brunch",
+      "time": "11:00 AM",
+      "location": "Near the Rhine River",
+      "description": "Join us the next morning for a relaxed brunch at a beautiful restaurant near the church, overlooking the Rhine River. A perfect way to extend our celebration and say farewell."
+    }
+  },
+  "venue": {
+    "title": "The Venue",
+    "subtitle": "Burg Schwarzenstein",
+    "description": "A stunning Relais & Châteaux hotel nestled in the heart of the Rheingau wine region. This historic castle, surrounded by rolling vineyards, offers breathtaking views and world-class hospitality.",
+    "region": {
+      "title": "The Rheingau Region",
+      "description": "The Rheingau is one of Germany's most prestigious wine regions, famous for its exceptional Riesling wines. Nestled along the Rhine River, this picturesque region features charming villages, historic monasteries, and endless vineyards stretching across sun-drenched hillsides.",
+      "highlights": {
+        "title": "Regional Highlights",
+        "wine": "World-renowned Riesling wine",
+        "scenery": "Stunning Rhine valley views",
+        "history": "Rich medieval history and architecture",
+        "cuisine": "Excellent local gastronomy"
+      }
+    }
+  },
+  "travel": {
+    "title": "Getting There",
+    "subtitle": "How to reach Burg Schwarzenstein",
+    "intro": "The venue is located approximately 30 minutes from Frankfurt, making it easily accessible by various means of transportation.",
+    "byAir": {
+      "title": "By Air",
+      "description": "Fly into Frankfurt Airport (FRA), one of Europe's largest hubs with excellent international connections. The airport also has a major train station (Frankfurt Flughafen Fernbahnhof) for easy onward travel."
+    },
+    "byTrain": {
+      "title": "By Train",
+      "description": "Take a train to Frankfurt Hauptbahnhof (main station) or Frankfurt Airport station. From there, you can rent a car, take a taxi, or arrange a transfer to the venue."
+    },
+    "byCar": {
+      "title": "By Car",
+      "description": "If driving, the venue is easily accessible via the A66 motorway. There is ample parking available at Burg Schwarzenstein.",
+      "address": "Rosengasse 32, 65366 Geisenheim, Germany"
+    },
+    "lastMile": {
+      "title": "Getting to the Venue",
+      "description": "Since the castle is about 30 minutes from Frankfurt, we recommend:",
+      "options": {
+        "rental": "Renting a car - gives you flexibility to explore the beautiful region",
+        "taxi": "Taking a taxi or Uber from Frankfurt"
+      }
+    }
+  },
+  "accommodation": {
+    "title": "Where to Stay",
+    "subtitle": "Accommodation options for all preferences and budgets",
+    "castle": {
+      "title": "Stay at the Castle",
+      "description": "We have reserved a limited number of rooms at Burg Schwarzenstein for our guests. This is a wonderful opportunity to stay where the celebration takes place and enjoy the full experience.",
+      "booking": "To book a room at the castle, please contact us directly:",
+      "note": "Rooms are limited and will be allocated on a first-come, first-served basis."
+    },
+    "airbnb": {
+      "title": "Airbnb & Vacation Rentals",
+      "description": "The Rheingau wine region offers amazing Airbnb options! Stay in a charming vineyard cottage, a traditional German wine estate, or a cozy apartment with stunning valley views. This is a great way to immerse yourself in the local atmosphere."
+    },
+    "hotels": {
+      "title": "Nearby Hotels",
+      "description": "There are excellent hotels in the area at various price points, from cozy guesthouses to luxury accommodations. Some options include hotels in Geisenheim, Rüdesheim, and Wiesbaden."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "For room reservations at the castle or any accommodation questions:",
+      "email": "Email",
+      "phone": "Phone/WhatsApp"
+    }
+  },
+  "gifts": {
+    "title": "Gift Registry",
+    "subtitle": "Your presence is the greatest gift",
+    "intro": "Your presence at our wedding is the most meaningful gift we could receive. However, if you wish to honor us with a gift, here are some options:",
+    "monetary": {
+      "title": "Honeymoon Fund",
+      "description": "We would be grateful for contributions to our honeymoon fund. As we begin our new life together, your generosity will help us create unforgettable memories on our first adventure as a married couple.",
+      "details": "Bank transfer details will be provided upon request."
+    },
+    "giftList": {
+      "title": "Gift Ideas",
+      "description": "If you prefer to give a physical gift, here are some items we would love:",
+      "note": "Please let us know which item you'd like to gift so we can avoid duplicates.",
+      "items": [
+        { "name": "Le Creuset Dutch Oven", "description": "Classic French cookware for our new kitchen", "price": "€350" },
+        { "name": "KitchenAid Stand Mixer", "description": "For baking together", "price": "€500" },
+        { "name": "Luxury Bed Linens Set", "description": "Egyptian cotton sheets and pillowcases", "price": "€300" },
+        { "name": "Wine Decanter Set", "description": "Crystal decanter with glasses", "price": "€150" },
+        { "name": "Espresso Machine", "description": "For our morning coffee ritual", "price": "€600" },
+        { "name": "Picnic Basket Set", "description": "For romantic outings in the countryside", "price": "€120" },
+        { "name": "Art Print", "description": "A beautiful piece for our home", "price": "€200" },
+        { "name": "Garden Tools Set", "description": "For our future garden", "price": "€180" }
+      ]
+    },
+    "contact": "To coordinate gifts or for bank details, please contact us."
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Please let us know if you can join us",
+    "deadline": "Please respond by August 1st, 2026",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "attending": "Will you be attending?",
+      "yes": "Joyfully accepts",
+      "no": "Regretfully declines",
+      "guests": "Number of guests (including yourself)",
+      "dietary": "Dietary restrictions or allergies",
+      "dietaryPlaceholder": "Please let us know of any dietary requirements...",
+      "message": "Message for the couple (optional)",
+      "messagePlaceholder": "Share your well wishes...",
+      "submit": "Send RSVP",
+      "success": "Thank you! Your RSVP has been received.",
+      "error": "Something went wrong. Please try again or contact us directly."
+    }
+  },
+  "footer": {
+    "madeWith": "Made with love",
+    "copyright": "Amalie & Pierre, 2026"
+  },
+  "language": {
+    "en": "English",
+    "fr": "Français",
+    "de": "Deutsch"
+  }
+}

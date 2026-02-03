@@ -3,14 +3,23 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-// Castle rooms available for booking
+// Castle rooms available for booking (from Burg Schwarzenstein)
 const CASTLE_ROOMS = [
-  { id: 'suite-rheingau', name: 'Suite Rheingau', capacity: 2, price: '€350/night', description: 'Luxurious suite with vineyard views' },
-  { id: 'suite-taunus', name: 'Suite Taunus', capacity: 2, price: '€320/night', description: 'Elegant suite with garden view' },
-  { id: 'deluxe-1', name: 'Deluxe Room 1', capacity: 2, price: '€280/night', description: 'Spacious deluxe room' },
-  { id: 'deluxe-2', name: 'Deluxe Room 2', capacity: 2, price: '€280/night', description: 'Spacious deluxe room' },
-  { id: 'classic-1', name: 'Classic Room 1', capacity: 2, price: '€220/night', description: 'Comfortable classic room' },
-  { id: 'classic-2', name: 'Classic Room 2', capacity: 2, price: '€220/night', description: 'Comfortable classic room' },
+  // Castle Building (Burggebäude)
+  { id: 'turm-suite', name: 'Turm Suite', capacity: 2, price: '€340/night', description: 'Castle tower suite - the most romantic option', category: 'Castle' },
+  { id: 'turmzimmer', name: 'Turmzimmer', capacity: 2, price: '€260-340/night', description: 'Tower room with castle views', category: 'Castle' },
+  { id: 'superior-1', name: 'Superiorzimmer 1', capacity: 2, price: '€240-260/night', description: 'Superior room in the castle', category: 'Castle' },
+  { id: 'superior-2', name: 'Superiorzimmer 2', capacity: 2, price: '€240-260/night', description: 'Superior room in the castle', category: 'Castle' },
+  { id: 'komfort-1', name: 'Komfortzimmer 1', capacity: 2, price: '€220-240/night', description: 'Comfort room in the castle', category: 'Castle' },
+  { id: 'komfort-2', name: 'Komfortzimmer 2', capacity: 2, price: '€220-240/night', description: 'Comfort room in the castle', category: 'Castle' },
+  { id: 'komfort-3', name: 'Komfortzimmer 3', capacity: 2, price: '€220-240/night', description: 'Comfort room in the castle', category: 'Castle' },
+  // Park Residence (Parkresidenz)
+  { id: 'panorama-suite', name: 'Panorama Suite', capacity: 2, price: '€490/night', description: 'Luxurious suite with panoramic vineyard views', category: 'Park Residence' },
+  { id: 'junior-suite', name: 'Junior Suite', capacity: 2, price: '€270-340/night', description: 'Elegant junior suite', category: 'Park Residence' },
+  { id: 'deluxe', name: 'De Luxe Zimmer', capacity: 2, price: '€250-270/night', description: 'Spacious deluxe room', category: 'Park Residence' },
+  // Guest House (Gästehaus)
+  { id: 'gaestehaus-1', name: 'Gästehausszimmer (1.60m bed)', capacity: 2, price: '€180/night', description: 'Cozy guest house room with queen bed', category: 'Guest House' },
+  { id: 'gaestehaus-2', name: 'Gästehausszimmer (1.40m bed)', capacity: 2, price: '€160-180/night', description: 'Cozy guest house room with double bed', category: 'Guest House' },
 ];
 
 interface RSVPFormData {
@@ -286,11 +295,27 @@ export default function RSVPPage() {
                       className="input-field"
                     >
                       <option value="">No, I&apos;ll arrange my own accommodation</option>
-                      {CASTLE_ROOMS.map((room) => (
-                        <option key={room.id} value={room.id}>
-                          {room.name} - {room.price} ({room.description})
-                        </option>
-                      ))}
+                      <optgroup label="🏰 Castle Building (Burggebäude)">
+                        {CASTLE_ROOMS.filter(r => r.category === 'Castle').map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {room.name} - {room.price}
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="🌳 Park Residence (Parkresidenz)">
+                        {CASTLE_ROOMS.filter(r => r.category === 'Park Residence').map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {room.name} - {room.price}
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="🏠 Guest House (Gästehaus)">
+                        {CASTLE_ROOMS.filter(r => r.category === 'Guest House').map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {room.name} - {room.price}
+                          </option>
+                        ))}
+                      </optgroup>
                     </select>
                   </div>
 

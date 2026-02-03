@@ -3,11 +3,25 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
+// Castle rooms available for booking
+const CASTLE_ROOMS = [
+  { id: 'suite-rheingau', name: 'Suite Rheingau', capacity: 2, price: '€350/night', description: 'Luxurious suite with vineyard views' },
+  { id: 'suite-taunus', name: 'Suite Taunus', capacity: 2, price: '€320/night', description: 'Elegant suite with garden view' },
+  { id: 'deluxe-1', name: 'Deluxe Room 1', capacity: 2, price: '€280/night', description: 'Spacious deluxe room' },
+  { id: 'deluxe-2', name: 'Deluxe Room 2', capacity: 2, price: '€280/night', description: 'Spacious deluxe room' },
+  { id: 'classic-1', name: 'Classic Room 1', capacity: 2, price: '€220/night', description: 'Comfortable classic room' },
+  { id: 'classic-2', name: 'Classic Room 2', capacity: 2, price: '€220/night', description: 'Comfortable classic room' },
+];
+
 interface RSVPFormData {
   name: string;
   email: string;
   attending: 'yes' | 'no' | '';
   guestCount: number;
+  guestNames: string;
+  arrivalDate: string;
+  departureDate: string;
+  roomBooking: string;
   dietary: string;
   message: string;
 }
@@ -19,6 +33,10 @@ export default function RSVPPage() {
     email: '',
     attending: '',
     guestCount: 1,
+    guestNames: '',
+    arrivalDate: '2026-10-02',
+    departureDate: '2026-10-04',
+    roomBooking: '',
     dietary: '',
     message: '',
   });
@@ -31,15 +49,10 @@ export default function RSVPPage() {
     setSubmitStatus('idle');
 
     try {
-      // For now, we'll store in localStorage and show success
-      // When Amplify is configured, this will POST to the API
       const response = await fetch('/api/rsvp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          submittedAt: new Date().toISOString(),
-        }),
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
@@ -49,6 +62,10 @@ export default function RSVPPage() {
           email: '',
           attending: '',
           guestCount: 1,
+          guestNames: '',
+          arrivalDate: '2026-10-02',
+          departureDate: '2026-10-04',
+          roomBooking: '',
           dietary: '',
           message: '',
         });
@@ -56,23 +73,8 @@ export default function RSVPPage() {
         throw new Error('Submission failed');
       }
     } catch (error) {
-      // Fallback: save to localStorage for demo purposes
-      const existingRSVPs = JSON.parse(localStorage.getItem('wedding-rsvps') || '[]');
-      existingRSVPs.push({
-        ...formData,
-        submittedAt: new Date().toISOString(),
-        id: Date.now().toString(),
-      });
-      localStorage.setItem('wedding-rsvps', JSON.stringify(existingRSVPs));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        attending: '',
-        guestCount: 1,
-        dietary: '',
-        message: '',
-      });
+      console.error('RSVP error:', error);
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -101,19 +103,21 @@ export default function RSVPPage() {
         <div className="max-w-2xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold-600 font-medium">{t('deadline')}</p>
+            <p className="text-primary-600 mt-2">Wedding: Saturday, October 3rd, 2026</p>
           </div>
 
           {submitStatus === 'success' ? (
             <div className="bg-sage-50 border border-sage-300 p-8 text-center">
               <span className="text-4xl mb-4 block">🎉</span>
               <p className="text-sage-800 text-lg font-medium">{t('form.success')}</p>
+              <p className="text-sage-600 mt-2">We&apos;ll be in touch with more details soon!</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-primary-700 font-medium mb-2">
-                  {t('form.name')} *
+                  Your Name *
                 </label>
                 <input
                   type="text"
@@ -123,13 +127,14 @@ export default function RSVPPage() {
                   value={formData.name}
                   onChange={handleChange}
                   className="input-field"
+                  placeholder="Full name"
                 />
               </div>
 
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-primary-700 font-medium mb-2">
-                  {t('form.email')} *
+                  Email Address *
                 </label>
                 <input
                   type="email"
@@ -139,13 +144,14 @@ export default function RSVPPage() {
                   value={formData.email}
                   onChange={handleChange}
                   className="input-field"
+                  placeholder="your@email.com"
                 />
               </div>
 
               {/* Attending */}
               <div>
                 <label className="block text-primary-700 font-medium mb-4">
-                  {t('form.attending')} *
+                  Will you be joining us? *
                 </label>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <label className={`flex-1 p-4 border-2 cursor-pointer transition-all ${
@@ -164,7 +170,7 @@ export default function RSVPPage() {
                     <span className="flex items-center justify-center">
                       <span className="text-2xl mr-2">🎉</span>
                       <span className={formData.attending === 'yes' ? 'text-sage-700 font-medium' : 'text-primary-600'}>
-                        {t('form.yes')}
+                        Yes, I&apos;ll be there!
                       </span>
                     </span>
                   </label>
@@ -184,55 +190,132 @@ export default function RSVPPage() {
                     <span className="flex items-center justify-center">
                       <span className="text-2xl mr-2">😢</span>
                       <span className={formData.attending === 'no' ? 'text-primary-700 font-medium' : 'text-primary-600'}>
-                        {t('form.no')}
+                        Sorry, can&apos;t make it
                       </span>
                     </span>
                   </label>
                 </div>
               </div>
 
-              {/* Guest Count - only show if attending */}
+              {/* Attending-specific fields */}
               {formData.attending === 'yes' && (
-                <div>
-                  <label htmlFor="guestCount" className="block text-primary-700 font-medium mb-2">
-                    {t('form.guests')} *
-                  </label>
-                  <select
-                    id="guestCount"
-                    name="guestCount"
-                    value={formData.guestCount}
-                    onChange={handleChange}
-                    className="input-field"
-                  >
-                    {[1, 2, 3, 4, 5].map((num) => (
-                      <option key={num} value={num}>{num}</option>
-                    ))}
-                  </select>
-                </div>
-              )}
+                <>
+                  {/* Guest Count */}
+                  <div>
+                    <label htmlFor="guestCount" className="block text-primary-700 font-medium mb-2">
+                      How many guests (including yourself)? *
+                    </label>
+                    <select
+                      id="guestCount"
+                      name="guestCount"
+                      value={formData.guestCount}
+                      onChange={handleChange}
+                      className="input-field"
+                    >
+                      {[1, 2, 3, 4, 5, 6].map((num) => (
+                        <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
+                      ))}
+                    </select>
+                  </div>
 
-              {/* Dietary Restrictions - only show if attending */}
-              {formData.attending === 'yes' && (
-                <div>
-                  <label htmlFor="dietary" className="block text-primary-700 font-medium mb-2">
-                    {t('form.dietary')}
-                  </label>
-                  <textarea
-                    id="dietary"
-                    name="dietary"
-                    rows={3}
-                    value={formData.dietary}
-                    onChange={handleChange}
-                    placeholder={t('form.dietaryPlaceholder')}
-                    className="input-field resize-none"
-                  />
-                </div>
+                  {/* Guest Names */}
+                  {formData.guestCount > 1 && (
+                    <div>
+                      <label htmlFor="guestNames" className="block text-primary-700 font-medium mb-2">
+                        Names of your guests
+                      </label>
+                      <textarea
+                        id="guestNames"
+                        name="guestNames"
+                        rows={2}
+                        value={formData.guestNames}
+                        onChange={handleChange}
+                        placeholder="e.g., Jane Doe, John Smith"
+                        className="input-field resize-none"
+                      />
+                    </div>
+                  )}
+
+                  {/* Dates */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="arrivalDate" className="block text-primary-700 font-medium mb-2">
+                        Arrival Date
+                      </label>
+                      <input
+                        type="date"
+                        id="arrivalDate"
+                        name="arrivalDate"
+                        value={formData.arrivalDate}
+                        onChange={handleChange}
+                        min="2026-10-01"
+                        max="2026-10-05"
+                        className="input-field"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="departureDate" className="block text-primary-700 font-medium mb-2">
+                        Departure Date
+                      </label>
+                      <input
+                        type="date"
+                        id="departureDate"
+                        name="departureDate"
+                        value={formData.departureDate}
+                        onChange={handleChange}
+                        min="2026-10-02"
+                        max="2026-10-06"
+                        className="input-field"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Room Booking */}
+                  <div>
+                    <label htmlFor="roomBooking" className="block text-primary-700 font-medium mb-2">
+                      🏰 Book a room at the castle?
+                    </label>
+                    <p className="text-sm text-primary-500 mb-3">
+                      Limited rooms available at Burg Schwarzenstein. Contact us for availability.
+                    </p>
+                    <select
+                      id="roomBooking"
+                      name="roomBooking"
+                      value={formData.roomBooking}
+                      onChange={handleChange}
+                      className="input-field"
+                    >
+                      <option value="">No, I&apos;ll arrange my own accommodation</option>
+                      {CASTLE_ROOMS.map((room) => (
+                        <option key={room.id} value={room.id}>
+                          {room.name} - {room.price} ({room.description})
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  {/* Dietary Restrictions */}
+                  <div>
+                    <label htmlFor="dietary" className="block text-primary-700 font-medium mb-2">
+                      Dietary Requirements
+                    </label>
+                    <textarea
+                      id="dietary"
+                      name="dietary"
+                      rows={2}
+                      value={formData.dietary}
+                      onChange={handleChange}
+                      placeholder="Vegetarian, vegan, allergies, etc."
+                      className="input-field resize-none"
+                    />
+                  </div>
+                </>
               )}
 
               {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-primary-700 font-medium mb-2">
-                  {t('form.message')}
+                  Message for the couple 💌
                 </label>
                 <textarea
                   id="message"
@@ -240,7 +323,7 @@ export default function RSVPPage() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder={t('form.messagePlaceholder')}
+                  placeholder="Any message you'd like to share..."
                   className="input-field resize-none"
                 />
               </div>
@@ -248,7 +331,7 @@ export default function RSVPPage() {
               {/* Error message */}
               {submitStatus === 'error' && (
                 <div className="bg-red-50 border border-red-200 p-4 text-red-700 text-center">
-                  {t('form.error')}
+                  Something went wrong. Please try again or contact us directly.
                 </div>
               )}
 
@@ -261,7 +344,7 @@ export default function RSVPPage() {
                     isSubmitting || !formData.attending ? 'opacity-50 cursor-not-allowed' : ''
                   }`}
                 >
-                  {isSubmitting ? 'Sending...' : t('form.submit')}
+                  {isSubmitting ? 'Sending...' : 'Send RSVP'}
                 </button>
               </div>
             </form>
@@ -273,7 +356,7 @@ export default function RSVPPage() {
       <section className="py-16 bg-primary-50">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <p className="text-primary-600 mb-4">
-            Having trouble with the form? Contact us directly:
+            Having trouble? Contact us directly:
           </p>
           <p>
             <a href="mailto:pierre.blanchet.engineer@gmail.com" className="text-gold-600 hover:text-gold-700">

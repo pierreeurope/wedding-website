@@ -1,19 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { kv } from '@vercel/kv';
-
-interface GiftClaim {
-  giftId: string;
-  claimedBy: string;
-  claimedAt: string;
-}
+import { getClaimedGifts, claimGift } from '@/lib/db';
 
 export async function GET() {
   try {
-    // Get all claimed gifts
-    const claimedList = await kv.get<string[]>('gifts:claimed') || [];
-    
-    // Return just the IDs of claimed gifts (not who claimed them for privacy)
-    return NextResponse.json({ claimedGifts: claimedList });
+    const claimedGifts = await getClaimedGifts();
+    return NextResponse.json({ claimedGifts });
   } catch (error) {
     console.error('Error fetching gifts:', error);
     return NextResponse.json({ claimedGifts: [] });
@@ -31,29 +22,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Check if already claimed
-    const existingClaim = await kv.get<GiftClaim>(`gift:${giftId}`);
-    if (existingClaim) {
+    const success = await claimGift(giftId, claimedBy);
+    
+    if (!success) {
       return NextResponse.json(
         { error: 'Gift already claimed', claimed: true },
         { status: 409 }
       );
-    }
-
-    // Claim the gift
-    const claim: GiftClaim = {
-      giftId,
-      claimedBy,
-      claimedAt: new Date().toISOString(),
-    };
-    
-    await kv.set(`gift:${giftId}`, claim);
-    
-    // Add to claimed list
-    const claimedList = await kv.get<string[]>('gifts:claimed') || [];
-    if (!claimedList.includes(giftId)) {
-      claimedList.push(giftId);
-      await kv.set('gifts:claimed', claimedList);
     }
 
     return NextResponse.json({ success: true, message: 'Gift claimed successfully' });

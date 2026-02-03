@@ -1,4 +1,11 @@
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
+
+// Initialize Redis client
+// Uses UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN env vars automatically
+const redis = new Redis({
+  url: process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL || '',
+  token: process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN || '',
+});
 
 // Types
 export interface RSVPEntry {
@@ -25,23 +32,28 @@ export interface GiftClaim {
 // RSVP Functions
 export async function saveRSVP(rsvp: RSVPEntry): Promise<void> {
   const key = `rsvp:${rsvp.id}`;
-  await kv.set(key, rsvp);
+  await redis.set(key, JSON.stringify(rsvp));
   
   // Also add to the list of all RSVPs
-  const rsvpList = await kv.get<string[]>('rsvp:list') || [];
+  const rsvpList = await redis.get<string[]>('rsvp:list') || [];
   if (!rsvpList.includes(rsvp.id)) {
     rsvpList.push(rsvp.id);
-    await kv.set('rsvp:list', rsvpList);
+    await redis.set('rsvp:list', JSON.stringify(rsvpList));
   }
 }
 
 export async function getAllRSVPs(): Promise<RSVPEntry[]> {
-  const rsvpList = await kv.get<string[]>('rsvp:list') || [];
+  const rsvpListRaw = await redis.get<string | string[]>('rsvp:list');
+  const rsvpList: string[] = typeof rsvpListRaw === 'string' 
+    ? JSON.parse(rsvpListRaw) 
+    : (rsvpListRaw || []);
+  
   const rsvps: RSVPEntry[] = [];
   
   for (const id of rsvpList) {
-    const rsvp = await kv.get<RSVPEntry>(`rsvp:${id}`);
-    if (rsvp) {
+    const rsvpRaw = await redis.get<string | RSVPEntry>(`rsvp:${id}`);
+    if (rsvpRaw) {
+      const rsvp: RSVPEntry = typeof rsvpRaw === 'string' ? JSON.parse(rsvpRaw) : rsvpRaw;
       rsvps.push(rsvp);
     }
   }
@@ -72,73 +84,52 @@ export async function getRSVPStats(): Promise<{
 // Gift Functions
 export async function claimGift(giftId: string, claimedBy: string): Promise<boolean> {
   const key = `gift:${giftId}`;
-  const existing = await kv.get<GiftClaim>(key);
+  const existingRaw = await redis.get<string | GiftClaim>(key);
   
-  if (existing) {
+  if (existingRaw) {
     return false; // Already claimed
   }
   
-  await kv.set(key, {
+  const claim: GiftClaim = {
     giftId,
     claimedBy,
     claimedAt: new Date().toISOString(),
-  });
+  };
+  
+  await redis.set(key, JSON.stringify(claim));
+  
+  // Add to claimed list
+  const claimedListRaw = await redis.get<string | string[]>('gifts:claimed');
+  const claimedList: string[] = typeof claimedListRaw === 'string' 
+    ? JSON.parse(claimedListRaw) 
+    : (claimedListRaw || []);
+  
+  if (!claimedList.includes(giftId)) {
+    claimedList.push(giftId);
+    await redis.set('gifts:claimed', JSON.stringify(claimedList));
+  }
   
   return true;
 }
 
-export async function getClaimedGifts(): Promise<Record<string, GiftClaim>> {
-  // Get all gift claims
+export async function getClaimedGifts(): Promise<string[]> {
+  const claimedListRaw = await redis.get<string | string[]>('gifts:claimed');
+  return typeof claimedListRaw === 'string' 
+    ? JSON.parse(claimedListRaw) 
+    : (claimedListRaw || []);
+}
+
+export async function getAllGiftClaims(): Promise<Record<string, GiftClaim>> {
+  const claimedList = await getClaimedGifts();
   const claims: Record<string, GiftClaim> = {};
   
-  // We'll store a list of claimed gift IDs
-  const claimedList = await kv.get<string[]>('gifts:claimed') || [];
-  
   for (const giftId of claimedList) {
-    const claim = await kv.get<GiftClaim>(`gift:${giftId}`);
-    if (claim) {
+    const claimRaw = await redis.get<string | GiftClaim>(`gift:${giftId}`);
+    if (claimRaw) {
+      const claim: GiftClaim = typeof claimRaw === 'string' ? JSON.parse(claimRaw) : claimRaw;
       claims[giftId] = claim;
     }
   }
   
   return claims;
-}
-
-export async function isGiftClaimed(giftId: string): Promise<boolean> {
-  const claim = await kv.get<GiftClaim>(`gift:${giftId}`);
-  return !!claim;
-}
-
-// Room Booking Functions
-export async function getRoomBookings(): Promise<Record<string, string[]>> {
-  // Returns roomId -> list of dates booked
-  const bookings = await kv.get<Record<string, string[]>>('rooms:bookings') || {};
-  return bookings;
-}
-
-export async function bookRoom(roomId: string, dates: string[], guestName: string): Promise<boolean> {
-  const bookings = await getRoomBookings();
-  
-  // Check if any dates are already booked
-  const roomBookings = bookings[roomId] || [];
-  for (const date of dates) {
-    if (roomBookings.includes(date)) {
-      return false; // Date already booked
-    }
-  }
-  
-  // Add the new dates
-  bookings[roomId] = [...roomBookings, ...dates];
-  await kv.set('rooms:bookings', bookings);
-  
-  // Store booking details
-  const bookingId = `${roomId}:${Date.now()}`;
-  await kv.set(`room:booking:${bookingId}`, {
-    roomId,
-    dates,
-    guestName,
-    bookedAt: new Date().toISOString(),
-  });
-  
-  return true;
 }

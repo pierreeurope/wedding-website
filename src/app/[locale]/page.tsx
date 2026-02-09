@@ -35,22 +35,22 @@ function HomePageClient() {
 
         {/* Content */}
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto animate-fade-in">
-          <p className="text-lg md:text-xl tracking-[0.3em] uppercase mb-4 text-primary-100">
+          <p className="hero-text-shadow text-lg md:text-xl tracking-[0.3em] uppercase mb-4 text-white font-medium">
             {t('saveTheDate')}
           </p>
-          <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight">
+          <h1 className="hero-text-shadow font-serif text-5xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-tight text-white">
             {t('names')}
           </h1>
-          <p className="text-lg md:text-xl mb-2 text-primary-100">
+          <p className="hero-text-shadow text-lg md:text-xl mb-2 text-white font-medium">
             {t('dateAnnouncement')}
           </p>
-          <p className="font-serif text-2xl md:text-3xl mb-4 text-gold-300">
+          <p className="hero-text-shadow-strong font-serif text-2xl md:text-3xl mb-4 text-gold-200 font-semibold">
             {t('date')}
           </p>
-          <p className="text-lg text-primary-200 mb-12">
+          <p className="hero-text-shadow text-lg text-white font-medium mb-12">
             {t('location')}
           </p>
-          <Link href="/rsvp" className="btn-primary bg-white/20 border-white hover:bg-white hover:text-primary-800">
+          <Link href="/rsvp" className="btn-primary bg-white/20 border-white hover:bg-white hover:text-primary-800 font-semibold shadow-lg">
             RSVP
           </Link>
         </div>

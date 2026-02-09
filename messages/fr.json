@@ -16,23 +16,26 @@
     "location": "Burg Schwarzenstein, Geisenheim, Allemagne",
     "welcome": "Nous avons hâte de célébrer avec vous !",
     "ourStory": "Notre Histoire",
-    "ourStoryText": "D'une rencontre fortuite à une demande en mariage magique sous les aurores boréales, notre parcours a été extraordinaire. Nous sommes ravis de partager ce jour spécial avec les personnes qui comptent le plus pour nous."
+    "ourStoryText": "Nous nous sommes rencontrés de la plus belle et inattendue des manières. Après une demande en mariage incroyable sous les aurores boréales, nous sommes très heureux d'avoir annoncé notre mariage et aimerions partager ce jour spécial avec vous."
   },
   "schedule": {
     "title": "Programme du Mariage",
     "subtitle": "Rejoignez-nous pour un week-end de célébration",
+    "addressLabel": "Adresse",
     "saturday": "Samedi 3 octobre",
     "sunday": "Dimanche 4 octobre",
     "ceremony": {
       "title": "Cérémonie religieuse",
       "time": "12h00",
       "location": "Rheingauer Dom",
+      "address": "Rheingauer Dom, Marktplatz 10, 65366 Geisenheim",
       "description": "Rejoignez-nous pour notre cérémonie de mariage dans la magnifique cathédrale Rheingauer Dom à Geisenheim."
     },
     "reception": {
       "title": "Réception & Célébration",
       "time": "Après la cérémonie",
       "location": "Burg Schwarzenstein",
+      "address": "Rosengasse 32, 65366 Geisenheim, Allemagne",
       "description": "Après un court trajet, nous continuerons la fête au Burg Schwarzenstein avec dîner, danse et festivités jusqu'au bout de la nuit."
     },
     "brunch": {
@@ -56,6 +59,10 @@
         "history": "Riche histoire et architecture médiévale",
         "cuisine": "Excellente gastronomie locale"
       }
+    },
+    "explore": {
+      "title": "Vous restez un peu plus longtemps ?",
+      "description": "Si vous pouvez prolonger votre séjour au-delà du mariage, nous vous encourageons vivement à profiter de tout ce que la région offre. Le Rheingau et ses environs regorgent de découvertes—visite de châteaux et de sites historiques, dégustations dans les domaines viticoles, routes pittoresques le long du Rhin, villages charmants à explorer. Quelle que soit la durée de votre séjour, nous espérons que vous en profiterez pleinement."
     }
   },
   "travel": {
@@ -82,6 +89,14 @@
         "rental": "Louer une voiture - vous donne la flexibilité d'explorer la belle région",
         "taxi": "Prendre un taxi ou Uber depuis Francfort"
       }
+    },
+    "accommodationNote": {
+      "title": "Où loger",
+      "description": "Il y a beaucoup d'Airbnbs et d'hôtels dans les environs. Nous logerons nous-mêmes dans un hôtel—si vous souhaitez réserver une chambre dans le même hôtel pour notre mariage, vous pouvez tout à fait le faire."
+    },
+    "churchToVenue": {
+      "title": "De l'église au lieu de réception",
+      "description": "Si vous venez à l'église en taxi ou en Uber, pas d'inquiétude pour la suite : nous nous chargeons de vous emmener jusqu'au lieu de réception. Il y a seulement 5 à 10 minutes en voiture entre l'église et le Burg Schwarzenstein, et quelqu'un s'en occupera."
     }
   },
   "accommodation": {
@@ -91,7 +106,24 @@
       "title": "Séjourner au Château",
       "description": "Nous avons réservé un nombre limité de chambres au Burg Schwarzenstein pour nos invités. C'est une merveilleuse opportunité de séjourner sur le lieu de la fête et de profiter pleinement de l'expérience.",
       "booking": "Pour réserver une chambre au château, veuillez nous contacter directement :",
-      "note": "Les chambres sont limitées et seront attribuées par ordre d'arrivée."
+      "note": "Les chambres sont limitées et seront attribuées par ordre d'arrivée.",
+      "extendStay": "Les chambres sont réservées pour la nuit du mariage. Si vous souhaitez rester jusqu'au dimanche ou plus longtemps, indiquez-le-nous simplement et nous nous arrangerons avec l'hôtel pour vous garder la chambre souhaitée.",
+      "dates": { "friSun": "Ven 2 oct. - Dim 4 oct.", "satSun": "Sam 3 oct. - Dim 4 oct." },
+      "sections": { "burggebauede": "Burggebäude (Bâtiment du château)", "gaestehaus": "Gästehaus (Maison des invités)", "parkresidenz": "Parkresidenz" },
+      "availableOne": "1 disponible",
+      "availableTwo": "2 disponibles",
+      "availableThree": "3 disponibles",
+      "rooms": {
+        "turmzimmer": { "name": "Turmzimmer", "description": "Chambre unique dans la tour" },
+        "superiorzimmer": { "name": "Superiorzimmer", "description": "Chambres supérieures avec équipements améliorés" },
+        "komfortzimmer": { "name": "Komfortzimmer", "description": "Chambres confortables dans le château" },
+        "gaestezimmer160": { "name": "Gästezimmer (lit 1,60 m)", "description": "Chambre d'hôte avec grand lit" },
+        "gaestezimmer140": { "name": "Gästezimmer (lit 1,40 m)", "description": "Chambre d'hôte cosy" },
+        "panoramaSuite": { "name": "Panorama Suite", "description": "Suite luxueuse avec vue panoramique" },
+        "juniorSuite": { "name": "Junior Suite", "description": "Élégante suite avec coin living" },
+        "deluxeZimmer": { "name": "De Luxe Zimmer", "description": "Chambre de luxe avec équipements premium" },
+        "klassikzimmer": { "name": "Klassikzimmer", "description": "Chambre classique confortable" }
+      }
     },
     "airbnb": {
       "title": "Airbnb & Locations de vacances",
@@ -109,50 +141,55 @@
     }
   },
   "gifts": {
-    "title": "Liste de Mariage",
-    "subtitle": "Votre présence est le plus beau des cadeaux",
-    "intro": "Votre présence à notre mariage est le cadeau le plus significatif que nous puissions recevoir. Cependant, si vous souhaitez nous honorer d'un cadeau, voici quelques options :",
+    "title": "Liste de mariage",
     "monetary": {
-      "title": "Cagnotte Lune de Miel",
-      "description": "Nous serions reconnaissants pour des contributions à notre cagnotte lune de miel. Alors que nous commençons notre nouvelle vie ensemble, votre générosité nous aidera à créer des souvenirs inoubliables lors de notre première aventure en tant que couple marié.",
-      "details": "Les détails du virement bancaire seront fournis sur demande."
+      "title": "Cagnotte lune de miel",
+      "description": "Nous partons en lune de miel au Japon juste après le mariage et nous aménageons notre nouvel appartement à Berlin. Un cadeau en argent est ce qui nous convient le mieux.",
+      "bankDetails": "Coordonnées bancaires pour virement",
+      "beneficiary": "Bénéficiaire",
+      "iban": "IBAN",
+      "bic": "BIC / SWIFT",
+      "cashOnSite": "Une enveloppe avec un peu d'argent le jour J est aussi tout à fait bienvenue."
     },
-    "giftList": {
-      "title": "Idées de cadeaux",
-      "description": "Si vous préférez offrir un cadeau physique, voici quelques articles que nous aimerions :",
-      "note": "Merci de nous indiquer quel article vous souhaitez offrir pour éviter les doublons.",
-      "items": [
-        { "name": "Cocotte Le Creuset", "description": "Ustensile de cuisine français classique pour notre nouvelle cuisine", "price": "350 €" },
-        { "name": "Robot pâtissier KitchenAid", "description": "Pour cuisiner ensemble", "price": "500 €" },
-        { "name": "Parure de lit de luxe", "description": "Draps et taies d'oreiller en coton égyptien", "price": "300 €" },
-        { "name": "Carafe à vin et verres", "description": "Carafe en cristal avec verres assortis", "price": "150 €" },
-        { "name": "Machine à expresso", "description": "Pour notre rituel café du matin", "price": "600 €" },
-        { "name": "Panier pique-nique", "description": "Pour des sorties romantiques à la campagne", "price": "120 €" },
-        { "name": "Œuvre d'art", "description": "Une belle pièce pour notre intérieur", "price": "200 €" },
-        { "name": "Set d'outils de jardinage", "description": "Pour notre futur jardin", "price": "180 €" }
-      ]
-    },
-    "contact": "Pour coordonner les cadeaux ou obtenir les coordonnées bancaires, veuillez nous contacter."
+    "contact": "Des questions sur les cadeaux ? Contactez-nous !"
   },
   "rsvp": {
     "title": "RSVP",
     "subtitle": "Merci de nous confirmer votre présence",
-    "deadline": "Merci de répondre avant le 1er août 2026",
+    "deadline": "Merci de répondre avant le 1er juillet 2026",
     "form": {
-      "name": "Nom complet",
-      "email": "Adresse email",
+      "name": "Votre nom",
+      "namePlaceholder": "Nom complet",
+      "phone": "Numéro de téléphone",
+      "phonePlaceholder": "Votre numéro de téléphone",
+      "email": "Adresse e-mail (optionnel)",
+      "emailPlaceholder": "votre@email.com",
       "attending": "Serez-vous des nôtres ?",
-      "yes": "Accepte avec joie",
-      "no": "Décline avec regret",
-      "guests": "Nombre d'invités (vous inclus)",
-      "dietary": "Restrictions alimentaires ou allergies",
-      "dietaryPlaceholder": "Merci de nous indiquer vos restrictions alimentaires...",
-      "message": "Message pour les mariés (optionnel)",
-      "messagePlaceholder": "Partagez vos vœux...",
+      "yes": "Oui, je serai là !",
+      "no": "Désolé(e), je ne pourrai pas",
+      "guests": "Combien d'invités (vous inclus) ?",
+      "guestNames": "Noms de vos invités",
+      "guestNamesPlaceholder": "ex. Jean Dupont, Marie Martin",
+      "arrivalDate": "Date d'arrivée",
+      "departureDate": "Date de départ",
+      "roomBooking": "Réserver une chambre au château ?",
+      "roomBookingNote": "Nombre de chambres limité au Burg Schwarzenstein. Contactez-nous pour la disponibilité.",
+      "noRoom": "Non, je m'occupe de mon hébergement",
+      "dietary": "Régime alimentaire / allergies",
+      "dietaryPlaceholder": "Végétarien, végan, allergies, etc.",
+      "message": "Message pour les mariés",
+      "messageHint": "Optionnel, mais nous serions ravis d'avoir de vos nouvelles !",
+      "messagePlaceholder": "Un message que vous souhaitez partager...",
       "submit": "Envoyer le RSVP",
+      "submitting": "Envoi en cours...",
       "success": "Merci ! Votre RSVP a bien été reçu.",
-      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement."
-    }
+      "successDetail": "Nous vous recontacterons avec plus de détails très bientôt !",
+      "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
+      "person": "personne",
+      "people": "personnes",
+      "contactTrouble": "Un problème ? Contactez-nous directement :"
+    },
+    "weddingDate": "Mariage : samedi 3 octobre 2026"
   },
   "footer": {
     "madeWith": "Fait avec amour",

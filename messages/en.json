@@ -16,23 +16,26 @@
     "location": "Burg Schwarzenstein, Geisenheim, Germany",
     "welcome": "We can't wait to celebrate with you!",
     "ourStory": "Our Story",
-    "ourStoryText": "From a chance encounter to a magical proposal under the Northern Lights, our journey has been nothing short of extraordinary. We're thrilled to share our special day with the people who matter most to us."
+    "ourStoryText": "We met in the most wonderful and unexpected way. After an incredible proposal under the Northern Lights, we are delighted to have announced our marriage and would love to share this special day with you."
   },
   "schedule": {
     "title": "Wedding Schedule",
     "subtitle": "Join us for a weekend of celebration",
+    "addressLabel": "Address",
     "saturday": "Saturday, October 3rd",
     "sunday": "Sunday, October 4th",
     "ceremony": {
       "title": "Church Ceremony",
       "time": "12:00 PM",
       "location": "Rheingauer Dom",
+      "address": "Rheingauer Dom, Marktplatz 10, 65366 Geisenheim",
       "description": "Join us for our church wedding ceremony at the beautiful Rheingauer Dom in Geisenheim."
     },
     "reception": {
       "title": "Reception & Celebration",
       "time": "Following the ceremony",
       "location": "Burg Schwarzenstein",
+      "address": "Rosengasse 32, 65366 Geisenheim, Germany",
       "description": "After a short drive, we'll continue the celebration at Burg Schwarzenstein with dinner, dancing, and festivities that will go deep into the night."
     },
     "brunch": {
@@ -56,6 +59,10 @@
         "history": "Rich medieval history and architecture",
         "cuisine": "Excellent local gastronomy"
       }
+    },
+    "explore": {
+      "title": "Staying a Bit Longer?",
+      "description": "If you're able to extend your stay beyond the wedding, we warmly encourage you to make the most of the region. The Rheingau and surrounding area offer so much to discover—from visiting castles and historic sites to wine tastings at local estates, scenic drives along the Rhine, and charming villages to explore. However long you stay, we hope you enjoy every moment."
     }
   },
   "travel": {
@@ -82,6 +89,14 @@
         "rental": "Renting a car - gives you flexibility to explore the beautiful region",
         "taxi": "Taking a taxi or Uber from Frankfurt"
       }
+    },
+    "accommodationNote": {
+      "title": "Where to Stay",
+      "description": "There are plenty of Airbnbs and hotels in the area. We will be staying at a hotel ourselves—if you would like to book a room at the same hotel when you come for our wedding, you are very welcome to do so."
+    },
+    "churchToVenue": {
+      "title": "From Church to the Venue",
+      "description": "If you come to the church by taxi or Uber, don't worry about the rest of the way: we will take care of getting you to the venue. It's only a 5–10 minute drive between the church and Burg Schwarzenstein, and someone will be there to help."
     }
   },
   "accommodation": {
@@ -91,7 +106,24 @@
       "title": "Stay at the Castle",
       "description": "We have reserved a limited number of rooms at Burg Schwarzenstein for our guests. This is a wonderful opportunity to stay where the celebration takes place and enjoy the full experience.",
       "booking": "To book a room at the castle, please contact us directly:",
-      "note": "Rooms are limited and will be allocated on a first-come, first-served basis."
+      "note": "Rooms are limited and will be allocated on a first-come, first-served basis.",
+      "extendStay": "Rooms are reserved for the wedding night. If you would like to stay until Sunday or longer, simply let us know and we will arrange with the hotel to keep your preferred room for the extra nights.",
+      "dates": { "friSun": "Fri Oct 2 – Sun Oct 4", "satSun": "Sat Oct 3 – Sun Oct 4" },
+      "sections": { "burggebauede": "Burggebäude (Castle Building)", "gaestehaus": "Gästehaus (Guest House)", "parkresidenz": "Parkresidenz" },
+      "availableOne": "1 available",
+      "availableTwo": "2 available",
+      "availableThree": "3 available",
+      "rooms": {
+        "turmzimmer": { "name": "Turmzimmer", "description": "Unique tower room experience" },
+        "superiorzimmer": { "name": "Superiorzimmer", "description": "Superior rooms with upgraded amenities" },
+        "komfortzimmer": { "name": "Komfortzimmer", "description": "Comfortable rooms in the castle" },
+        "gaestezimmer160": { "name": "Gästezimmer (1.60m bed)", "description": "Cozy guest room with larger bed" },
+        "gaestezimmer140": { "name": "Gästezimmer (1.40m bed)", "description": "Cozy guest room" },
+        "panoramaSuite": { "name": "Panorama Suite", "description": "Luxurious suite with panoramic views" },
+        "juniorSuite": { "name": "Junior Suite", "description": "Elegant suite with separate living area" },
+        "deluxeZimmer": { "name": "De Luxe Zimmer", "description": "Deluxe room with premium features" },
+        "klassikzimmer": { "name": "Klassikzimmer", "description": "Classic comfortable room" }
+      }
     },
     "airbnb": {
       "title": "Airbnb & Vacation Rentals",
@@ -110,49 +142,54 @@
   },
   "gifts": {
     "title": "Gift Registry",
-    "subtitle": "Your presence is the greatest gift",
-    "intro": "Your presence at our wedding is the most meaningful gift we could receive. However, if you wish to honor us with a gift, here are some options:",
     "monetary": {
       "title": "Honeymoon Fund",
-      "description": "We would be grateful for contributions to our honeymoon fund. As we begin our new life together, your generosity will help us create unforgettable memories on our first adventure as a married couple.",
-      "details": "Bank transfer details will be provided upon request."
+      "description": "We are going on our honeymoon in Japan right after the wedding, and we are furnishing our new apartment in Berlin. A monetary gift is definitely the most welcome.",
+      "bankDetails": "Bank details for transfer",
+      "beneficiary": "Beneficiary",
+      "iban": "IBAN",
+      "bic": "BIC / SWIFT code",
+      "cashOnSite": "A letter with cash on the day is also completely fine."
     },
-    "giftList": {
-      "title": "Gift Ideas",
-      "description": "If you prefer to give a physical gift, here are some items we would love:",
-      "note": "Please let us know which item you'd like to gift so we can avoid duplicates.",
-      "items": [
-        { "name": "Le Creuset Dutch Oven", "description": "Classic French cookware for our new kitchen", "price": "€350" },
-        { "name": "KitchenAid Stand Mixer", "description": "For baking together", "price": "€500" },
-        { "name": "Luxury Bed Linens Set", "description": "Egyptian cotton sheets and pillowcases", "price": "€300" },
-        { "name": "Wine Decanter Set", "description": "Crystal decanter with glasses", "price": "€150" },
-        { "name": "Espresso Machine", "description": "For our morning coffee ritual", "price": "€600" },
-        { "name": "Picnic Basket Set", "description": "For romantic outings in the countryside", "price": "€120" },
-        { "name": "Art Print", "description": "A beautiful piece for our home", "price": "€200" },
-        { "name": "Garden Tools Set", "description": "For our future garden", "price": "€180" }
-      ]
-    },
-    "contact": "To coordinate gifts or for bank details, please contact us."
+    "contact": "Questions about gifts? Get in touch!"
   },
   "rsvp": {
     "title": "RSVP",
     "subtitle": "Please let us know if you can join us",
-    "deadline": "Please respond by August 1st, 2026",
+    "deadline": "Please respond by July 1st, 2026",
     "form": {
-      "name": "Full Name",
-      "email": "Email Address",
-      "attending": "Will you be attending?",
-      "yes": "Joyfully accepts",
-      "no": "Regretfully declines",
-      "guests": "Number of guests (including yourself)",
-      "dietary": "Dietary restrictions or allergies",
-      "dietaryPlaceholder": "Please let us know of any dietary requirements...",
-      "message": "Message for the couple (optional)",
-      "messagePlaceholder": "Share your well wishes...",
+      "name": "Your Name",
+      "namePlaceholder": "Full name",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Your phone number",
+      "email": "Email Address (optional)",
+      "emailPlaceholder": "your@email.com",
+      "attending": "Will you be joining us?",
+      "yes": "Yes, I'll be there!",
+      "no": "Sorry, can't make it",
+      "guests": "How many guests (including yourself)?",
+      "guestNames": "Names of your guests",
+      "guestNamesPlaceholder": "e.g., Jane Doe, John Smith",
+      "arrivalDate": "Arrival Date",
+      "departureDate": "Departure Date",
+      "roomBooking": "Book a room at the castle?",
+      "roomBookingNote": "Limited rooms available at Burg Schwarzenstein. Contact us for availability.",
+      "noRoom": "No, I'll arrange my own accommodation",
+      "dietary": "Dietary Requirements",
+      "dietaryPlaceholder": "Vegetarian, vegan, allergies, etc.",
+      "message": "Message for the couple",
+      "messageHint": "Optional, but we'd love to hear from you!",
+      "messagePlaceholder": "Any message you'd like to share...",
       "submit": "Send RSVP",
+      "submitting": "Sending...",
       "success": "Thank you! Your RSVP has been received.",
-      "error": "Something went wrong. Please try again or contact us directly."
-    }
+      "successDetail": "We'll be in touch with more details soon!",
+      "error": "Something went wrong. Please try again or contact us directly.",
+      "person": "person",
+      "people": "people",
+      "contactTrouble": "Having trouble? Contact us directly:"
+    },
+    "weddingDate": "Wedding: Saturday, October 3rd, 2026"
   },
   "footer": {
     "madeWith": "Made with love",

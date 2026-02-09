@@ -24,6 +24,7 @@ const CASTLE_ROOMS = [
 
 interface RSVPFormData {
   name: string;
+  phone: string;
   email: string;
   attending: 'yes' | 'no' | '';
   guestCount: number;
@@ -39,6 +40,7 @@ export default function RSVPPage() {
   const t = useTranslations('rsvp');
   const [formData, setFormData] = useState<RSVPFormData>({
     name: '',
+    phone: '',
     email: '',
     attending: '',
     guestCount: 1,
@@ -68,6 +70,7 @@ export default function RSVPPage() {
         setSubmitStatus('success');
         setFormData({
           name: '',
+          phone: '',
           email: '',
           attending: '',
           guestCount: 1,
@@ -112,21 +115,21 @@ export default function RSVPPage() {
         <div className="max-w-2xl mx-auto px-4">
           <div className="text-center mb-12">
             <p className="text-gold-600 font-medium">{t('deadline')}</p>
-            <p className="text-primary-600 mt-2">Wedding: Saturday, October 3rd, 2026</p>
+            <p className="text-primary-600 mt-2">{t('weddingDate')}</p>
           </div>
 
           {submitStatus === 'success' ? (
             <div className="bg-sage-50 border border-sage-300 p-8 text-center">
               <span className="text-4xl mb-4 block">🎉</span>
               <p className="text-sage-800 text-lg font-medium">{t('form.success')}</p>
-              <p className="text-sage-600 mt-2">We&apos;ll be in touch with more details soon!</p>
+              <p className="text-sage-600 mt-2">{t('form.successDetail')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-primary-700 font-medium mb-2">
-                  Your Name *
+                  {t('form.name')} *
                 </label>
                 <input
                   type="text"
@@ -136,31 +139,47 @@ export default function RSVPPage() {
                   value={formData.name}
                   onChange={handleChange}
                   className="input-field"
-                  placeholder="Full name"
+                  placeholder={t('form.namePlaceholder')}
                 />
               </div>
 
-              {/* Email */}
+              {/* Phone */}
+              <div>
+                <label htmlFor="phone" className="block text-primary-700 font-medium mb-2">
+                  {t('form.phone')} *
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="input-field"
+                  placeholder={t('form.phonePlaceholder')}
+                />
+              </div>
+
+              {/* Email (optional) */}
               <div>
                 <label htmlFor="email" className="block text-primary-700 font-medium mb-2">
-                  Email Address *
+                  {t('form.email')}
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  required
                   value={formData.email}
                   onChange={handleChange}
                   className="input-field"
-                  placeholder="your@email.com"
+                  placeholder={t('form.emailPlaceholder')}
                 />
               </div>
 
               {/* Attending */}
               <div>
                 <label className="block text-primary-700 font-medium mb-4">
-                  Will you be joining us? *
+                  {t('form.attending')} *
                 </label>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <label className={`flex-1 p-4 border-2 cursor-pointer transition-all ${
@@ -179,7 +198,7 @@ export default function RSVPPage() {
                     <span className="flex items-center justify-center">
                       <span className="text-2xl mr-2">🎉</span>
                       <span className={formData.attending === 'yes' ? 'text-sage-700 font-medium' : 'text-primary-600'}>
-                        Yes, I&apos;ll be there!
+                        {t('form.yes')}
                       </span>
                     </span>
                   </label>
@@ -199,7 +218,7 @@ export default function RSVPPage() {
                     <span className="flex items-center justify-center">
                       <span className="text-2xl mr-2">😢</span>
                       <span className={formData.attending === 'no' ? 'text-primary-700 font-medium' : 'text-primary-600'}>
-                        Sorry, can&apos;t make it
+                        {t('form.no')}
                       </span>
                     </span>
                   </label>
@@ -212,7 +231,7 @@ export default function RSVPPage() {
                   {/* Guest Count */}
                   <div>
                     <label htmlFor="guestCount" className="block text-primary-700 font-medium mb-2">
-                      How many guests (including yourself)? *
+                      {t('form.guests')} *
                     </label>
                     <select
                       id="guestCount"
@@ -222,7 +241,7 @@ export default function RSVPPage() {
                       className="input-field"
                     >
                       {[1, 2, 3, 4, 5, 6].map((num) => (
-                        <option key={num} value={num}>{num} {num === 1 ? 'person' : 'people'}</option>
+                        <option key={num} value={num}>{num} {num === 1 ? t('form.person') : t('form.people')}</option>
                       ))}
                     </select>
                   </div>
@@ -231,7 +250,7 @@ export default function RSVPPage() {
                   {formData.guestCount > 1 && (
                     <div>
                       <label htmlFor="guestNames" className="block text-primary-700 font-medium mb-2">
-                        Names of your guests
+                        {t('form.guestNames')}
                       </label>
                       <textarea
                         id="guestNames"
@@ -239,7 +258,7 @@ export default function RSVPPage() {
                         rows={2}
                         value={formData.guestNames}
                         onChange={handleChange}
-                        placeholder="e.g., Jane Doe, John Smith"
+                        placeholder={t('form.guestNamesPlaceholder')}
                         className="input-field resize-none"
                       />
                     </div>
@@ -249,7 +268,7 @@ export default function RSVPPage() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="arrivalDate" className="block text-primary-700 font-medium mb-2">
-                        Arrival Date
+                        {t('form.arrivalDate')}
                       </label>
                       <input
                         type="date"
@@ -264,7 +283,7 @@ export default function RSVPPage() {
                     </div>
                     <div>
                       <label htmlFor="departureDate" className="block text-primary-700 font-medium mb-2">
-                        Departure Date
+                        {t('form.departureDate')}
                       </label>
                       <input
                         type="date"
@@ -282,10 +301,10 @@ export default function RSVPPage() {
                   {/* Room Booking */}
                   <div>
                     <label htmlFor="roomBooking" className="block text-primary-700 font-medium mb-2">
-                      🏰 Book a room at the castle?
+                      🏰 {t('form.roomBooking')}
                     </label>
                     <p className="text-sm text-primary-500 mb-3">
-                      Limited rooms available at Burg Schwarzenstein. Contact us for availability.
+                      {t('form.roomBookingNote')}
                     </p>
                     <select
                       id="roomBooking"
@@ -294,7 +313,7 @@ export default function RSVPPage() {
                       onChange={handleChange}
                       className="input-field"
                     >
-                      <option value="">No, I&apos;ll arrange my own accommodation</option>
+                      <option value="">{t('form.noRoom')}</option>
                       <optgroup label="🏰 Castle Building (Burggebäude)">
                         {CASTLE_ROOMS.filter(r => r.category === 'Castle').map((room) => (
                           <option key={room.id} value={room.id}>
@@ -322,7 +341,7 @@ export default function RSVPPage() {
                   {/* Dietary Restrictions */}
                   <div>
                     <label htmlFor="dietary" className="block text-primary-700 font-medium mb-2">
-                      Dietary Requirements
+                      {t('form.dietary')}
                     </label>
                     <textarea
                       id="dietary"
@@ -330,25 +349,26 @@ export default function RSVPPage() {
                       rows={2}
                       value={formData.dietary}
                       onChange={handleChange}
-                      placeholder="Vegetarian, vegan, allergies, etc."
+                      placeholder={t('form.dietaryPlaceholder')}
                       className="input-field resize-none"
                     />
                   </div>
                 </>
               )}
 
-              {/* Message */}
+              {/* Message (optional but encouraged) */}
               <div>
                 <label htmlFor="message" className="block text-primary-700 font-medium mb-2">
-                  Message for the couple 💌
+                  {t('form.message')} 💌
                 </label>
+                <p className="text-sm text-primary-500 mb-2">{t('form.messageHint')}</p>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Any message you'd like to share..."
+                  placeholder={t('form.messagePlaceholder')}
                   className="input-field resize-none"
                 />
               </div>
@@ -356,7 +376,7 @@ export default function RSVPPage() {
               {/* Error message */}
               {submitStatus === 'error' && (
                 <div className="bg-red-50 border border-red-200 p-4 text-red-700 text-center">
-                  Something went wrong. Please try again or contact us directly.
+                  {t('form.error')}
                 </div>
               )}
 
@@ -369,7 +389,7 @@ export default function RSVPPage() {
                     isSubmitting || !formData.attending ? 'opacity-50 cursor-not-allowed' : ''
                   }`}
                 >
-                  {isSubmitting ? 'Sending...' : 'Send RSVP'}
+                  {isSubmitting ? t('form.submitting') : t('form.submit')}
                 </button>
               </div>
             </form>
@@ -381,7 +401,7 @@ export default function RSVPPage() {
       <section className="py-16 bg-primary-50">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <p className="text-primary-600 mb-4">
-            Having trouble? Contact us directly:
+            {t('form.contactTrouble')}
           </p>
           <p>
             <a href="mailto:pierre.blanchet.engineer@gmail.com" className="text-gold-600 hover:text-gold-700">

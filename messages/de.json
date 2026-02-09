@@ -5,7 +5,7 @@
     "venue": "Ort & Region",
     "travel": "Anreise",
     "accommodation": "Unterkunft",
-    "gifts": "Geschenke",
+    "gifts": "Geschenkliste",
     "rsvp": "RSVP"
   },
   "home": {
@@ -16,23 +16,26 @@
     "location": "Burg Schwarzenstein, Geisenheim, Deutschland",
     "welcome": "Wir freuen uns darauf, mit Ihnen zu feiern!",
     "ourStory": "Unsere Geschichte",
-    "ourStoryText": "Von einer zufälligen Begegnung bis zu einem magischen Heiratsantrag unter den Nordlichtern war unsere Reise außergewöhnlich. Wir freuen uns sehr, diesen besonderen Tag mit den Menschen zu teilen, die uns am wichtigsten sind."
+    "ourStoryText": "Wir haben uns auf die wunderbarste und unerwartetste Weise kennengelernt. Nach einem unglaublichen Heiratsantrag unter den Nordlichtern freuen wir uns sehr, unsere Hochzeit angekündigt zu haben, und möchten diesen besonderen Tag mit Ihnen teilen."
   },
   "schedule": {
     "title": "Hochzeitsablauf",
     "subtitle": "Feiern Sie mit uns ein unvergessliches Wochenende",
+    "addressLabel": "Adresse",
     "saturday": "Samstag, 3. Oktober",
     "sunday": "Sonntag, 4. Oktober",
     "ceremony": {
       "title": "Kirchliche Trauung",
       "time": "12:00 Uhr",
       "location": "Rheingauer Dom",
+      "address": "Rheingauer Dom, Marktplatz 10, 65366 Geisenheim",
       "description": "Seien Sie bei unserer kirchlichen Trauung im wunderschönen Rheingauer Dom in Geisenheim dabei."
     },
     "reception": {
       "title": "Empfang & Feier",
       "time": "Im Anschluss an die Zeremonie",
       "location": "Burg Schwarzenstein",
+      "address": "Rosengasse 32, 65366 Geisenheim, Deutschland",
       "description": "Nach einer kurzen Fahrt setzen wir die Feier auf Burg Schwarzenstein fort – mit Abendessen, Tanz und Festlichkeiten bis tief in die Nacht."
     },
     "brunch": {
@@ -56,6 +59,10 @@
         "history": "Reiche mittelalterliche Geschichte und Architektur",
         "cuisine": "Ausgezeichnete lokale Gastronomie"
       }
+    },
+    "explore": {
+      "title": "Bleiben Sie etwas länger?",
+      "description": "Wenn Sie Ihren Aufenthalt über die Hochzeit hinaus verlängern können, ermutigen wir Sie herzlich, die Region in vollen Zügen zu genießen. Der Rheingau und die Umgebung haben so viel zu bieten—von Burgen und historischen Stätten über Weinproben in lokalen Weingütern bis zu malerischen Fahrten am Rhein und charmanten Dörfern zum Erkunden. Wir hoffen, dass Sie jeden Moment genießen, egal wie lange Sie bleiben."
     }
   },
   "travel": {
@@ -82,6 +89,14 @@
         "rental": "Ein Auto mieten – gibt Ihnen Flexibilität, die schöne Region zu erkunden",
         "taxi": "Ein Taxi oder Uber von Frankfurt nehmen"
       }
+    },
+    "accommodationNote": {
+      "title": "Unterkunft",
+      "description": "Es gibt viele Airbnbs und Hotels in der Umgebung. Wir übernachten selbst in einem Hotel—wenn Sie für unsere Hochzeit ein Zimmer im selben Hotel buchen möchten, können Sie das gerne tun."
+    },
+    "churchToVenue": {
+      "title": "Von der Kirche zum Veranstaltungsort",
+      "description": "Wenn Sie mit dem Taxi oder Uber zur Kirche kommen, machen Sie sich keine Sorgen um den weiteren Weg: Wir kümmern uns darum, Sie zum Veranstaltungsort zu bringen. Es sind nur 5–10 Minuten Fahrt zwischen der Kirche und Burg Schwarzenstein, und jemand wird sich darum kümmern."
     }
   },
   "accommodation": {
@@ -91,7 +106,24 @@
       "title": "Auf der Burg übernachten",
       "description": "Wir haben eine begrenzte Anzahl von Zimmern auf Burg Schwarzenstein für unsere Gäste reserviert. Dies ist eine wunderbare Gelegenheit, dort zu übernachten, wo die Feier stattfindet, und das volle Erlebnis zu genießen.",
       "booking": "Um ein Zimmer auf der Burg zu buchen, kontaktieren Sie uns bitte direkt:",
-      "note": "Die Zimmer sind begrenzt und werden nach dem Windhundprinzip vergeben."
+      "note": "Die Zimmer sind begrenzt und werden nach dem Windhundprinzip vergeben.",
+      "extendStay": "Die Zimmer sind für die Hochzeitsnacht reserviert. Wenn Sie bis Sonntag oder länger bleiben möchten, sagen Sie uns einfach Bescheid – wir regeln mit dem Hotel die Verlängerung in Ihrer Wunschzimmerkategorie.",
+      "dates": { "friSun": "Fr 2. Okt. – So 4. Okt.", "satSun": "Sa 3. Okt. – So 4. Okt." },
+      "sections": { "burggebauede": "Burggebäude (Burg)", "gaestehaus": "Gästehaus", "parkresidenz": "Parkresidenz" },
+      "availableOne": "1 verfügbar",
+      "availableTwo": "2 verfügbar",
+      "availableThree": "3 verfügbar",
+      "rooms": {
+        "turmzimmer": { "name": "Turmzimmer", "description": "Einzigartiges Turmzimmer-Erlebnis" },
+        "superiorzimmer": { "name": "Superiorzimmer", "description": "Superior-Zimmer mit erweiterten Annehmlichkeiten" },
+        "komfortzimmer": { "name": "Komfortzimmer", "description": "Komfortable Zimmer in der Burg" },
+        "gaestezimmer160": { "name": "Gästezimmer (1,60 m Bett)", "description": "Gemütliches Gästezimmer mit größerem Bett" },
+        "gaestezimmer140": { "name": "Gästezimmer (1,40 m Bett)", "description": "Gemütliches Gästezimmer" },
+        "panoramaSuite": { "name": "Panorama Suite", "description": "Luxuriöse Suite mit Panoramablick" },
+        "juniorSuite": { "name": "Junior Suite", "description": "Elegante Suite mit separatem Wohnbereich" },
+        "deluxeZimmer": { "name": "De Luxe Zimmer", "description": "Deluxe-Zimmer mit Premium-Ausstattung" },
+        "klassikzimmer": { "name": "Klassikzimmer", "description": "Klassisches komfortables Zimmer" }
+      }
     },
     "airbnb": {
       "title": "Airbnb & Ferienwohnungen",
@@ -109,50 +141,55 @@
     }
   },
   "gifts": {
-    "title": "Geschenke",
-    "subtitle": "Ihre Anwesenheit ist das schönste Geschenk",
-    "intro": "Ihre Anwesenheit bei unserer Hochzeit ist das bedeutungsvollste Geschenk, das wir uns wünschen können. Wenn Sie uns jedoch mit einem Geschenk ehren möchten, hier einige Möglichkeiten:",
+    "title": "Geschenkliste",
     "monetary": {
       "title": "Hochzeitsreise-Kasse",
-      "description": "Wir würden uns über Beiträge zu unserer Hochzeitsreise-Kasse freuen. Während wir unser neues Leben zusammen beginnen, wird Ihre Großzügigkeit uns helfen, unvergessliche Erinnerungen auf unserem ersten Abenteuer als verheiratetes Paar zu schaffen.",
-      "details": "Bankverbindung auf Anfrage."
+      "description": "Wir fahren direkt nach der Hochzeit in die Flitterwochen nach Japan und richten unsere neue Wohnung in Berlin ein. Ein Geldgeschenk ist definitiv am willkommensten.",
+      "bankDetails": "Bankdaten für Überweisung",
+      "beneficiary": "Empfänger",
+      "iban": "IBAN",
+      "bic": "BIC / SWIFT-Code",
+      "cashOnSite": "Ein Briefumschlag mit Bargeld am Tag der Hochzeit ist ebenfalls völlig in Ordnung."
     },
-    "giftList": {
-      "title": "Geschenkideen",
-      "description": "Wenn Sie lieber ein physisches Geschenk machen möchten, hier einige Dinge, die wir uns wünschen:",
-      "note": "Bitte teilen Sie uns mit, welchen Artikel Sie schenken möchten, damit wir Doppelungen vermeiden können.",
-      "items": [
-        { "name": "Le Creuset Bräter", "description": "Klassisches französisches Kochgeschirr für unsere neue Küche", "price": "350 €" },
-        { "name": "KitchenAid Küchenmaschine", "description": "Zum gemeinsamen Backen", "price": "500 €" },
-        { "name": "Luxus-Bettwäsche-Set", "description": "Ägyptische Baumwolllaken und Kissenbezüge", "price": "300 €" },
-        { "name": "Weinkaraffe mit Gläsern", "description": "Kristallkaraffe mit passenden Gläsern", "price": "150 €" },
-        { "name": "Espressomaschine", "description": "Für unser morgendliches Kaffeeritual", "price": "600 €" },
-        { "name": "Picknickkorb-Set", "description": "Für romantische Ausflüge aufs Land", "price": "120 €" },
-        { "name": "Kunstdruck", "description": "Ein schönes Stück für unser Zuhause", "price": "200 €" },
-        { "name": "Gartenwerkzeug-Set", "description": "Für unseren zukünftigen Garten", "price": "180 €" }
-      ]
-    },
-    "contact": "Zur Koordination von Geschenken oder für Bankdaten kontaktieren Sie uns bitte."
+    "contact": "Fragen zu Geschenken? Melden Sie sich!"
   },
   "rsvp": {
     "title": "RSVP",
     "subtitle": "Bitte teilen Sie uns mit, ob Sie dabei sein können",
-    "deadline": "Bitte antworten Sie bis zum 1. August 2026",
+    "deadline": "Bitte antworten Sie bis zum 1. Juli 2026",
     "form": {
-      "name": "Vollständiger Name",
-      "email": "E-Mail-Adresse",
-      "attending": "Werden Sie teilnehmen?",
-      "yes": "Nimmt mit Freude an",
-      "no": "Muss leider absagen",
-      "guests": "Anzahl der Gäste (Sie eingeschlossen)",
-      "dietary": "Ernährungseinschränkungen oder Allergien",
-      "dietaryPlaceholder": "Bitte teilen Sie uns Ihre Ernährungsanforderungen mit...",
-      "message": "Nachricht an das Brautpaar (optional)",
-      "messagePlaceholder": "Teilen Sie Ihre Glückwünsche...",
+      "name": "Ihr Name",
+      "namePlaceholder": "Vollständiger Name",
+      "phone": "Telefonnummer",
+      "phonePlaceholder": "Ihre Telefonnummer",
+      "email": "E-Mail-Adresse (optional)",
+      "emailPlaceholder": "ihre@email.com",
+      "attending": "Werden Sie dabei sein?",
+      "yes": "Ja, ich komme!",
+      "no": "Leider kann ich nicht",
+      "guests": "Wie viele Gäste (Sie eingeschlossen)?",
+      "guestNames": "Namen Ihrer Gäste",
+      "guestNamesPlaceholder": "z. B. Anna Müller, Peter Schmidt",
+      "arrivalDate": "Anreisedatum",
+      "departureDate": "Abreisedatum",
+      "roomBooking": "Ein Zimmer auf der Burg buchen?",
+      "roomBookingNote": "Begrenzte Zimmer verfügbar im Burg Schwarzenstein. Kontaktieren Sie uns für die Verfügbarkeit.",
+      "noRoom": "Nein, ich organisiere meine Unterkunft selbst",
+      "dietary": "Ernährungswünsche / Allergien",
+      "dietaryPlaceholder": "Vegetarisch, vegan, Allergien usw.",
+      "message": "Nachricht an das Brautpaar",
+      "messageHint": "Optional, aber wir freuen uns über ein paar Zeilen von Ihnen!",
+      "messagePlaceholder": "Eine Nachricht, die Sie teilen möchten...",
       "submit": "RSVP senden",
+      "submitting": "Wird gesendet...",
       "success": "Vielen Dank! Ihre Antwort wurde empfangen.",
-      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt."
-    }
+      "successDetail": "Wir melden uns bald mit weiteren Details bei Ihnen!",
+      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+      "person": "Person",
+      "people": "Personen",
+      "contactTrouble": "Probleme? Kontaktieren Sie uns direkt:"
+    },
+    "weddingDate": "Hochzeit: Samstag, 3. Oktober 2026"
   },
   "footer": {
     "madeWith": "Mit Liebe gemacht",

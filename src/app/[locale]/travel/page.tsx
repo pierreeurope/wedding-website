@@ -125,6 +125,32 @@ function TravelPageClient() {
         </div>
       </section>
 
+      {/* Church to Venue */}
+      <section className="py-16 bg-primary-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-start p-6 bg-white border-l-4 border-gold-500 shadow-sm">
+            <span className="text-2xl mr-4">🚐</span>
+            <div>
+              <h2 className="font-serif text-2xl text-primary-800 mb-3">{t('churchToVenue.title')}</h2>
+              <p className="text-primary-600">{t('churchToVenue.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Where to Stay */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex items-start p-6 bg-primary-50 border-l-4 border-gold-500">
+            <span className="text-2xl mr-4">🏨</span>
+            <div>
+              <h2 className="font-serif text-2xl text-primary-800 mb-3">{t('accommodationNote.title')}</h2>
+              <p className="text-primary-600">{t('accommodationNote.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Map */}
       <section className="py-16 bg-primary-100">
         <div className="max-w-4xl mx-auto px-4 text-center">

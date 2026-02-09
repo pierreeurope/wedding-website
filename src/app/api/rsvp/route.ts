@@ -5,8 +5,8 @@ export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
     
-    // Validate required fields
-    if (!data.name || !data.email || !data.attending) {
+    // Validate required fields (name, phone, attending; email is optional)
+    if (!data.name || !data.phone || !data.attending) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -16,7 +16,8 @@ export async function POST(request: NextRequest) {
     const rsvp: RSVPEntry = {
       id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       name: data.name,
-      email: data.email,
+      phone: data.phone,
+      email: data.email || '',
       attending: data.attending,
       guestCount: data.guestCount || 1,
       guestNames: data.guestNames || '',

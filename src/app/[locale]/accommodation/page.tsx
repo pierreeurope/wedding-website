@@ -38,133 +38,136 @@ function AccommodationPageClient() {
             <p className="text-primary-600 text-center mb-10">
               {t('castle.description')}
             </p>
-            
-            {/* Parkresidenz - Friday arrival */}
-            <div className="mb-10">
-              <h3 className="font-serif text-xl text-primary-800 mb-2 border-b border-primary-200 pb-2">
-                Parkresidenz
-                <span className="text-sm font-sans text-primary-500 ml-2">(Fri Oct 2 - Sun Oct 4)</span>
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4 mt-4">
-                <div className="bg-white p-4 border border-primary-100">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-medium text-primary-800">Panorama Suite</h4>
-                      <p className="text-primary-500 text-sm">Luxurious suite with panoramic views</p>
-                    </div>
-                    <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€490/night</span>
-                  </div>
-                  <p className="text-xs text-primary-400 mt-2">1 available</p>
-                </div>
-              </div>
-            </div>
+            <p className="text-primary-600 text-center mb-10 text-sm italic">
+              {t('castle.extendStay')}
+            </p>
 
-            {/* Burggebäude - Saturday arrival */}
+            {/* Burggebäude (Château) - most expensive first */}
             <div className="mb-10">
               <h3 className="font-serif text-xl text-primary-800 mb-2 border-b border-primary-200 pb-2">
-                Burggebäude (Castle Building)
-                <span className="text-sm font-sans text-primary-500 ml-2">(Sat Oct 3 - Sun Oct 4)</span>
+                {t('castle.sections.burggebauede')}
+                <span className="text-sm font-sans text-primary-500 ml-2">({t('castle.dates.satSun')})</span>
               </h3>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-white p-4 border border-primary-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-medium text-primary-800">Komfortzimmer</h4>
-                      <p className="text-primary-500 text-sm">Comfortable rooms in the castle</p>
-                    </div>
-                    <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€220/night</span>
-                  </div>
-                  <p className="text-xs text-primary-400 mt-2">3 available</p>
-                </div>
-                <div className="bg-white p-4 border border-primary-100">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-medium text-primary-800">Superiorzimmer</h4>
-                      <p className="text-primary-500 text-sm">Superior rooms with upgraded amenities</p>
-                    </div>
-                    <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€240/night</span>
-                  </div>
-                  <p className="text-xs text-primary-400 mt-2">2 available</p>
-                </div>
-                <div className="bg-white p-4 border border-primary-100">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <h4 className="font-medium text-primary-800">Turmzimmer</h4>
-                      <p className="text-primary-500 text-sm">Unique tower room experience</p>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.turmzimmer.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.turmzimmer.description')}</p>
                     </div>
                     <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€260/night</span>
                   </div>
-                  <p className="text-xs text-primary-400 mt-2">1 available</p>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableOne')}</p>
+                </div>
+                <div className="bg-white p-4 border border-primary-100">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.superiorzimmer.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.superiorzimmer.description')}</p>
+                    </div>
+                    <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€240/night</span>
+                  </div>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableTwo')}</p>
+                </div>
+                <div className="bg-white p-4 border border-primary-100">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.komfortzimmer.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.komfortzimmer.description')}</p>
+                    </div>
+                    <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€220/night</span>
+                  </div>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableThree')}</p>
                 </div>
               </div>
             </div>
 
-            {/* Gästehaus */}
+            {/* Gästehaus (Château) - same price */}
             <div className="mb-10">
               <h3 className="font-serif text-xl text-primary-800 mb-2 border-b border-primary-200 pb-2">
-                Gästehaus (Guest House)
-                <span className="text-sm font-sans text-primary-500 ml-2">(Sat Oct 3 - Sun Oct 4)</span>
+                {t('castle.sections.gaestehaus')}
+                <span className="text-sm font-sans text-primary-500 ml-2">({t('castle.dates.satSun')})</span>
               </h3>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-white p-4 border border-primary-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-medium text-primary-800">Gästezimmer (1.40m bed)</h4>
-                      <p className="text-primary-500 text-sm">Cozy guest room</p>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.gaestezimmer160.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.gaestezimmer160.description')}</p>
                     </div>
                     <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€160/night</span>
                   </div>
-                  <p className="text-xs text-primary-400 mt-2">1 available</p>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableOne')}</p>
                 </div>
                 <div className="bg-white p-4 border border-primary-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-medium text-primary-800">Gästezimmer (1.60m bed)</h4>
-                      <p className="text-primary-500 text-sm">Cozy guest room with larger bed</p>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.gaestezimmer140.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.gaestezimmer140.description')}</p>
                     </div>
                     <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€160/night</span>
                   </div>
-                  <p className="text-xs text-primary-400 mt-2">1 available</p>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableOne')}</p>
                 </div>
               </div>
             </div>
 
-            {/* Parkresidenz - Saturday arrival */}
+            {/* Parkresidenz - Friday arrival (most expensive) */}
             <div className="mb-10">
               <h3 className="font-serif text-xl text-primary-800 mb-2 border-b border-primary-200 pb-2">
-                Parkresidenz
-                <span className="text-sm font-sans text-primary-500 ml-2">(Sat Oct 3 - Sun Oct 4)</span>
+                {t('castle.sections.parkresidenz')}
+                <span className="text-sm font-sans text-primary-500 ml-2">({t('castle.dates.friSun')})</span>
               </h3>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="bg-white p-4 border border-primary-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-medium text-primary-800">Junior Suite</h4>
-                      <p className="text-primary-500 text-sm">Elegant suite with separate living area</p>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.panoramaSuite.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.panoramaSuite.description')}</p>
+                    </div>
+                    <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€490/night</span>
+                  </div>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableOne')}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Parkresidenz - Saturday arrival (price desc) */}
+            <div className="mb-10">
+              <h3 className="font-serif text-xl text-primary-800 mb-2 border-b border-primary-200 pb-2">
+                {t('castle.sections.parkresidenz')}
+                <span className="text-sm font-sans text-primary-500 ml-2">({t('castle.dates.satSun')})</span>
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <div className="bg-white p-4 border border-primary-100">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.juniorSuite.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.juniorSuite.description')}</p>
                     </div>
                     <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€340/night</span>
                   </div>
-                  <p className="text-xs text-primary-400 mt-2">1 available</p>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableOne')}</p>
                 </div>
                 <div className="bg-white p-4 border border-primary-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-medium text-primary-800">De Luxe Zimmer</h4>
-                      <p className="text-primary-500 text-sm">Deluxe room with premium features</p>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.deluxeZimmer.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.deluxeZimmer.description')}</p>
                     </div>
                     <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€270/night</span>
                   </div>
-                  <p className="text-xs text-primary-400 mt-2">1 available</p>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableOne')}</p>
                 </div>
                 <div className="bg-white p-4 border border-primary-100">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h4 className="font-medium text-primary-800">Klassikzimmer</h4>
-                      <p className="text-primary-500 text-sm">Classic comfortable room</p>
+                      <h4 className="font-medium text-primary-800">{t('castle.rooms.klassikzimmer.name')}</h4>
+                      <p className="text-primary-500 text-sm">{t('castle.rooms.klassikzimmer.description')}</p>
                     </div>
                     <span className="text-gold-600 font-medium whitespace-nowrap ml-4">€250/night</span>
                   </div>
-                  <p className="text-xs text-primary-400 mt-2">3 available</p>
+                  <p className="text-xs text-primary-400 mt-2">{t('castle.availableThree')}</p>
                 </div>
               </div>
             </div>

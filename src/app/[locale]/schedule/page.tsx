@@ -47,7 +47,7 @@ function SchedulePageClient() {
                   <p className="text-primary-500">{t('ceremony.description')}</p>
                   <div className="mt-4 p-4 bg-white border border-primary-100">
                     <p className="text-sm text-primary-600">
-                      <span className="font-medium">Address:</span> Rheingauer Dom, Marktplatz 10, 65366 Geisenheim
+                      <span className="font-medium">{t('addressLabel')}:</span> {t('ceremony.address')}
                     </p>
                   </div>
                 </div>
@@ -65,7 +65,7 @@ function SchedulePageClient() {
                   <p className="text-primary-500">{t('reception.description')}</p>
                   <div className="mt-4 p-4 bg-white border border-primary-100">
                     <p className="text-sm text-primary-600">
-                      <span className="font-medium">Address:</span> Rosengasse 32, 65366 Geisenheim
+                      <span className="font-medium">{t('addressLabel')}:</span> {t('reception.address')}
                     </p>
                   </div>
                 </div>
@@ -94,19 +94,6 @@ function SchedulePageClient() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Dress Code */}
-      <section className="py-16 bg-primary-50">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <h3 className="font-serif text-2xl text-primary-800 mb-4">Dress Code</h3>
-          <p className="text-primary-600">
-            Formal / Black Tie Optional
-          </p>
-          <p className="text-primary-500 text-sm mt-2">
-            We want you to feel comfortable while celebrating with us. Ladies, you may want to bring comfortable shoes for dancing!
-          </p>
         </div>
       </section>
     </div>

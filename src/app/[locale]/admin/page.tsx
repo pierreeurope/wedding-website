@@ -7,6 +7,7 @@ const ADMIN_PASSWORD = 'wordl';
 interface RSVPEntry {
   id: string;
   name: string;
+  phone?: string;
   email: string;
   attending: 'yes' | 'no';
   guestCount: number;
@@ -157,6 +158,7 @@ export default function AdminPage() {
               <thead className="bg-primary-100">
                 <tr>
                   <th className="px-4 py-3 text-left text-sm font-medium text-primary-700">Name</th>
+                  <th className="px-4 py-3 text-left text-sm font-medium text-primary-700">Phone</th>
                   <th className="px-4 py-3 text-left text-sm font-medium text-primary-700">Email</th>
                   <th className="px-4 py-3 text-center text-sm font-medium text-primary-700">Attending</th>
                   <th className="px-4 py-3 text-center text-sm font-medium text-primary-700">Guests</th>
@@ -176,7 +178,8 @@ export default function AdminPage() {
                         <div className="text-xs text-gray-500">+ {rsvp.guestNames}</div>
                       )}
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-600">{rsvp.email}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">{rsvp.phone || '—'}</td>
+                    <td className="px-4 py-3 text-sm text-gray-600">{rsvp.email || '—'}</td>
                     <td className="px-4 py-3 text-center">
                       <span className={`px-2 py-1 text-xs rounded ${
                         rsvp.attending === 'yes' 

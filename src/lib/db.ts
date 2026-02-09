@@ -1,16 +1,17 @@
 import { Redis } from '@upstash/redis';
 
-// Initialize Redis client
-// Uses Vercel KV environment variables
-const redis = new Redis({
-  url: process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || '',
-  token: process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || '',
-});
+// Initialize Redis client only when configured (so local dev without Redis doesn't crash)
+const redisUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL || '';
+const redisToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN || '';
+const redis = redisUrl && redisToken
+  ? new Redis({ url: redisUrl, token: redisToken })
+  : null;
 
 // Types
 export interface RSVPEntry {
   id: string;
   name: string;
+  phone: string;
   email: string;
   attending: 'yes' | 'no';
   guestCount: number;
@@ -31,6 +32,7 @@ export interface GiftClaim {
 
 // RSVP Functions
 export async function saveRSVP(rsvp: RSVPEntry): Promise<void> {
+  if (!redis) return;
   const key = `rsvp:${rsvp.id}`;
   await redis.set(key, JSON.stringify(rsvp));
   
@@ -43,6 +45,7 @@ export async function saveRSVP(rsvp: RSVPEntry): Promise<void> {
 }
 
 export async function getAllRSVPs(): Promise<RSVPEntry[]> {
+  if (!redis) return [];
   const rsvpListRaw = await redis.get<string | string[]>('rsvp:list');
   const rsvpList: string[] = typeof rsvpListRaw === 'string' 
     ? JSON.parse(rsvpListRaw) 
@@ -83,6 +86,7 @@ export async function getRSVPStats(): Promise<{
 
 // Gift Functions
 export async function claimGift(giftId: string, claimedBy: string): Promise<boolean> {
+  if (!redis) return false;
   const key = `gift:${giftId}`;
   const existingRaw = await redis.get<string | GiftClaim>(key);
   
@@ -113,13 +117,19 @@ export async function claimGift(giftId: string, claimedBy: string): Promise<bool
 }
 
 export async function getClaimedGifts(): Promise<string[]> {
-  const claimedListRaw = await redis.get<string | string[]>('gifts:claimed');
-  return typeof claimedListRaw === 'string' 
-    ? JSON.parse(claimedListRaw) 
-    : (claimedListRaw || []);
+  if (!redis) return [];
+  try {
+    const claimedListRaw = await redis.get<string | string[]>('gifts:claimed');
+    return typeof claimedListRaw === 'string' 
+      ? JSON.parse(claimedListRaw) 
+      : (claimedListRaw || []);
+  } catch {
+    return [];
+  }
 }
 
 export async function getAllGiftClaims(): Promise<Record<string, GiftClaim>> {
+  if (!redis) return {};
   const claimedList = await getClaimedGifts();
   const claims: Record<string, GiftClaim> = {};
   

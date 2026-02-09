@@ -108,6 +108,17 @@ function VenuePageClient() {
         </div>
       </section>
 
+      {/* Explore the Region */}
+      <section className="py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="section-title text-3xl md:text-4xl">{t('explore.title')}</h2>
+          <div className="h-px w-16 bg-gold-500 my-6 mx-auto"></div>
+          <p className="text-lg text-primary-600 leading-relaxed">
+            {t('explore.description')}
+          </p>
+        </div>
+      </section>
+
       {/* Map Section */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -12,8 +12,8 @@ export default function middleware(request: NextRequest) {
 
   // Skip password check for the login page, login API, and static assets
   if (
-    pathname === '/login' ||
-    pathname === '/api/login' ||
+    pathname.startsWith('/login') ||
+    pathname.startsWith('/api/login') ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/favicon') ||
     pathname.includes('.')

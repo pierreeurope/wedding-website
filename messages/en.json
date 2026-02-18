@@ -102,42 +102,93 @@
   "accommodation": {
     "title": "Where to Stay",
     "subtitle": "Accommodation options for all preferences and budgets",
+    "intro": "To make the most of your stay, we recommend one of three options:",
     "castle": {
-      "title": "Stay at the Castle",
-      "description": "We have reserved a limited number of rooms at Burg Schwarzenstein for our guests. This is a wonderful opportunity to stay where the celebration takes place and enjoy the full experience.",
+      "title": "On-Site: Burg Schwarzenstein",
+      "description": "We have reserved a limited number of rooms at Burg Schwarzenstein for our guests. The hotel has three buildings, each in a different location on the estate.",
       "booking": "To book a room at the castle, please contact us directly:",
       "note": "Rooms are limited and will be allocated on a first-come, first-served basis.",
-      "extendStay": "Rooms are reserved for the wedding night. If you would like to stay until Sunday or longer, simply let us know and we will arrange with the hotel to keep your preferred room for the extra nights.",
-      "dates": { "friSun": "Fri Oct 2 – Sun Oct 4", "satSun": "Sat Oct 3 – Sun Oct 4" },
-      "sections": { "burggebauede": "Burggebäude (Castle Building)", "gaestehaus": "Gästehaus (Guest House)", "parkresidenz": "Parkresidenz" },
+      "extendStay": "All rooms are reserved through Monday checkout. If you would like to extend your stay beyond Monday, let us know and we will check availability with the hotel.",
+      "checkInOut": "Check-in from 15:00 on arrival day. Checkout by 11:00 on departure day.",
+      "breakfast": "Breakfast is available for €34 per person per day (extra charge).",
+      "dates": {
+        "friMon": "Fri Oct 2 – Mon Oct 5",
+        "satMon": "Sat Oct 3 – Mon Oct 5"
+      },
+      "sections": {
+        "parkresidenz": "Parkresidenz",
+        "parkresidenzDesc": "Hotel building across from the castle venue, separated by a parking area.",
+        "burggebauede": "Castle Building (Burggebäude)",
+        "burggebauedeDesc": "The wedding reception, dinner and after party take place here — it could be a bit louder due to the celebration.",
+        "gaestehaus": "Guest House (Gästehaus)",
+        "gaestehausDesc": "A few minutes walking distance from the Parkresidenz and the castle."
+      },
       "availableOne": "1 available",
       "availableTwo": "2 available",
       "availableThree": "3 available",
       "rooms": {
-        "turmzimmer": { "name": "Turmzimmer", "description": "Unique tower room experience" },
-        "superiorzimmer": { "name": "Superiorzimmer", "description": "Superior rooms with upgraded amenities" },
-        "komfortzimmer": { "name": "Komfortzimmer", "description": "Comfortable rooms in the castle" },
-        "gaestezimmer160": { "name": "Gästezimmer (1.60m bed)", "description": "Cozy guest room with larger bed" },
-        "gaestezimmer140": { "name": "Gästezimmer (1.40m bed)", "description": "Cozy guest room" },
-        "panoramaSuite": { "name": "Panorama Suite", "description": "Luxurious suite with panoramic views" },
-        "juniorSuite": { "name": "Junior Suite", "description": "Elegant suite with separate living area" },
-        "deluxeZimmer": { "name": "De Luxe Zimmer", "description": "Deluxe room with premium features" },
-        "klassikzimmer": { "name": "Klassikzimmer", "description": "Classic comfortable room" }
+        "juniorSuite": {
+          "name": "Junior Suite",
+          "description": "Elegant suite with separate living area"
+        },
+        "deluxeZimmer": {
+          "name": "De Luxe Room",
+          "description": "Larger double bed room, would fit an extra adult bed"
+        },
+        "klassikzimmer": {
+          "name": "Classic Room",
+          "description": "Double bed room, would fit a children's bed but not an adult bed"
+        },
+        "turmSuite": {
+          "name": "Tower Suite",
+          "description": "Spacious suite in the tower, would handle two additional double beds"
+        },
+        "turmzimmer": {
+          "name": "Tower Room",
+          "description": "Smaller than other castle rooms but fits a couple — fairy tale charm"
+        },
+        "superiorzimmer": {
+          "name": "Superior Room",
+          "description": "Very large room with double bed, could handle an extra bed (child or adult)"
+        },
+        "komfortzimmer": {
+          "name": "Comfort Room",
+          "description": "Double bed room in the castle"
+        },
+        "gaestezimmer160": {
+          "name": "Guest Room (1.60m bed)",
+          "description": "Very small room, cozy for two, may be more suited for one person"
+        },
+        "gaestezimmer140": {
+          "name": "Guest Room (1.40m bed)",
+          "description": "Very small room, cozy for two, may be more suited for one person"
+        }
       }
     },
-    "airbnb": {
-      "title": "Airbnb & Vacation Rentals",
-      "description": "The Rheingau wine region offers amazing Airbnb options! Stay in a charming vineyard cottage, a traditional German wine estate, or a cozy apartment with stunning valley views. This is a great way to immerse yourself in the local atmosphere."
-    },
-    "hotels": {
+    "alternatives": {
       "title": "Nearby Hotels",
-      "description": "There are excellent hotels in the area at various price points, from cozy guesthouses to luxury accommodations. Some options include hotels in Geisenheim, Rüdesheim, and Wiesbaden."
+      "description": "The nearby town of Geisenheim and the surrounding area have many great hotels and guesthouses at affordable prices. This is a wonderful option if you prefer more flexibility or want to explore the region.",
+      "geisenheim": "Closest town, many affordable hotels and guesthouses",
+      "ruedesheim": "Famous wine town with plenty of accommodation",
+      "wiesbaden": "Larger city with luxury hotels and spa options",
+      "mainz": "Historic city with many accommodation types",
+      "min5": "~5 min to venue",
+      "min10": "~10 min to venue",
+      "min25": "~25 min to venue",
+      "min30": "~30 min to venue"
     },
     "contact": {
       "title": "Contact Us",
       "description": "For room reservations at the castle or any accommodation questions:",
       "email": "Email",
       "phone": "Phone/WhatsApp"
+    },
+    "introOption1": "Find a hotel in the nearby town of Geisenheim or surrounding area",
+    "introOption2": "Book an Airbnb or vacation rental in the Rheingau wine region",
+    "introOption3": "Stay directly at Burg Schwarzenstein, where the wedding takes place",
+    "airbnb": {
+      "title": "Airbnb & Vacation Rentals",
+      "description": "The Rheingau wine region offers amazing Airbnb options! Stay in a charming vineyard cottage, a traditional German wine estate, or a cozy apartment with stunning valley views. A great way to immerse yourself in the local atmosphere."
     }
   },
   "gifts": {

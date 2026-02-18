@@ -102,42 +102,93 @@
   "accommodation": {
     "title": "Où Dormir",
     "subtitle": "Options d'hébergement pour tous les goûts et budgets",
+    "intro": "Pour profiter au mieux de votre séjour, nous vous recommandons l'une de ces trois options :",
     "castle": {
-      "title": "Séjourner au Château",
-      "description": "Nous avons réservé un nombre limité de chambres au Burg Schwarzenstein pour nos invités. C'est une merveilleuse opportunité de séjourner sur le lieu de la fête et de profiter pleinement de l'expérience.",
+      "title": "Sur place : Burg Schwarzenstein",
+      "description": "Nous avons réservé un nombre limité de chambres au Burg Schwarzenstein pour nos invités. L'hôtel comprend trois bâtiments, chacun à un emplacement différent sur le domaine.",
       "booking": "Pour réserver une chambre au château, veuillez nous contacter directement :",
       "note": "Les chambres sont limitées et seront attribuées par ordre d'arrivée.",
-      "extendStay": "Les chambres sont réservées pour la nuit du mariage. Si vous souhaitez rester jusqu'au dimanche ou plus longtemps, indiquez-le-nous simplement et nous nous arrangerons avec l'hôtel pour vous garder la chambre souhaitée.",
-      "dates": { "friSun": "Ven 2 oct. - Dim 4 oct.", "satSun": "Sam 3 oct. - Dim 4 oct." },
-      "sections": { "burggebauede": "Burggebäude (Bâtiment du château)", "gaestehaus": "Gästehaus (Maison des invités)", "parkresidenz": "Parkresidenz" },
+      "extendStay": "Toutes les chambres sont réservées jusqu'au départ le lundi. Si vous souhaitez prolonger votre séjour au-delà du lundi, contactez-nous et nous vérifierons la disponibilité avec l'hôtel.",
+      "checkInOut": "Arrivée à partir de 15h00 le jour d'arrivée. Départ avant 11h00 le jour de départ.",
+      "breakfast": "Le petit-déjeuner est disponible pour 34 € par personne et par jour (en supplément).",
+      "dates": {
+        "friMon": "Ven 2 oct. – Lun 5 oct.",
+        "satMon": "Sam 3 oct. – Lun 5 oct."
+      },
+      "sections": {
+        "parkresidenz": "Parkresidenz",
+        "parkresidenzDesc": "Bâtiment hôtelier face au château, séparé par un parking.",
+        "burggebauede": "Bâtiment du château (Burggebäude)",
+        "burggebauedeDesc": "La réception, le dîner et l'after party ont lieu ici — il peut y avoir un peu plus de bruit en raison de la fête.",
+        "gaestehaus": "Maison des invités (Gästehaus)",
+        "gaestehausDesc": "À quelques minutes à pied de la Parkresidenz et du château."
+      },
       "availableOne": "1 disponible",
       "availableTwo": "2 disponibles",
       "availableThree": "3 disponibles",
       "rooms": {
-        "turmzimmer": { "name": "Turmzimmer", "description": "Chambre unique dans la tour" },
-        "superiorzimmer": { "name": "Superiorzimmer", "description": "Chambres supérieures avec équipements améliorés" },
-        "komfortzimmer": { "name": "Komfortzimmer", "description": "Chambres confortables dans le château" },
-        "gaestezimmer160": { "name": "Gästezimmer (lit 1,60 m)", "description": "Chambre d'hôte avec grand lit" },
-        "gaestezimmer140": { "name": "Gästezimmer (lit 1,40 m)", "description": "Chambre d'hôte cosy" },
-        "panoramaSuite": { "name": "Panorama Suite", "description": "Suite luxueuse avec vue panoramique" },
-        "juniorSuite": { "name": "Junior Suite", "description": "Élégante suite avec coin living" },
-        "deluxeZimmer": { "name": "De Luxe Zimmer", "description": "Chambre de luxe avec équipements premium" },
-        "klassikzimmer": { "name": "Klassikzimmer", "description": "Chambre classique confortable" }
+        "juniorSuite": {
+          "name": "Suite Junior",
+          "description": "Élégante suite avec coin salon séparé"
+        },
+        "deluxeZimmer": {
+          "name": "Chambre De Luxe",
+          "description": "Grande chambre avec lit double, peut accueillir un lit adulte supplémentaire"
+        },
+        "klassikzimmer": {
+          "name": "Chambre Classique",
+          "description": "Chambre avec lit double, peut accueillir un lit enfant mais pas un lit adulte"
+        },
+        "turmSuite": {
+          "name": "Suite de la Tour",
+          "description": "Suite spacieuse dans la tour, peut accueillir deux lits doubles supplémentaires"
+        },
+        "turmzimmer": {
+          "name": "Chambre de la Tour",
+          "description": "Plus petite que les autres chambres du château mais idéale pour un couple — charme de conte de fées"
+        },
+        "superiorzimmer": {
+          "name": "Chambre Supérieure",
+          "description": "Très grande chambre avec lit double, peut accueillir un lit supplémentaire (enfant ou adulte)"
+        },
+        "komfortzimmer": {
+          "name": "Chambre Confort",
+          "description": "Chambre avec lit double dans le château"
+        },
+        "gaestezimmer160": {
+          "name": "Chambre d'Hôtes (lit 1,60 m)",
+          "description": "Très petite chambre, cosy pour deux, peut-être plus adaptée pour une personne"
+        },
+        "gaestezimmer140": {
+          "name": "Chambre d'Hôtes (lit 1,40 m)",
+          "description": "Très petite chambre, cosy pour deux, peut-être plus adaptée pour une personne"
+        }
       }
     },
-    "airbnb": {
-      "title": "Airbnb & Locations de vacances",
-      "description": "La région viticole du Rheingau offre d'incroyables options Airbnb ! Séjournez dans un charmant cottage de vignoble, un domaine viticole allemand traditionnel, ou un appartement cosy avec vue imprenable sur la vallée. C'est une excellente façon de vous immerger dans l'atmosphère locale."
-    },
-    "hotels": {
+    "alternatives": {
       "title": "Hôtels à proximité",
-      "description": "Il y a d'excellents hôtels dans la région à différents prix, des maisons d'hôtes chaleureuses aux hébergements de luxe. Quelques options incluent des hôtels à Geisenheim, Rüdesheim et Wiesbaden."
+      "description": "La ville voisine de Geisenheim et ses environs offrent de nombreux hôtels et maisons d'hôtes à des prix abordables. C'est une excellente option si vous préférez plus de flexibilité ou souhaitez explorer la région.",
+      "geisenheim": "Ville la plus proche, nombreux hôtels et pensions abordables",
+      "ruedesheim": "Célèbre ville viticole avec de nombreux hébergements",
+      "wiesbaden": "Grande ville avec hôtels de luxe et options spa",
+      "mainz": "Ville historique avec de nombreux types d'hébergement",
+      "min5": "~5 min du lieu",
+      "min10": "~10 min du lieu",
+      "min25": "~25 min du lieu",
+      "min30": "~30 min du lieu"
     },
     "contact": {
       "title": "Nous contacter",
       "description": "Pour les réservations de chambres au château ou toute question d'hébergement :",
       "email": "Email",
       "phone": "Téléphone/WhatsApp"
+    },
+    "introOption1": "Trouver un hôtel dans la ville voisine de Geisenheim ou ses environs",
+    "introOption2": "Réserver un Airbnb ou une location de vacances dans la région viticole du Rheingau",
+    "introOption3": "Séjourner directement au Burg Schwarzenstein, où le mariage aura lieu",
+    "airbnb": {
+      "title": "Airbnb & Locations de vacances",
+      "description": "La région viticole du Rheingau offre d'incroyables options Airbnb ! Séjournez dans un charmant cottage de vignoble, un domaine viticole allemand traditionnel, ou un appartement cosy avec vue imprenable sur la vallée. Une excellente façon de vous immerger dans l'atmosphère locale."
     }
   },
   "gifts": {

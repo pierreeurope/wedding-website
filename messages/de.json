@@ -102,42 +102,93 @@
   "accommodation": {
     "title": "Übernachtung",
     "subtitle": "Unterkunftsmöglichkeiten für jeden Geschmack und jedes Budget",
+    "intro": "Um Ihren Aufenthalt bestmöglich zu genießen, empfehlen wir eine dieser drei Möglichkeiten:",
     "castle": {
-      "title": "Auf der Burg übernachten",
-      "description": "Wir haben eine begrenzte Anzahl von Zimmern auf Burg Schwarzenstein für unsere Gäste reserviert. Dies ist eine wunderbare Gelegenheit, dort zu übernachten, wo die Feier stattfindet, und das volle Erlebnis zu genießen.",
+      "title": "Vor Ort: Burg Schwarzenstein",
+      "description": "Wir haben eine begrenzte Anzahl von Zimmern auf Burg Schwarzenstein für unsere Gäste reserviert. Das Hotel besteht aus drei Gebäuden, die sich an verschiedenen Stellen des Anwesens befinden.",
       "booking": "Um ein Zimmer auf der Burg zu buchen, kontaktieren Sie uns bitte direkt:",
       "note": "Die Zimmer sind begrenzt und werden nach dem Windhundprinzip vergeben.",
-      "extendStay": "Die Zimmer sind für die Hochzeitsnacht reserviert. Wenn Sie bis Sonntag oder länger bleiben möchten, sagen Sie uns einfach Bescheid – wir regeln mit dem Hotel die Verlängerung in Ihrer Wunschzimmerkategorie.",
-      "dates": { "friSun": "Fr 2. Okt. – So 4. Okt.", "satSun": "Sa 3. Okt. – So 4. Okt." },
-      "sections": { "burggebauede": "Burggebäude (Burg)", "gaestehaus": "Gästehaus", "parkresidenz": "Parkresidenz" },
+      "extendStay": "Alle Zimmer sind bis zum Auschecken am Montag reserviert. Wenn Sie Ihren Aufenthalt über den Montag hinaus verlängern möchten, kontaktieren Sie uns und wir prüfen die Verfügbarkeit mit dem Hotel.",
+      "checkInOut": "Check-in ab 15:00 Uhr am Anreisetag. Checkout bis 11:00 Uhr am Abreisetag.",
+      "breakfast": "Frühstück ist für 34 € pro Person und Tag verfügbar (Aufpreis).",
+      "dates": {
+        "friMon": "Fr 2. Okt. – Mo 5. Okt.",
+        "satMon": "Sa 3. Okt. – Mo 5. Okt."
+      },
+      "sections": {
+        "parkresidenz": "Parkresidenz",
+        "parkresidenzDesc": "Hotelgebäude gegenüber der Burg, getrennt durch einen Parkplatz.",
+        "burggebauede": "Burggebäude",
+        "burggebauedeDesc": "Hier finden Empfang, Abendessen und After Party statt — es könnte wegen der Feier etwas lauter sein.",
+        "gaestehaus": "Gästehaus",
+        "gaestehausDesc": "Wenige Gehminuten von der Parkresidenz und der Burg entfernt."
+      },
       "availableOne": "1 verfügbar",
       "availableTwo": "2 verfügbar",
       "availableThree": "3 verfügbar",
       "rooms": {
-        "turmzimmer": { "name": "Turmzimmer", "description": "Einzigartiges Turmzimmer-Erlebnis" },
-        "superiorzimmer": { "name": "Superiorzimmer", "description": "Superior-Zimmer mit erweiterten Annehmlichkeiten" },
-        "komfortzimmer": { "name": "Komfortzimmer", "description": "Komfortable Zimmer in der Burg" },
-        "gaestezimmer160": { "name": "Gästezimmer (1,60 m Bett)", "description": "Gemütliches Gästezimmer mit größerem Bett" },
-        "gaestezimmer140": { "name": "Gästezimmer (1,40 m Bett)", "description": "Gemütliches Gästezimmer" },
-        "panoramaSuite": { "name": "Panorama Suite", "description": "Luxuriöse Suite mit Panoramablick" },
-        "juniorSuite": { "name": "Junior Suite", "description": "Elegante Suite mit separatem Wohnbereich" },
-        "deluxeZimmer": { "name": "De Luxe Zimmer", "description": "Deluxe-Zimmer mit Premium-Ausstattung" },
-        "klassikzimmer": { "name": "Klassikzimmer", "description": "Klassisches komfortables Zimmer" }
+        "juniorSuite": {
+          "name": "Junior Suite",
+          "description": "Elegante Suite mit separatem Wohnbereich"
+        },
+        "deluxeZimmer": {
+          "name": "De Luxe Zimmer",
+          "description": "Größeres Doppelzimmer, Platz für ein zusätzliches Erwachsenenbett"
+        },
+        "klassikzimmer": {
+          "name": "Klassikzimmer",
+          "description": "Doppelzimmer, Platz für ein Kinderbett aber nicht für ein Erwachsenenbett"
+        },
+        "turmSuite": {
+          "name": "Turm-Suite",
+          "description": "Geräumige Suite im Turm, Platz für zwei zusätzliche Doppelbetten"
+        },
+        "turmzimmer": {
+          "name": "Turmzimmer",
+          "description": "Kleiner als andere Burgzimmer, aber ideal für ein Paar — märchenhafter Charme"
+        },
+        "superiorzimmer": {
+          "name": "Superiorzimmer",
+          "description": "Sehr großes Zimmer mit Doppelbett, Platz für ein Zusatzbett (Kind oder Erwachsener)"
+        },
+        "komfortzimmer": {
+          "name": "Komfortzimmer",
+          "description": "Doppelzimmer in der Burg"
+        },
+        "gaestezimmer160": {
+          "name": "Gästezimmer (1,60 m Bett)",
+          "description": "Sehr kleines Zimmer, gemütlich für zwei, vielleicht eher für eine Person geeignet"
+        },
+        "gaestezimmer140": {
+          "name": "Gästezimmer (1,40 m Bett)",
+          "description": "Sehr kleines Zimmer, gemütlich für zwei, vielleicht eher für eine Person geeignet"
+        }
       }
     },
-    "airbnb": {
-      "title": "Airbnb & Ferienwohnungen",
-      "description": "Die Rheingau-Weinregion bietet fantastische Airbnb-Optionen! Übernachten Sie in einem charmanten Winzerhäuschen, einem traditionellen deutschen Weingut oder einer gemütlichen Wohnung mit atemberaubendem Talblick. Eine großartige Möglichkeit, in die lokale Atmosphäre einzutauchen."
-    },
-    "hotels": {
+    "alternatives": {
       "title": "Hotels in der Nähe",
-      "description": "Es gibt ausgezeichnete Hotels in der Umgebung in verschiedenen Preisklassen, von gemütlichen Pensionen bis zu Luxusunterkünften. Einige Optionen sind Hotels in Geisenheim, Rüdesheim und Wiesbaden."
+      "description": "Das nahe gelegene Geisenheim und die Umgebung bieten viele tolle Hotels und Pensionen zu erschwinglichen Preisen. Eine wunderbare Option, wenn Sie mehr Flexibilität bevorzugen oder die Region erkunden möchten.",
+      "geisenheim": "Nächstgelegener Ort, viele erschwingliche Hotels und Pensionen",
+      "ruedesheim": "Berühmte Weinstadt mit zahlreichen Unterkünften",
+      "wiesbaden": "Größere Stadt mit Luxushotels und Spa-Angeboten",
+      "mainz": "Historische Stadt mit vielen Unterkunftsarten",
+      "min5": "~5 Min. zum Veranstaltungsort",
+      "min10": "~10 Min. zum Veranstaltungsort",
+      "min25": "~25 Min. zum Veranstaltungsort",
+      "min30": "~30 Min. zum Veranstaltungsort"
     },
     "contact": {
       "title": "Kontakt",
       "description": "Für Zimmerreservierungen auf der Burg oder Fragen zur Unterkunft:",
       "email": "E-Mail",
       "phone": "Telefon/WhatsApp"
+    },
+    "introOption1": "Ein Hotel im nahen Geisenheim oder der Umgebung finden",
+    "introOption2": "Eine Airbnb- oder Ferienwohnung in der Rheingau-Weinregion buchen",
+    "introOption3": "Direkt auf Burg Schwarzenstein übernachten, wo die Hochzeit stattfindet",
+    "airbnb": {
+      "title": "Airbnb & Ferienwohnungen",
+      "description": "Die Rheingau-Weinregion bietet fantastische Airbnb-Optionen! Übernachten Sie in einem charmanten Winzerhäuschen, einem traditionellen deutschen Weingut oder einer gemütlichen Wohnung mit atemberaubendem Talblick. Eine großartige Möglichkeit, in die lokale Atmosphäre einzutauchen."
     }
   },
   "gifts": {

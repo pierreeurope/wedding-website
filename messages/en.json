@@ -240,9 +240,26 @@
       "error": "Something went wrong. Please try again or contact us directly.",
       "person": "person",
       "people": "people",
-      "contactTrouble": "Having trouble? Contact us directly:"
+      "contactTrouble": "Having trouble? Contact us directly:",
+      "perNight": "/night",
+      "roomCategories": {
+        "parkresidenz": "Parkresidenz",
+        "castle": "Castle Building (Burggebäude)",
+        "guesthouse": "Guest House (Gästehaus)"
+      }
     },
-    "weddingDate": "Wedding: Saturday, October 3rd, 2026"
+    "weddingDate": "Wedding: Saturday, October 3rd, 2026",
+    "rooms": {
+      "juniorSuite": "Junior Suite",
+      "deluxe": "De Luxe Room",
+      "classic": "Classic Room",
+      "towerSuite": "Tower Suite",
+      "towerRoom": "Tower Room",
+      "superior": "Superior Room",
+      "comfort": "Comfort Room",
+      "guestRoom160": "Guest Room (1.60m bed)",
+      "guestRoom140": "Guest Room (1.40m bed)"
+    }
   },
   "footer": {
     "madeWith": "Made with love",

@@ -240,9 +240,26 @@
       "error": "Une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
       "person": "personne",
       "people": "personnes",
-      "contactTrouble": "Un problème ? Contactez-nous directement :"
+      "contactTrouble": "Un problème ? Contactez-nous directement :",
+      "perNight": "/nuit",
+      "roomCategories": {
+        "parkresidenz": "Parkresidenz",
+        "castle": "Bâtiment du château (Burggebäude)",
+        "guesthouse": "Maison des invités (Gästehaus)"
+      }
     },
-    "weddingDate": "Mariage : samedi 3 octobre 2026"
+    "weddingDate": "Mariage : samedi 3 octobre 2026",
+    "rooms": {
+      "juniorSuite": "Suite Junior",
+      "deluxe": "Chambre De Luxe",
+      "classic": "Chambre Classique",
+      "towerSuite": "Suite de la Tour",
+      "towerRoom": "Chambre de la Tour",
+      "superior": "Chambre Supérieure",
+      "comfort": "Chambre Confort",
+      "guestRoom160": "Chambre d'Hôtes (lit 1,60 m)",
+      "guestRoom140": "Chambre d'Hôtes (lit 1,40 m)"
+    }
   },
   "footer": {
     "madeWith": "Fait avec amour",

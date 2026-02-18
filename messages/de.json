@@ -240,9 +240,26 @@
       "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
       "person": "Person",
       "people": "Personen",
-      "contactTrouble": "Probleme? Kontaktieren Sie uns direkt:"
+      "contactTrouble": "Probleme? Kontaktieren Sie uns direkt:",
+      "perNight": "/Nacht",
+      "roomCategories": {
+        "parkresidenz": "Parkresidenz",
+        "castle": "Burggebäude",
+        "guesthouse": "Gästehaus"
+      }
     },
-    "weddingDate": "Hochzeit: Samstag, 3. Oktober 2026"
+    "weddingDate": "Hochzeit: Samstag, 3. Oktober 2026",
+    "rooms": {
+      "juniorSuite": "Junior Suite",
+      "deluxe": "De Luxe Zimmer",
+      "classic": "Klassikzimmer",
+      "towerSuite": "Turm-Suite",
+      "towerRoom": "Turmzimmer",
+      "superior": "Superiorzimmer",
+      "comfort": "Komfortzimmer",
+      "guestRoom160": "Gästezimmer (1,60 m Bett)",
+      "guestRoom140": "Gästezimmer (1,40 m Bett)"
+    }
   },
   "footer": {
     "madeWith": "Mit Liebe gemacht",

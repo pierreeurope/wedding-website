@@ -3,23 +3,28 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-// Castle rooms available for booking (from Burg Schwarzenstein)
+// Room definitions with availability dates
+// Castle building rooms: only available Sat Oct 3 - Mon Oct 5
+// Parkresidenz & Guest House: available Fri Oct 2 - Mon Oct 5
 const CASTLE_ROOMS = [
-  // Castle Building (Burggebäude)
-  { id: 'turm-suite', name: 'Turm Suite', capacity: 2, price: '€340/night', description: 'Castle tower suite - the most romantic option', category: 'Castle' },
-  { id: 'turmzimmer', name: 'Turmzimmer', capacity: 2, price: '€260-340/night', description: 'Tower room with castle views', category: 'Castle' },
-  { id: 'superior-1', name: 'Superiorzimmer 1', capacity: 2, price: '€240-260/night', description: 'Superior room in the castle', category: 'Castle' },
-  { id: 'superior-2', name: 'Superiorzimmer 2', capacity: 2, price: '€240-260/night', description: 'Superior room in the castle', category: 'Castle' },
-  { id: 'komfort-1', name: 'Komfortzimmer 1', capacity: 2, price: '€220-240/night', description: 'Comfort room in the castle', category: 'Castle' },
-  { id: 'komfort-2', name: 'Komfortzimmer 2', capacity: 2, price: '€220-240/night', description: 'Comfort room in the castle', category: 'Castle' },
-  { id: 'komfort-3', name: 'Komfortzimmer 3', capacity: 2, price: '€220-240/night', description: 'Comfort room in the castle', category: 'Castle' },
-  // Park Residence (Parkresidenz)
-  { id: 'panorama-suite', name: 'Panorama Suite', capacity: 2, price: '€490/night', description: 'Luxurious suite with panoramic vineyard views', category: 'Park Residence' },
-  { id: 'junior-suite', name: 'Junior Suite', capacity: 2, price: '€270-340/night', description: 'Elegant junior suite', category: 'Park Residence' },
-  { id: 'deluxe', name: 'De Luxe Zimmer', capacity: 2, price: '€250-270/night', description: 'Spacious deluxe room', category: 'Park Residence' },
-  // Guest House (Gästehaus)
-  { id: 'gaestehaus-1', name: 'Gästehausszimmer (1.60m bed)', capacity: 2, price: '€180/night', description: 'Cozy guest house room with queen bed', category: 'Guest House' },
-  { id: 'gaestehaus-2', name: 'Gästehausszimmer (1.40m bed)', capacity: 2, price: '€160-180/night', description: 'Cozy guest house room with double bed', category: 'Guest House' },
+  // Parkresidenz (Fri Oct 2 - Mon Oct 5)
+  { id: 'junior-suite', nameKey: 'rooms.juniorSuite', price: 340, category: 'parkresidenz', earliestArrival: '2026-10-02' },
+  { id: 'deluxe', nameKey: 'rooms.deluxe', price: 270, category: 'parkresidenz', earliestArrival: '2026-10-02' },
+  { id: 'classic-1', nameKey: 'rooms.classic', price: 250, category: 'parkresidenz', earliestArrival: '2026-10-02', suffix: ' 1' },
+  { id: 'classic-2', nameKey: 'rooms.classic', price: 250, category: 'parkresidenz', earliestArrival: '2026-10-02', suffix: ' 2' },
+  { id: 'classic-3', nameKey: 'rooms.classic', price: 250, category: 'parkresidenz', earliestArrival: '2026-10-02', suffix: ' 3' },
+  // Castle Building (Sat Oct 3 - Mon Oct 5)
+  { id: 'turm-suite', nameKey: 'rooms.towerSuite', price: 340, category: 'castle', earliestArrival: '2026-10-03' },
+  { id: 'turmzimmer', nameKey: 'rooms.towerRoom', price: 260, category: 'castle', earliestArrival: '2026-10-03' },
+  { id: 'superior-1', nameKey: 'rooms.superior', price: 240, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 1' },
+  { id: 'superior-2', nameKey: 'rooms.superior', price: 240, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 2' },
+  { id: 'komfort-1', nameKey: 'rooms.comfort', price: 220, category: 'castle', earliestArrival: '2026-10-03' , suffix: ' 1' },
+  { id: 'komfort-2', nameKey: 'rooms.comfort', price: 220, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 2' },
+  { id: 'komfort-3', nameKey: 'rooms.comfort', price: 220, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 3' },
+  // Guest House (Fri Oct 2 - Mon Oct 5)
+  { id: 'gaestehaus-160', nameKey: 'rooms.guestRoom160', price: 160, category: 'guesthouse', earliestArrival: '2026-10-02' },
+  { id: 'gaestehaus-140-1', nameKey: 'rooms.guestRoom140', price: 160, category: 'guesthouse', earliestArrival: '2026-10-02', suffix: ' 1' },
+  { id: 'gaestehaus-140-2', nameKey: 'rooms.guestRoom140', price: 160, category: 'guesthouse', earliestArrival: '2026-10-02', suffix: ' 2' },
 ];
 
 interface RSVPFormData {
@@ -314,27 +319,33 @@ export default function RSVPPage() {
                       className="input-field"
                     >
                       <option value="">{t('form.noRoom')}</option>
-                      <optgroup label="🏰 Castle Building (Burggebäude)">
-                        {CASTLE_ROOMS.filter(r => r.category === 'Castle').map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {room.name} - {room.price}
-                          </option>
-                        ))}
-                      </optgroup>
-                      <optgroup label="🌳 Park Residence (Parkresidenz)">
-                        {CASTLE_ROOMS.filter(r => r.category === 'Park Residence').map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {room.name} - {room.price}
-                          </option>
-                        ))}
-                      </optgroup>
-                      <optgroup label="🏠 Guest House (Gästehaus)">
-                        {CASTLE_ROOMS.filter(r => r.category === 'Guest House').map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {room.name} - {room.price}
-                          </option>
-                        ))}
-                      </optgroup>
+                      {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz' && formData.arrivalDate <= r.earliestArrival).length > 0 && (
+                        <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
+                          {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz' && formData.arrivalDate <= r.earliestArrival).map((room) => (
+                            <option key={room.id} value={room.id}>
+                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                            </option>
+                          ))}
+                        </optgroup>
+                      )}
+                      {CASTLE_ROOMS.filter(r => r.category === 'castle' && formData.arrivalDate <= r.earliestArrival).length > 0 && (
+                        <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
+                          {CASTLE_ROOMS.filter(r => r.category === 'castle' && formData.arrivalDate <= r.earliestArrival).map((room) => (
+                            <option key={room.id} value={room.id}>
+                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                            </option>
+                          ))}
+                        </optgroup>
+                      )}
+                      {CASTLE_ROOMS.filter(r => r.category === 'guesthouse' && formData.arrivalDate <= r.earliestArrival).length > 0 && (
+                        <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
+                          {CASTLE_ROOMS.filter(r => r.category === 'guesthouse' && formData.arrivalDate <= r.earliestArrival).map((room) => (
+                            <option key={room.id} value={room.id}>
+                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                            </option>
+                          ))}
+                        </optgroup>
+                      )}
                     </select>
                   </div>
 

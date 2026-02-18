@@ -204,7 +204,8 @@
       "bic": "BIC / SWIFT",
       "cashOnSite": "Une enveloppe avec un peu d'argent le jour J est aussi tout à fait bienvenue."
     },
-    "contact": "Des questions sur les cadeaux ? Contactez-nous !"
+    "contact": "Des questions sur les cadeaux ? Contactez-nous !",
+    "physicalGifts": "Nous ajouterons bientôt une liste d'idées cadeaux pour ceux qui préfèrent offrir un cadeau physique. Cela nous ferait tout autant plaisir !"
   },
   "rsvp": {
     "title": "RSVP",

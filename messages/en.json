@@ -204,7 +204,8 @@
       "bic": "BIC / SWIFT code",
       "cashOnSite": "A letter with cash on the day is also completely fine."
     },
-    "contact": "Questions about gifts? Get in touch!"
+    "contact": "Questions about gifts? Get in touch!",
+    "physicalGifts": "We will also soon add a list of gift ideas for those who prefer to give a physical present. That would be equally appreciated!"
   },
   "rsvp": {
     "title": "RSVP",

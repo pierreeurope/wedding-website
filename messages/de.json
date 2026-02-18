@@ -204,7 +204,8 @@
       "bic": "BIC / SWIFT-Code",
       "cashOnSite": "Ein Briefumschlag mit Bargeld am Tag der Hochzeit ist ebenfalls völlig in Ordnung."
     },
-    "contact": "Fragen zu Geschenken? Melden Sie sich!"
+    "contact": "Fragen zu Geschenken? Melden Sie sich!",
+    "physicalGifts": "Wir werden auch bald eine Liste mit Geschenkideen hinzufügen, falls Sie lieber ein richtiges Geschenk machen möchten. Darüber würden wir uns genauso freuen!"
   },
   "rsvp": {
     "title": "RSVP",

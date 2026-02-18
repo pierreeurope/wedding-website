@@ -319,33 +319,27 @@ export default function RSVPPage() {
                       className="input-field"
                     >
                       <option value="">{t('form.noRoom')}</option>
-                      {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz' && formData.arrivalDate <= r.earliestArrival).length > 0 && (
-                        <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
-                          {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz' && formData.arrivalDate <= r.earliestArrival).map((room) => (
-                            <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                            </option>
-                          ))}
-                        </optgroup>
-                      )}
-                      {CASTLE_ROOMS.filter(r => r.category === 'castle' && formData.arrivalDate <= r.earliestArrival).length > 0 && (
-                        <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
-                          {CASTLE_ROOMS.filter(r => r.category === 'castle' && formData.arrivalDate <= r.earliestArrival).map((room) => (
-                            <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                            </option>
-                          ))}
-                        </optgroup>
-                      )}
-                      {CASTLE_ROOMS.filter(r => r.category === 'guesthouse' && formData.arrivalDate <= r.earliestArrival).length > 0 && (
-                        <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
-                          {CASTLE_ROOMS.filter(r => r.category === 'guesthouse' && formData.arrivalDate <= r.earliestArrival).map((room) => (
-                            <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                            </option>
-                          ))}
-                        </optgroup>
-                      )}
+                      <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
+                        {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz').map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
+                        {CASTLE_ROOMS.filter(r => r.category === 'castle').map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
+                        {CASTLE_ROOMS.filter(r => r.category === 'guesthouse').map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                          </option>
+                        ))}
+                      </optgroup>
                     </select>
                   </div>
 

@@ -163,7 +163,8 @@
           "name": "Chambre d'Hôtes (lit 1,40 m)",
           "description": "Très petite chambre, cosy pour deux, peut-être plus adaptée pour une personne"
         }
-      }
+      },
+      "perNight": "/nuit"
     },
     "alternatives": {
       "title": "Hôtels à proximité",
@@ -179,9 +180,10 @@
     },
     "contact": {
       "title": "Nous contacter",
-      "description": "Pour les réservations de chambres au château ou toute question d'hébergement :",
+      "description": "Pour les réservations de chambres au château ou toute question sur l'hébergement, appelez-nous ou envoyez-nous un message :",
       "email": "Email",
-      "phone": "Téléphone/WhatsApp"
+      "phone": "Téléphone/WhatsApp",
+      "or": "ou"
     },
     "introOption1": "Trouver un hôtel dans la ville voisine de Geisenheim ou ses environs",
     "introOption2": "Réserver un Airbnb ou une location de vacances dans la région viticole du Rheingau",

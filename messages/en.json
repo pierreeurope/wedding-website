@@ -163,7 +163,8 @@
           "name": "Guest Room (1.40m bed)",
           "description": "Very small room, cozy for two, may be more suited for one person"
         }
-      }
+      },
+      "perNight": "/night"
     },
     "alternatives": {
       "title": "Nearby Hotels",
@@ -179,9 +180,10 @@
     },
     "contact": {
       "title": "Contact Us",
-      "description": "For room reservations at the castle or any accommodation questions:",
+      "description": "For room reservations at the castle or any accommodation questions, give us a call or send a message:",
       "email": "Email",
-      "phone": "Phone/WhatsApp"
+      "phone": "Phone/WhatsApp",
+      "or": "or"
     },
     "introOption1": "Find a hotel in the nearby town of Geisenheim or surrounding area",
     "introOption2": "Book an Airbnb or vacation rental in the Rheingau wine region",

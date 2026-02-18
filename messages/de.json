@@ -163,7 +163,8 @@
           "name": "Gästezimmer (1,40 m Bett)",
           "description": "Sehr kleines Zimmer, gemütlich für zwei, vielleicht eher für eine Person geeignet"
         }
-      }
+      },
+      "perNight": "/Nacht"
     },
     "alternatives": {
       "title": "Hotels in der Nähe",
@@ -179,9 +180,10 @@
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Für Zimmerreservierungen auf der Burg oder Fragen zur Unterkunft:",
+      "description": "Für Zimmerreservierungen auf der Burg oder Fragen zur Unterkunft, rufen Sie uns an oder schreiben Sie uns:",
       "email": "E-Mail",
-      "phone": "Telefon/WhatsApp"
+      "phone": "Telefon/WhatsApp",
+      "or": "oder"
     },
     "introOption1": "Ein Hotel im nahen Geisenheim oder der Umgebung finden",
     "introOption2": "Eine Airbnb- oder Ferienwohnung in der Rheingau-Weinregion buchen",

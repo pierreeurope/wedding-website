@@ -180,9 +180,9 @@ function AccommodationPageClient() {
               </h3>
               <p className="text-primary-500 text-sm mt-2 mb-4 italic">{t('castle.sections.parkresidenzDesc')}</p>
               <div className="grid md:grid-cols-2 gap-4">
-                <RoomCard name={t('castle.rooms.juniorSuite.name')} description={t('castle.rooms.juniorSuite.description')} price="€340/night" available={t('castle.availableOne')} />
-                <RoomCard name={t('castle.rooms.deluxeZimmer.name')} description={t('castle.rooms.deluxeZimmer.description')} price="€270/night" available={t('castle.availableOne')} />
-                <RoomCard name={t('castle.rooms.klassikzimmer.name')} description={t('castle.rooms.klassikzimmer.description')} price="€250/night" available={t('castle.availableThree')} />
+                <RoomCard name={t('castle.rooms.juniorSuite.name')} description={t('castle.rooms.juniorSuite.description')} price={`€340${t('castle.perNight')}`} available={t('castle.availableOne')} />
+                <RoomCard name={t('castle.rooms.deluxeZimmer.name')} description={t('castle.rooms.deluxeZimmer.description')} price={`€270${t('castle.perNight')}`} available={t('castle.availableOne')} />
+                <RoomCard name={t('castle.rooms.klassikzimmer.name')} description={t('castle.rooms.klassikzimmer.description')} price={`€250${t('castle.perNight')}`} available={t('castle.availableThree')} />
               </div>
             </div>
 
@@ -194,10 +194,10 @@ function AccommodationPageClient() {
               </h3>
               <p className="text-primary-500 text-sm mt-2 mb-4 italic">{t('castle.sections.burggebauedeDesc')}</p>
               <div className="grid md:grid-cols-2 gap-4">
-                <RoomCard name={t('castle.rooms.turmSuite.name')} description={t('castle.rooms.turmSuite.description')} price="€340/night" available={t('castle.availableOne')} />
-                <RoomCard name={t('castle.rooms.turmzimmer.name')} description={t('castle.rooms.turmzimmer.description')} price="€260/night" available={t('castle.availableOne')} />
-                <RoomCard name={t('castle.rooms.superiorzimmer.name')} description={t('castle.rooms.superiorzimmer.description')} price="€240/night" available={t('castle.availableTwo')} />
-                <RoomCard name={t('castle.rooms.komfortzimmer.name')} description={t('castle.rooms.komfortzimmer.description')} price="€220/night" available={t('castle.availableThree')} />
+                <RoomCard name={t('castle.rooms.turmSuite.name')} description={t('castle.rooms.turmSuite.description')} price={`€340${t('castle.perNight')}`} available={t('castle.availableOne')} />
+                <RoomCard name={t('castle.rooms.turmzimmer.name')} description={t('castle.rooms.turmzimmer.description')} price={`€260${t('castle.perNight')}`} available={t('castle.availableOne')} />
+                <RoomCard name={t('castle.rooms.superiorzimmer.name')} description={t('castle.rooms.superiorzimmer.description')} price={`€240${t('castle.perNight')}`} available={t('castle.availableTwo')} />
+                <RoomCard name={t('castle.rooms.komfortzimmer.name')} description={t('castle.rooms.komfortzimmer.description')} price={`€220${t('castle.perNight')}`} available={t('castle.availableThree')} />
               </div>
             </div>
 
@@ -209,8 +209,8 @@ function AccommodationPageClient() {
               </h3>
               <p className="text-primary-500 text-sm mt-2 mb-4 italic">{t('castle.sections.gaestehausDesc')}</p>
               <div className="grid md:grid-cols-2 gap-4">
-                <RoomCard name={t('castle.rooms.gaestezimmer160.name')} description={t('castle.rooms.gaestezimmer160.description')} price="€160/night" available={t('castle.availableOne')} />
-                <RoomCard name={t('castle.rooms.gaestezimmer140.name')} description={t('castle.rooms.gaestezimmer140.description')} price="€160/night" available={t('castle.availableTwo')} />
+                <RoomCard name={t('castle.rooms.gaestezimmer160.name')} description={t('castle.rooms.gaestezimmer160.description')} price={`€160${t('castle.perNight')}`} available={t('castle.availableOne')} />
+                <RoomCard name={t('castle.rooms.gaestezimmer140.name')} description={t('castle.rooms.gaestezimmer140.description')} price={`€160${t('castle.perNight')}`} available={t('castle.availableTwo')} />
               </div>
             </div>
             
@@ -243,13 +243,16 @@ function AccommodationPageClient() {
           <p className="text-primary-200 mb-6">{t('contact.description')}</p>
           <div className="space-y-2">
             <p>
-              <a href="mailto:pierre.blanchet.engineer@gmail.com" className="text-gold-300 hover:text-gold-200">
-                pierre.blanchet.engineer@gmail.com
-              </a>
-            </p>
-            <p>
+              <span className="font-medium">{t('contact.phone')}:</span>{' '}
               <a href="tel:+33649362491" className="text-gold-300 hover:text-gold-200">
                 +33 6 49 36 24 91
+              </a>
+            </p>
+            <p className="text-primary-300 text-sm">{t('contact.or')}</p>
+            <p>
+              <span className="font-medium">{t('contact.email')}:</span>{' '}
+              <a href="mailto:pierre.blanchet.engineer@gmail.com" className="text-gold-300 hover:text-gold-200">
+                pierre.blanchet.engineer@gmail.com
               </a>
             </p>
           </div>

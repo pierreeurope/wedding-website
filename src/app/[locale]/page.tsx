@@ -108,7 +108,7 @@ function HomePageClient() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="section-title">Burg Schwarzenstein</h2>
-            <p className="section-subtitle">Rheingau Wine Region, Germany</p>
+            <p className="section-subtitle">{t('venueSubtitle')}</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-4">
@@ -140,7 +140,7 @@ function HomePageClient() {
           
           <div className="text-center mt-12">
             <Link href="/venue" className="btn-secondary">
-              Learn More
+              {t('learnMore')}
             </Link>
           </div>
         </div>
@@ -152,20 +152,20 @@ function HomePageClient() {
           <div className="grid md:grid-cols-3 gap-8">
             <Link href="/schedule" className="card bg-primary-700/50 border-primary-600 text-center group hover:bg-primary-700/70">
               <div className="text-gold-400 text-4xl mb-4">📅</div>
-              <h3 className="font-serif text-2xl mb-2 text-white group-hover:text-gold-300 transition-colors">Schedule</h3>
-              <p className="text-primary-200 text-sm">View the wedding day timeline</p>
+              <h3 className="font-serif text-2xl mb-2 text-white group-hover:text-gold-300 transition-colors">{t('scheduleTitle')}</h3>
+              <p className="text-primary-200 text-sm">{t('scheduleDesc')}</p>
             </Link>
             
             <Link href="/travel" className="card bg-primary-700/50 border-primary-600 text-center group hover:bg-primary-700/70">
               <div className="text-gold-400 text-4xl mb-4">✈️</div>
-              <h3 className="font-serif text-2xl mb-2 text-white group-hover:text-gold-300 transition-colors">Getting There</h3>
-              <p className="text-primary-200 text-sm">Travel information & directions</p>
+              <h3 className="font-serif text-2xl mb-2 text-white group-hover:text-gold-300 transition-colors">{t('travelTitle')}</h3>
+              <p className="text-primary-200 text-sm">{t('travelDesc')}</p>
             </Link>
             
             <Link href="/accommodation" className="card bg-primary-700/50 border-primary-600 text-center group hover:bg-primary-700/70">
               <div className="text-gold-400 text-4xl mb-4">🏰</div>
-              <h3 className="font-serif text-2xl mb-2 text-white group-hover:text-gold-300 transition-colors">Accommodation</h3>
-              <p className="text-primary-200 text-sm">Where to stay</p>
+              <h3 className="font-serif text-2xl mb-2 text-white group-hover:text-gold-300 transition-colors">{t('accommodationTitle')}</h3>
+              <p className="text-primary-200 text-sm">{t('accommodationDesc')}</p>
             </Link>
           </div>
         </div>

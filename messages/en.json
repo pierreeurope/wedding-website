@@ -16,7 +16,15 @@
     "location": "Burg Schwarzenstein, Geisenheim, Germany",
     "welcome": "We can't wait to celebrate with you!",
     "ourStory": "Our Story",
-    "ourStoryText": "We met in the most wonderful and unexpected way. After an incredible proposal under the Northern Lights, we are delighted to have announced our marriage and would love to share this special day with you."
+    "ourStoryText": "We met in the most wonderful and unexpected way. After an incredible proposal under the Northern Lights, we are delighted to have announced our marriage and would love to share this special day with you.",
+    "venueSubtitle": "Rheingau Wine Region, Germany",
+    "learnMore": "Learn More",
+    "scheduleTitle": "Schedule",
+    "scheduleDesc": "View the wedding day timeline",
+    "travelTitle": "Getting There",
+    "travelDesc": "Travel information & directions",
+    "accommodationTitle": "Accommodation",
+    "accommodationDesc": "Where to stay"
   },
   "schedule": {
     "title": "Wedding Schedule",

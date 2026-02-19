@@ -16,7 +16,15 @@
     "location": "Burg Schwarzenstein, Geisenheim, Deutschland",
     "welcome": "Wir freuen uns darauf, mit Ihnen zu feiern!",
     "ourStory": "Unsere Geschichte",
-    "ourStoryText": "Wir haben uns auf die wunderbarste und unerwartetste Weise kennengelernt. Nach einem unglaublichen Heiratsantrag unter den Nordlichtern freuen wir uns sehr, unsere Hochzeit angekündigt zu haben, und möchten diesen besonderen Tag mit Ihnen teilen."
+    "ourStoryText": "Wir haben uns auf die wunderbarste und unerwartetste Weise kennengelernt. Nach einem unglaublichen Heiratsantrag unter den Nordlichtern freuen wir uns sehr, unsere Hochzeit angekündigt zu haben, und möchten diesen besonderen Tag mit Ihnen teilen.",
+    "venueSubtitle": "Rheingau-Weinregion, Deutschland",
+    "learnMore": "Mehr erfahren",
+    "scheduleTitle": "Ablauf",
+    "scheduleDesc": "Der Zeitplan des Hochzeitstages",
+    "travelTitle": "Anreise",
+    "travelDesc": "Reiseinformationen und Wegbeschreibung",
+    "accommodationTitle": "Übernachtung",
+    "accommodationDesc": "Unterkunftsmöglichkeiten"
   },
   "schedule": {
     "title": "Hochzeitsablauf",

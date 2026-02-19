@@ -16,7 +16,15 @@
     "location": "Burg Schwarzenstein, Geisenheim, Allemagne",
     "welcome": "Nous avons hâte de célébrer avec vous !",
     "ourStory": "Notre Histoire",
-    "ourStoryText": "Nous nous sommes rencontrés de la plus belle et inattendue des manières. Après une demande en mariage incroyable sous les aurores boréales, nous sommes très heureux d'avoir annoncé notre mariage et aimerions partager ce jour spécial avec vous."
+    "ourStoryText": "Nous nous sommes rencontrés de la plus belle et inattendue des manières. Après une demande en mariage incroyable sous les aurores boréales, nous sommes très heureux d'avoir annoncé notre mariage et aimerions partager ce jour spécial avec vous.",
+    "venueSubtitle": "Région viticole du Rheingau, Allemagne",
+    "learnMore": "En savoir plus",
+    "scheduleTitle": "Programme",
+    "scheduleDesc": "Le déroulement de la journée",
+    "travelTitle": "S'y rendre",
+    "travelDesc": "Informations de voyage et itinéraires",
+    "accommodationTitle": "Hébergement",
+    "accommodationDesc": "Où dormir"
   },
   "schedule": {
     "title": "Programme du Mariage",

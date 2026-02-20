@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
 // Room definitions with availability dates
@@ -58,6 +58,21 @@ export default function RSVPPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [bookedRooms, setBookedRooms] = useState<string[]>([]);
+
+  // Fetch booked rooms on mount
+  useEffect(() => {
+    const fetchBookedRooms = async () => {
+      try {
+        const res = await fetch('/api/rsvp/rooms');
+        const data = await res.json();
+        setBookedRooms(data.bookedRooms || []);
+      } catch (error) {
+        console.error('Error fetching booked rooms:', error);
+      }
+    };
+    fetchBookedRooms();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -320,25 +335,37 @@ export default function RSVPPage() {
                     >
                       <option value="">{t('form.noRoom')}</option>
                       <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
-                        {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz').map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                          </option>
-                        ))}
+                        {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz').map((room) => {
+                          const isBooked = bookedRooms.includes(room.id);
+                          return (
+                            <option key={room.id} value={room.id} disabled={isBooked}>
+                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                              {isBooked ? ` ${t('form.roomBooked')}` : ''}
+                            </option>
+                          );
+                        })}
                       </optgroup>
                       <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
-                        {CASTLE_ROOMS.filter(r => r.category === 'castle').map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                          </option>
-                        ))}
+                        {CASTLE_ROOMS.filter(r => r.category === 'castle').map((room) => {
+                          const isBooked = bookedRooms.includes(room.id);
+                          return (
+                            <option key={room.id} value={room.id} disabled={isBooked}>
+                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                              {isBooked ? ` ${t('form.roomBooked')}` : ''}
+                            </option>
+                          );
+                        })}
                       </optgroup>
                       <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
-                        {CASTLE_ROOMS.filter(r => r.category === 'guesthouse').map((room) => (
-                          <option key={room.id} value={room.id}>
-                            {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                          </option>
-                        ))}
+                        {CASTLE_ROOMS.filter(r => r.category === 'guesthouse').map((room) => {
+                          const isBooked = bookedRooms.includes(room.id);
+                          return (
+                            <option key={room.id} value={room.id} disabled={isBooked}>
+                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                              {isBooked ? ` ${t('form.roomBooked')}` : ''}
+                            </option>
+                          );
+                        })}
                       </optgroup>
                     </select>
                   </div>

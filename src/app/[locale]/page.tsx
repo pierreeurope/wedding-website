@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/routing';
+import CountdownTimer from '@/components/CountdownTimer';
 
 export default function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   return <HomePageContent params={params} />;
@@ -47,9 +48,10 @@ function HomePageClient() {
           <p className="hero-text-shadow-strong font-serif text-2xl md:text-3xl mb-4 text-gold-200 font-semibold">
             {t('date')}
           </p>
-          <p className="hero-text-shadow text-lg text-white font-medium mb-12">
+          <p className="hero-text-shadow text-lg text-white font-medium mb-8">
             {t('location')}
           </p>
+          <CountdownTimer />
           <Link href="/rsvp" className="btn-primary bg-white/20 border-white hover:bg-white hover:text-primary-800 font-semibold shadow-lg">
             RSVP
           </Link>

@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react';
 
-const ADMIN_PASSWORD = 'wordl';
-
 interface RSVPEntry {
   id: string;
   name: string;
@@ -29,31 +27,49 @@ interface GiftClaim {
 export default function AdminPage() {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [adminPassword, setAdminPassword] = useState('');
   const [rsvps, setRsvps] = useState<RSVPEntry[]>([]);
   const [giftClaims, setGiftClaims] = useState<Record<string, GiftClaim>>({});
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<'rsvps' | 'gifts'>('rsvps');
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (password === ADMIN_PASSWORD) {
-      setIsAuthenticated(true);
-      loadData();
-    } else {
-      alert('Incorrect password');
+    try {
+      const res = await fetch('/api/admin/auth', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      });
+
+      if (res.ok) {
+        setAdminPassword(password);
+        setIsAuthenticated(true);
+        loadData(password);
+      } else {
+        alert('Incorrect password');
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Login failed');
     }
   };
 
-  const loadData = async () => {
+  const loadData = async (pwd?: string) => {
+    const authPassword = pwd || adminPassword;
     setLoading(true);
     try {
       // Load RSVPs
-      const rsvpRes = await fetch('/api/rsvp');
+      const rsvpRes = await fetch('/api/rsvp', {
+        headers: { 'x-admin-password': authPassword }
+      });
       const rsvpData = await rsvpRes.json();
       setRsvps(rsvpData.data || []);
 
       // Load gift claims
-      const giftRes = await fetch('/api/gifts/admin');
+      const giftRes = await fetch('/api/gifts/admin', {
+        headers: { 'x-admin-password': authPassword }
+      });
       const giftData = await giftRes.json();
       setGiftClaims(giftData.claims || {});
     } catch (error) {
@@ -99,7 +115,7 @@ export default function AdminPage() {
         <div className="flex justify-between items-center mb-8">
           <h1 className="font-serif text-3xl text-primary-800">Wedding Admin</h1>
           <button 
-            onClick={loadData} 
+            onClick={() => loadData()} 
             className="btn-secondary text-sm"
             disabled={loading}
           >

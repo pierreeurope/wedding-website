@@ -24,12 +24,19 @@
     "travelTitle": "S'y rendre",
     "travelDesc": "Informations de voyage et itinéraires",
     "accommodationTitle": "Hébergement",
-    "accommodationDesc": "Où dormir"
+    "accommodationDesc": "Où dormir",
+    "countdown": {
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes"
+    }
   },
   "schedule": {
     "title": "Programme du Mariage",
     "subtitle": "Rejoignez-nous pour un week-end de célébration",
     "addressLabel": "Adresse",
+    "addToCalendar": "Ajouter au calendrier",
     "saturday": "Samedi 3 octobre",
     "sunday": "Dimanche 4 octobre",
     "ceremony": {
@@ -255,7 +262,8 @@
         "parkresidenz": "Parkresidenz",
         "castle": "Bâtiment du château (Burggebäude)",
         "guesthouse": "Maison des invités (Gästehaus)"
-      }
+      },
+      "roomBooked": "(Réservé)"
     },
     "weddingDate": "Mariage : samedi 3 octobre 2026",
     "rooms": {

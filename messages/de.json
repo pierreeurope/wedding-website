@@ -24,12 +24,19 @@
     "travelTitle": "Anreise",
     "travelDesc": "Reiseinformationen und Wegbeschreibung",
     "accommodationTitle": "Übernachtung",
-    "accommodationDesc": "Unterkunftsmöglichkeiten"
+    "accommodationDesc": "Unterkunftsmöglichkeiten",
+    "countdown": {
+      "days": "Tage",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "seconds": "Sekunden"
+    }
   },
   "schedule": {
     "title": "Hochzeitsablauf",
     "subtitle": "Feiern Sie mit uns ein unvergessliches Wochenende",
     "addressLabel": "Adresse",
+    "addToCalendar": "Zum Kalender hinzufügen",
     "saturday": "Samstag, 3. Oktober",
     "sunday": "Sonntag, 4. Oktober",
     "ceremony": {
@@ -255,7 +262,8 @@
         "parkresidenz": "Parkresidenz",
         "castle": "Burggebäude",
         "guesthouse": "Gästehaus"
-      }
+      },
+      "roomBooked": "(Gebucht)"
     },
     "weddingDate": "Hochzeit: Samstag, 3. Oktober 2026",
     "rooms": {

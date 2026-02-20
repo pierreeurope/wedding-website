@@ -46,6 +46,21 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    // Check authentication via cookie or header
+    const cookie = request.cookies.get('site-auth');
+    const adminPasswordHeader = request.headers.get('x-admin-password');
+    const adminPassword = process.env.ADMIN_PASSWORD;
+    
+    const isAuthenticatedViaCookie = cookie?.value === 'authenticated';
+    const isAuthenticatedViaHeader = adminPasswordHeader && adminPassword && adminPasswordHeader === adminPassword;
+    
+    if (!isAuthenticatedViaCookie && !isAuthenticatedViaHeader) {
+      return NextResponse.json(
+        { error: 'Unauthorized' },
+        { status: 401 }
+      );
+    }
+    
     const { searchParams } = new URL(request.url);
     const statsOnly = searchParams.get('stats') === 'true';
     

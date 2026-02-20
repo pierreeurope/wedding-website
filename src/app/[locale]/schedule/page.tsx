@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import AddToCalendar from '@/components/AddToCalendar';
 
 export default function SchedulePage({ params }: { params: Promise<{ locale: string }> }) {
   return <SchedulePageContent params={params} />;
@@ -22,6 +23,9 @@ function SchedulePageClient() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="section-title">{t('title')}</h1>
           <p className="section-subtitle">{t('subtitle')}</p>
+          <div className="mt-6">
+            <AddToCalendar />
+          </div>
         </div>
       </section>
 

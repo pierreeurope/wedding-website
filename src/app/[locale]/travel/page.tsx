@@ -157,7 +157,7 @@ function TravelPageClient() {
           <h3 className="font-serif text-2xl text-primary-800 mb-8">Interactive Map</h3>
           <div className="bg-white p-4 shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.7!2d7.9695!3d50.0007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bdc9b7b7b7b7b7%3A0x0!2sBurg%20Schwarzenstein!5e0!3m2!1sen!2sde!4v1"
+              src="https://www.google.com/maps?q=Burg+Schwarzenstein,+Rosengasse+32,+65366+Geisenheim,+Germany&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}

@@ -1,16 +1,62 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+
+// Inline translations for the login page (outside [locale] routing)
+const translations = {
+  en: {
+    title: "Amalie & Pierre",
+    welcome: "Welcome",
+    instruction: "Please enter the password from your invitation",
+    passwordLabel: "Password",
+    submitButton: "Enter",
+    errorMessage: "Incorrect password. Please try again.",
+    loadingMessage: "Checking..."
+  },
+  fr: {
+    title: "Amalie & Pierre",
+    welcome: "Bienvenue",
+    instruction: "Veuillez entrer le mot de passe de votre invitation",
+    passwordLabel: "Mot de passe",
+    submitButton: "Entrer",
+    errorMessage: "Mot de passe incorrect. Veuillez réessayer.",
+    loadingMessage: "Vérification..."
+  },
+  de: {
+    title: "Amalie & Pierre",
+    welcome: "Willkommen",
+    instruction: "Bitte geben Sie das Passwort von Ihrer Einladung ein",
+    passwordLabel: "Passwort",
+    submitButton: "Eintreten",
+    errorMessage: "Falsches Passwort. Bitte versuchen Sie es erneut.",
+    loadingMessage: "Wird geprüft..."
+  }
+};
+
+function getLanguage(): 'en' | 'fr' | 'de' {
+  if (typeof navigator === 'undefined') return 'en';
+  const lang = navigator.language.toLowerCase();
+  if (lang.startsWith('fr')) return 'fr';
+  if (lang.startsWith('de')) return 'de';
+  return 'en';
+}
 
 function LoginForm() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [lang, setLang] = useState<'en' | 'fr' | 'de'>('en');
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirect = searchParams.get('redirect') || '/';
+
+  useEffect(() => {
+    setLang(getLanguage());
+  }, []);
+
+  const t = translations[lang];
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,16 +90,16 @@ function LoginForm() {
         {/* Decorative element */}
         <div className="mb-8">
           <p className="font-serif text-primary-400 text-lg tracking-widest uppercase mb-2">
-            Amalie & Pierre
+            {t.title}
           </p>
           <div className="w-16 h-px bg-gold-400 mx-auto" />
         </div>
 
         <h1 className="font-serif text-3xl md:text-4xl font-light text-primary-800 mb-2">
-          Welcome
+          {t.welcome}
         </h1>
         <p className="text-primary-500 font-light mb-10">
-          Please enter the password from your invitation
+          {t.instruction}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -62,7 +108,7 @@ function LoginForm() {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
+              placeholder={t.passwordLabel}
               className="input-field text-center tracking-widest"
               autoFocus
               required
@@ -71,7 +117,7 @@ function LoginForm() {
 
           {error && (
             <p className="text-red-600 text-sm font-light">
-              Incorrect password. Please try again.
+              {t.errorMessage}
             </p>
           )}
 
@@ -80,7 +126,7 @@ function LoginForm() {
             disabled={loading}
             className="btn-primary w-full disabled:opacity-50"
           >
-            {loading ? 'Checking...' : 'Enter'}
+            {loading ? t.loadingMessage : t.submitButton}
           </button>
         </form>
 

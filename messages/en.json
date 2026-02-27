@@ -16,7 +16,7 @@
     "location": "Burg Schwarzenstein, Geisenheim, Germany",
     "welcome": "We can't wait to celebrate with you!",
     "ourStory": "Our Story",
-    "ourStoryText": "We met in the most wonderful and unexpected way. After an incredible proposal under the Northern Lights, we are delighted to have announced our marriage and would love to share this special day with you.",
+    "ourStoryText": "The joke goes like this: an art historian and an aeroplane engineer walk into a bank. They come out married... or almost married, after a proposal under the Northern Lights. We are delighted to announce our marriage and celebrate this special day with you.",
     "venueSubtitle": "Rheingau Wine Region, Germany",
     "learnMore": "Learn More",
     "scheduleTitle": "Schedule",
@@ -35,13 +35,14 @@
   "schedule": {
     "title": "Wedding Schedule",
     "subtitle": "Join us for a weekend of celebration",
+    "timingNote": "The detailed timeline is still being finalized. We'll update this page as the day takes shape.",
     "addressLabel": "Address",
     "addToCalendar": "Add to Calendar",
     "saturday": "Saturday, October 3rd",
     "sunday": "Sunday, October 4th",
     "ceremony": {
       "title": "Church Ceremony",
-      "time": "12:00 PM",
+      "time": "To be announced",
       "location": "Lutheran Church Geisenheim",
       "address": "Lutheran Church Geisenheim, Geisenheim",
       "description": "Join us for our church wedding ceremony at the beautiful Lutheran Church in Geisenheim."
@@ -184,12 +185,14 @@
     "alternatives": {
       "title": "Nearby Hotels",
       "description": "The nearby town of Geisenheim and the surrounding area have many great hotels and guesthouses at affordable prices. This is a wonderful option if you prefer more flexibility or want to explore the region.",
+      "ourSuggestions": "Here are some hotels we recommend in the area:",
       "geisenheim": "Closest town, many affordable hotels and guesthouses",
       "ruedesheim": "Famous wine town with plenty of accommodation",
       "wiesbaden": "Larger city with luxury hotels and spa options",
       "mainz": "Historic city with many accommodation types",
       "min5": "~5 min to venue",
       "min10": "~10 min to venue",
+      "min15": "~15 min to venue",
       "min25": "~25 min to venue",
       "min30": "~30 min to venue"
     },

@@ -16,7 +16,7 @@
     "location": "Burg Schwarzenstein, Geisenheim, Allemagne",
     "welcome": "Nous avons hâte de célébrer avec vous !",
     "ourStory": "Notre Histoire",
-    "ourStoryText": "Nous nous sommes rencontrés de la plus belle et inattendue des manières. Après une demande en mariage incroyable sous les aurores boréales, nous sommes très heureux d'avoir annoncé notre mariage et aimerions partager ce jour spécial avec vous.",
+    "ourStoryText": "La blague va comme ca : une historienne de l'art et un ingenieur aeronautique entrent dans une banque. Ils en ressortent maries... ou presque maries, apres une demande en mariage sous les aurores boreales. Nous sommes ravis d'annoncer notre mariage et de celebrer ce jour special avec vous.",
     "venueSubtitle": "Région viticole du Rheingau, Allemagne",
     "learnMore": "En savoir plus",
     "scheduleTitle": "Programme",
@@ -35,13 +35,14 @@
   "schedule": {
     "title": "Programme du Mariage",
     "subtitle": "Rejoignez-nous pour un week-end de célébration",
+    "timingNote": "L'horaire detaille est encore en cours de finalisation. Nous mettrons cette page a jour au fil de l'organisation.",
     "addressLabel": "Adresse",
     "addToCalendar": "Ajouter au calendrier",
     "saturday": "Samedi 3 octobre",
     "sunday": "Dimanche 4 octobre",
     "ceremony": {
       "title": "Cérémonie religieuse",
-      "time": "12h00",
+      "time": "A confirmer",
       "location": "Église luthérienne de Geisenheim",
       "address": "Église luthérienne de Geisenheim, Geisenheim",
       "description": "Rejoignez-nous pour notre cérémonie de mariage dans la magnifique église luthérienne de Geisenheim."
@@ -184,12 +185,14 @@
     "alternatives": {
       "title": "Hôtels à proximité",
       "description": "La ville voisine de Geisenheim et ses environs offrent de nombreux hôtels et maisons d'hôtes à des prix abordables. C'est une excellente option si vous préférez plus de flexibilité ou souhaitez explorer la région.",
+      "ourSuggestions": "Voici quelques hôtels que nous recommandons dans la région :",
       "geisenheim": "Ville la plus proche, nombreux hôtels et pensions abordables",
       "ruedesheim": "Célèbre ville viticole avec de nombreux hébergements",
       "wiesbaden": "Grande ville avec hôtels de luxe et options spa",
       "mainz": "Ville historique avec de nombreux types d'hébergement",
       "min5": "~5 min du lieu",
       "min10": "~10 min du lieu",
+      "min15": "~15 min du lieu",
       "min25": "~25 min du lieu",
       "min30": "~30 min du lieu"
     },

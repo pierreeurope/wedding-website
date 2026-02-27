@@ -16,7 +16,7 @@
     "location": "Burg Schwarzenstein, Geisenheim, Deutschland",
     "welcome": "Wir freuen uns darauf, mit Ihnen zu feiern!",
     "ourStory": "Unsere Geschichte",
-    "ourStoryText": "Wir haben uns auf die wunderbarste und unerwartetste Weise kennengelernt. Nach einem unglaublichen Heiratsantrag unter den Nordlichtern freuen wir uns sehr, unsere Hochzeit angekündigt zu haben, und möchten diesen besonderen Tag mit Ihnen teilen.",
+    "ourStoryText": "Der Witz geht so: Eine Kunsthistorikerin und ein Flugzeugingenieur gehen in eine Bank. Sie kommen verheiratet wieder heraus... oder fast verheiratet, nach einem Antrag unter den Nordlichtern. Wir freuen uns, unsere Hochzeit anzukundigen und diesen besonderen Tag mit euch zu feiern.",
     "venueSubtitle": "Rheingau-Weinregion, Deutschland",
     "learnMore": "Mehr erfahren",
     "scheduleTitle": "Ablauf",
@@ -35,13 +35,14 @@
   "schedule": {
     "title": "Hochzeitsablauf",
     "subtitle": "Feiern Sie mit uns ein unvergessliches Wochenende",
+    "timingNote": "Der genaue Zeitplan wird noch finalisiert. Wir werden diese Seite aktualisieren, sobald alles feststeht.",
     "addressLabel": "Adresse",
     "addToCalendar": "Zum Kalender hinzufügen",
     "saturday": "Samstag, 3. Oktober",
     "sunday": "Sonntag, 4. Oktober",
     "ceremony": {
       "title": "Kirchliche Trauung",
-      "time": "12:00 Uhr",
+      "time": "Wird noch bekanntgegeben",
       "location": "Evangelische Kirche Geisenheim",
       "address": "Evangelische Kirche Geisenheim, Geisenheim",
       "description": "Seien Sie bei unserer kirchlichen Trauung in der wunderschönen Evangelischen Kirche in Geisenheim dabei."
@@ -184,12 +185,14 @@
     "alternatives": {
       "title": "Hotels in der Nähe",
       "description": "Das nahe gelegene Geisenheim und die Umgebung bieten viele tolle Hotels und Pensionen zu erschwinglichen Preisen. Eine wunderbare Option, wenn Sie mehr Flexibilität bevorzugen oder die Region erkunden möchten.",
+      "ourSuggestions": "Hier sind einige Hotels, die wir in der Gegend empfehlen:",
       "geisenheim": "Nächstgelegener Ort, viele erschwingliche Hotels und Pensionen",
       "ruedesheim": "Berühmte Weinstadt mit zahlreichen Unterkünften",
       "wiesbaden": "Größere Stadt mit Luxushotels und Spa-Angeboten",
       "mainz": "Historische Stadt mit vielen Unterkunftsarten",
       "min5": "~5 Min. zum Veranstaltungsort",
       "min10": "~10 Min. zum Veranstaltungsort",
+      "min15": "~15 Min. zum Veranstaltungsort",
       "min25": "~25 Min. zum Veranstaltungsort",
       "min30": "~30 Min. zum Veranstaltungsort"
     },

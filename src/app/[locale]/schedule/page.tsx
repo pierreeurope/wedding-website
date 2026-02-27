@@ -32,6 +32,13 @@ function SchedulePageClient() {
       {/* Timeline */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4">
+          {/* Timing Note */}
+          <div className="mb-16 max-w-2xl mx-auto">
+            <p className="text-center text-primary-500 italic text-lg">
+              {t('timingNote')}
+            </p>
+          </div>
+
           {/* Saturday */}
           <div className="mb-20">
             <h2 className="font-serif text-3xl text-primary-800 mb-12 text-center">

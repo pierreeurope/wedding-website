@@ -27,6 +27,41 @@ function RoomCard({ name, description, price, available }: { name: string; descr
   );
 }
 
+function HotelCard({ name, address, rooms, price, parking, website, note }: { 
+  name: string; 
+  address: string; 
+  rooms: string;
+  price: string;
+  parking: string;
+  website?: string;
+  note?: string;
+}) {
+  return (
+    <div className="bg-white p-6 border border-primary-200 hover:border-gold-300 transition-colors">
+      <h4 className="font-serif text-lg text-primary-800 mb-2">{name}</h4>
+      <div className="space-y-1 text-sm text-primary-600 mb-3">
+        <p><span className="font-medium">Address:</span> {address}</p>
+        <p><span className="font-medium">Rooms:</span> {rooms}</p>
+        <p><span className="font-medium">Price:</span> {price}</p>
+        <p><span className="font-medium">Parking:</span> {parking}</p>
+        {note && <p className="text-primary-500 italic text-xs mt-2">{note}</p>}
+      </div>
+      {website ? (
+        <a 
+          href={`https://${website}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-gold-600 hover:text-gold-700 text-sm font-medium"
+        >
+          {website} →
+        </a>
+      ) : (
+        <p className="text-primary-500 text-sm">Call: +49 6723 602500</p>
+      )}
+    </div>
+  );
+}
+
 function AccommodationPageClient() {
   const t = useTranslations('accommodation');
 
@@ -72,53 +107,118 @@ function AccommodationPageClient() {
             <div className="h-px w-16 bg-gold-500 mx-auto my-4"></div>
           </div>
           
-          <p className="text-primary-600 text-center mb-12 text-lg">
+          <p className="text-primary-600 text-center mb-8 text-lg">
             {t('alternatives.description')}
           </p>
           
-          <div className="space-y-6 mb-12">
-            <div className="card flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h4 className="font-serif text-xl text-primary-800">Geisenheim</h4>
-                <p className="text-primary-500 text-sm">{t('alternatives.geisenheim')}</p>
-              </div>
-              <span className="text-primary-400 mt-2 md:mt-0">{t('alternatives.min5')}</span>
-            </div>
-            
-            <div className="card flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h4 className="font-serif text-xl text-primary-800">Rüdesheim am Rhein</h4>
-                <p className="text-primary-500 text-sm">{t('alternatives.ruedesheim')}</p>
-              </div>
-              <span className="text-primary-400 mt-2 md:mt-0">{t('alternatives.min10')}</span>
-            </div>
-            
-            <div className="card flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h4 className="font-serif text-xl text-primary-800">Wiesbaden</h4>
-                <p className="text-primary-500 text-sm">{t('alternatives.wiesbaden')}</p>
-              </div>
-              <span className="text-primary-400 mt-2 md:mt-0">{t('alternatives.min25')}</span>
-            </div>
-            
-            <div className="card flex flex-col md:flex-row md:items-center md:justify-between">
-              <div>
-                <h4 className="font-serif text-xl text-primary-800">Mainz</h4>
-                <p className="text-primary-500 text-sm">{t('alternatives.mainz')}</p>
-              </div>
-              <span className="text-primary-400 mt-2 md:mt-0">{t('alternatives.min30')}</span>
+          <p className="text-primary-700 font-medium text-center mb-8">
+            {t('alternatives.ourSuggestions')}
+          </p>
+          
+          {/* Rüdesheim am Rhein */}
+          <div className="mb-12">
+            <h3 className="font-serif text-2xl text-primary-800 mb-2 flex items-center gap-2">
+              Rüdesheim am Rhein
+              <span className="text-sm font-sans text-primary-500">({t('alternatives.min10')})</span>
+            </h3>
+            <div className="h-px bg-primary-200 mb-6"></div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <HotelCard 
+                name="Hotel Rose" 
+                address="Wilhelmstr. 27"
+                rooms="18 rooms"
+                price="from €80-90"
+                parking="Free parking"
+                website="www.hotelrose-online.de"
+              />
+              <HotelCard 
+                name="Hotel Trapp" 
+                address="Kirchstrasse 7"
+                rooms="35 rooms"
+                price="Double from €90"
+                parking="Parking €13/night"
+                website="www.hotel-trapp.de"
+              />
+              <HotelCard 
+                name="Hotel Rüdesheimer Hof" 
+                address="Geisenheimerstrasse 1"
+                rooms="36 rooms"
+                price="Double from €120"
+                parking="Parking on-site"
+                website="www.ruedesheimer-hof.de"
+              />
             </div>
           </div>
           
-          <div className="text-center">
-            <a 
-              href="https://www.booking.com/searchresults.html?ss=Geisenheim"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
-              Booking.com
-            </a>
+          {/* Geisenheim-Marienthal */}
+          <div className="mb-12">
+            <h3 className="font-serif text-2xl text-primary-800 mb-2 flex items-center gap-2">
+              Geisenheim-Marienthal
+              <span className="text-sm font-sans text-primary-500">({t('alternatives.min5')})</span>
+            </h3>
+            <div className="h-px bg-primary-200 mb-6"></div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <HotelCard 
+                name="Akzent Waldhotel Rheingau" 
+                address="Marienthaler Strasse 20"
+                rooms="55 rooms"
+                price="Double from €130"
+                parking="Parking available"
+                website="waldhotel-rheingau.de"
+              />
+            </div>
+          </div>
+          
+          {/* Oestrich-Winkel */}
+          <div className="mb-12">
+            <h3 className="font-serif text-2xl text-primary-800 mb-2 flex items-center gap-2">
+              Oestrich-Winkel
+              <span className="text-sm font-sans text-primary-500">({t('alternatives.min15')})</span>
+            </h3>
+            <div className="h-px bg-primary-200 mb-6"></div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <HotelCard 
+                name="Gästehaus Grüner Baum" 
+                address="Rheingaustrasse 45"
+                rooms="12 rooms"
+                price="Double €130-170"
+                parking="Parking available"
+                note="No website, call +49 6723 602500"
+              />
+              <HotelCard 
+                name="Nagler's Fine Lounge Hotel" 
+                address="Hauptstr. 1"
+                rooms="40 rooms"
+                price="Double from €160"
+                parking="Free parking, wellness/spa"
+                website="naeglers-hotel.de"
+              />
+              <HotelCard 
+                name="Hotel Zum Rebhang" 
+                address="Rebhangstr. 53"
+                rooms="14 rooms"
+                price="Double from €99"
+                parking="Panoramic view, free parking"
+                website="hotel-zum-rebhang.de"
+                note="March-October: 2-night minimum"
+              />
+              <HotelCard 
+                name="Hotel Ruthmann" 
+                address="Rheinstr. 109"
+                rooms="19 rooms"
+                price="Double from €99"
+                parking="Free parking, non-smoking"
+                website="hotel-ruthmann.de"
+              />
+              <HotelCard 
+                name="Wein- & Sekthaus F.B. Schönleber" 
+                address="Hauptstr. 1b"
+                rooms="13 rooms"
+                price="Double from €126"
+                parking="Rhine view, wine estate restaurant"
+                website="fb-schoenleber.de"
+              />
+            </div>
           </div>
         </div>
       </section>

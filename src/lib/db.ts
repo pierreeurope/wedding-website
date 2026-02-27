@@ -20,6 +20,7 @@ export interface RSVPEntry {
   departureDate: string;
   roomBooking: string | null;
   dietary: string;
+  songRequests: string;
   message: string;
   submittedAt: string;
 }

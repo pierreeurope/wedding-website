@@ -25,6 +25,7 @@ export async function POST(request: NextRequest) {
       departureDate: data.departureDate || '',
       roomBooking: data.roomBooking || null,
       dietary: data.dietary || '',
+      songRequests: data.songRequests || '',
       message: data.message || '',
       submittedAt: new Date().toISOString(),
     };

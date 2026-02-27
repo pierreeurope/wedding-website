@@ -263,7 +263,10 @@
         "castle": "Burggebäude",
         "guesthouse": "Gästehaus"
       },
-      "roomBooked": "(Gebucht)"
+      "roomBooked": "(Gebucht)",
+      "songRequests": "Songs, die euch die ganze Nacht tanzen lassen",
+      "songRequestsHint": "Helft unserem DJ die perfekte Playlist zusammenzustellen!",
+      "songRequestsPlaceholder": "z.B. Dancing Queen - ABBA, Superstition - Stevie Wonder..."
     },
     "weddingDate": "Hochzeit: Samstag, 3. Oktober 2026",
     "rooms": {

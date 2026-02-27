@@ -38,6 +38,7 @@ interface RSVPFormData {
   departureDate: string;
   roomBooking: string;
   dietary: string;
+  songRequests: string;
   message: string;
 }
 
@@ -54,6 +55,7 @@ export default function RSVPPage() {
     departureDate: '2026-10-04',
     roomBooking: '',
     dietary: '',
+    songRequests: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -99,6 +101,7 @@ export default function RSVPPage() {
           departureDate: '2026-10-04',
           roomBooking: '',
           dietary: '',
+          songRequests: '',
           message: '',
         });
       } else {
@@ -382,6 +385,23 @@ export default function RSVPPage() {
                       value={formData.dietary}
                       onChange={handleChange}
                       placeholder={t('form.dietaryPlaceholder')}
+                      className="input-field resize-none"
+                    />
+                  </div>
+
+                  {/* Song Requests */}
+                  <div>
+                    <label htmlFor="songRequests" className="block text-primary-700 font-medium mb-2">
+                      🎶 {t('form.songRequests')}
+                    </label>
+                    <p className="text-sm text-primary-500 mb-2">{t('form.songRequestsHint')}</p>
+                    <textarea
+                      id="songRequests"
+                      name="songRequests"
+                      rows={2}
+                      value={formData.songRequests}
+                      onChange={handleChange}
+                      placeholder={t('form.songRequestsPlaceholder')}
                       className="input-field resize-none"
                     />
                   </div>

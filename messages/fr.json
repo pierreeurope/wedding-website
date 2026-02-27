@@ -263,7 +263,10 @@
         "castle": "Bâtiment du château (Burggebäude)",
         "guesthouse": "Maison des invités (Gästehaus)"
       },
-      "roomBooked": "(Réservé)"
+      "roomBooked": "(Réservé)",
+      "songRequests": "Chansons qui vous feront danser toute la nuit",
+      "songRequestsHint": "Aidez notre DJ à créer la playlist parfaite !",
+      "songRequestsPlaceholder": "ex. Dancing Queen - ABBA, Superstition - Stevie Wonder..."
     },
     "weddingDate": "Mariage : samedi 3 octobre 2026",
     "rooms": {

@@ -246,7 +246,7 @@
       "roomBookingNote": "Limited rooms available at Burg Schwarzenstein. Contact us for availability.",
       "noRoom": "No, I'll arrange my own accommodation",
       "dietary": "Dietary Requirements",
-      "dietaryPlaceholder": "Vegetarian, vegan, allergies, etc.",
+      "dietaryPlaceholder": "Please specify here: fish, meat (beef), vegetarian or vegan, as well as any allergies or intolerances.",
       "message": "Message for the couple",
       "messageHint": "Optional, but we'd love to hear from you!",
       "messagePlaceholder": "Any message you'd like to share...",

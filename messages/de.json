@@ -246,7 +246,7 @@
       "roomBookingNote": "Begrenzte Zimmer sind im Burg Schwarzenstein verfügbar. Kontaktiere uns gern zur Verfügbarkeit.",
       "noRoom": "Nein, ich organisiere meine Unterkunft selbst",
       "dietary": "Ernährungswünsche / Allergien",
-      "dietaryPlaceholder": "Vegetarisch, vegan, Allergien usw.",
+      "dietaryPlaceholder": "Bitte gib hier an: Fisch, Fleisch (Rind), vegetarisch oder vegan, sowie eventuelle Allergien oder Unverträglichkeiten.",
       "message": "Nachricht an das Brautpaar",
       "messageHint": "Optional, aber wir freuen uns über ein paar Zeilen von dir!",
       "messagePlaceholder": "Eine Nachricht, die du mit uns teilen möchtest...",

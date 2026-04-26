@@ -11,10 +11,10 @@
   "home": {
     "saveTheDate": "Save the Date",
     "names": "Amalie Wilke & Pierre Blanchet",
-    "dateAnnouncement": "freuen sich, Sie zu ihrer Hochzeit einzuladen",
+    "dateAnnouncement": "freuen sich, dich zu ihrer Hochzeit einzuladen",
     "date": "Samstag, 3. Oktober 2026",
     "location": "Burg Schwarzenstein, Geisenheim, Deutschland",
-    "welcome": "Wir freuen uns darauf, mit Ihnen zu feiern!",
+    "welcome": "Wir freuen uns darauf, mit dir zu feiern!",
     "ourStory": "Unsere Geschichte",
     "ourStoryText": "Der Witz geht so: Eine Kunsthistorikerin und ein Flugzeugingenieur gehen in eine Bank. Sie kommen verheiratet wieder heraus... oder fast verheiratet, nach einem Antrag unter den Nordlichtern. Wir freuen uns, unsere Hochzeit anzukündigen und diesen besonderen Tag mit euch zu feiern.",
     "venueSubtitle": "Rheingau-Weinregion, Deutschland",
@@ -34,22 +34,22 @@
   },
   "schedule": {
     "title": "Hochzeitsablauf",
-    "subtitle": "Feiern Sie mit uns ein unvergessliches Wochenende",
-    "timingNote": "Der genaue Zeitplan wird noch finalisiert. Wir werden diese Seite aktualisieren, sobald alles feststeht.",
+    "subtitle": "Feiere mit uns ein unvergessliches Wochenende",
+    "timingNote": "Hier ist der aktuelle Plan für den Tag. Falls sich noch etwas ändert, aktualisieren wir diese Seite.",
     "addressLabel": "Adresse",
     "addToCalendar": "Zum Kalender hinzufügen",
     "saturday": "Samstag, 3. Oktober",
     "sunday": "Sonntag, 4. Oktober",
     "ceremony": {
       "title": "Kirchliche Trauung",
-      "time": "Wird noch bekanntgegeben",
+      "time": "13.00 Uhr",
       "location": "Evangelische Kirche Geisenheim",
       "address": "Evangelische Kirche Geisenheim, Geisenheim",
-      "description": "Seien Sie bei unserer kirchlichen Trauung in der wunderschönen Evangelischen Kirche in Geisenheim dabei."
+      "description": "Sei bei unserer kirchlichen Trauung in der wunderschönen Evangelischen Kirche in Geisenheim dabei."
     },
     "reception": {
       "title": "Empfang & Feier",
-      "time": "Im Anschluss an die Zeremonie",
+      "time": "14.30 Uhr",
       "location": "Burg Schwarzenstein",
       "address": "Rosengasse 32, 65366 Geisenheim, Deutschland",
       "description": "Nach einer kurzen Fahrt setzen wir die Feier auf Burg Schwarzenstein fort – mit Abendessen, Tanz und Festlichkeiten bis tief in die Nacht."
@@ -58,7 +58,7 @@
       "title": "Sonntagsbrunch",
       "time": "11:00 Uhr",
       "location": "In der Nähe des Rheins",
-      "description": "Treffen Sie uns am nächsten Morgen zu einem entspannten Brunch in einem schönen Restaurant in der Nähe der Kirche mit Blick auf den Rhein. Eine perfekte Art, unsere Feier ausklingen zu lassen."
+      "description": "Triff uns am nächsten Morgen zu einem entspannten Brunch in einem schönen Restaurant in der Nähe der Kirche mit Blick auf den Rhein. Eine perfekte Art, unsere Feier ausklingen zu lassen."
     }
   },
   "venue": {
@@ -77,21 +77,21 @@
       }
     },
     "explore": {
-      "title": "Bleiben Sie etwas länger?",
-      "description": "Wenn Sie Ihren Aufenthalt über die Hochzeit hinaus verlängern können, ermutigen wir Sie herzlich, die Region in vollen Zügen zu genießen. Der Rheingau und die Umgebung haben so viel zu bieten—von Burgen und historischen Stätten über Weinproben in lokalen Weingütern bis zu malerischen Fahrten am Rhein und charmanten Dörfern zum Erkunden. Wir hoffen, dass Sie jeden Moment genießen, egal wie lange Sie bleiben."
+      "title": "Bleibst du etwas länger?",
+      "description": "Wenn du deinen Aufenthalt über die Hochzeit hinaus verlängern kannst, möchten wir dich herzlich ermutigen, die Region in vollen Zügen zu genießen. Der Rheingau und die Umgebung haben so viel zu bieten, von Burgen und historischen Stätten über Weinproben in lokalen Weingütern bis zu malerischen Fahrten am Rhein und charmanten Dörfern zum Erkunden. Wir hoffen, dass du jeden Moment genießt, egal wie lange du bleibst."
     }
   },
   "travel": {
     "title": "Anreise",
     "subtitle": "So erreichen Sie Burg Schwarzenstein",
-    "intro": "Der Veranstaltungsort liegt etwa 30 Minuten von Frankfurt entfernt und ist mit verschiedenen Verkehrsmitteln gut erreichbar.",
+    "intro": "Der Veranstaltungsort liegt etwa 50 Minuten von Frankfurt entfernt und ist mit verschiedenen Verkehrsmitteln gut erreichbar.",
     "byAir": {
       "title": "Mit dem Flugzeug",
-      "description": "Fliegen Sie zum Flughafen Frankfurt (FRA), einem der größten Drehkreuze Europas mit hervorragenden internationalen Verbindungen. Der Flughafen verfügt auch über einen großen Fernbahnhof für eine bequeme Weiterreise."
+      "description": "Flieg zum Flughafen Frankfurt (FRA), einem der größten Drehkreuze Europas mit hervorragenden internationalen Verbindungen. Der Flughafen verfügt auch über einen großen Fernbahnhof für eine bequeme Weiterreise."
     },
     "byTrain": {
       "title": "Mit dem Zug",
-      "description": "Nehmen Sie einen Zug zum Frankfurt Hauptbahnhof oder zum Flughafen Fernbahnhof. Von dort können Sie ein Auto mieten, ein Taxi nehmen oder einen Transfer zum Veranstaltungsort organisieren."
+      "description": "Nimm einen Zug zum Frankfurt Hauptbahnhof oder zum Flughafen Fernbahnhof. Von dort kannst du ein Auto mieten, ein Taxi nehmen oder einen Transfer zum Veranstaltungsort organisieren."
     },
     "byCar": {
       "title": "Mit dem Auto",
@@ -100,31 +100,31 @@
     },
     "lastMile": {
       "title": "Zum Veranstaltungsort",
-      "description": "Da die Burg etwa 30 Minuten von Frankfurt entfernt liegt, empfehlen wir:",
+      "description": "Da die Burg etwa 50 Minuten von Frankfurt entfernt liegt, empfehlen wir:",
       "options": {
-        "rental": "Ein Auto mieten – gibt Ihnen Flexibilität, die schöne Region zu erkunden",
+        "rental": "Ein Auto mieten, das gibt dir Flexibilität, die schöne Region zu erkunden",
         "taxi": "Ein Taxi oder Uber von Frankfurt nehmen"
       }
     },
     "accommodationNote": {
       "title": "Unterkunft",
-      "description": "Es gibt viele Airbnbs und Hotels in der Umgebung. Wir übernachten selbst in einem Hotel—wenn Sie für unsere Hochzeit ein Zimmer im selben Hotel buchen möchten, können Sie das gerne tun."
+      "description": "Es gibt viele Airbnbs und Hotels in der Umgebung. Wir übernachten selbst in einem Hotel. Wenn du für unsere Hochzeit ein Zimmer im selben Hotel buchen möchtest, kannst du das sehr gern tun."
     },
     "churchToVenue": {
       "title": "Von der Kirche zum Veranstaltungsort",
-      "description": "Wenn Sie mit dem Taxi oder Uber zur Kirche kommen, machen Sie sich keine Sorgen um den weiteren Weg: Wir kümmern uns darum, Sie zum Veranstaltungsort zu bringen. Es sind nur 15 Minuten Fahrt zwischen der Kirche und Burg Schwarzenstein, und jemand wird sich darum kümmern."
+      "description": "Wenn du mit dem Taxi oder Uber zur Kirche kommst, mach dir keine Sorgen um den weiteren Weg. Wir kümmern uns darum, dich zum Veranstaltungsort zu bringen. Es sind nur 15 Minuten Fahrt zwischen der Kirche und Burg Schwarzenstein, und jemand wird sich darum kümmern."
     }
   },
   "accommodation": {
     "title": "Übernachtung",
     "subtitle": "Unterkunftsmöglichkeiten für jeden Geschmack und jedes Budget",
-    "intro": "Um Ihren Aufenthalt bestmöglich zu genießen, empfehlen wir eine dieser drei Möglichkeiten:",
+    "intro": "Um deinen Aufenthalt bestmöglich zu genießen, empfehlen wir eine dieser drei Möglichkeiten:",
     "castle": {
       "title": "Vor Ort: Burg Schwarzenstein",
       "description": "Wir haben eine begrenzte Anzahl von Zimmern auf Burg Schwarzenstein für unsere Gäste reserviert. Das Hotel besteht aus drei Gebäuden, die sich an verschiedenen Stellen des Anwesens befinden.",
-      "booking": "Um ein Zimmer auf der Burg zu buchen, kontaktieren Sie uns bitte direkt:",
+      "booking": "Um ein Zimmer auf der Burg zu buchen, kontaktiere uns bitte direkt:",
       "note": "Die Zimmer sind begrenzt und werden nach dem Windhundprinzip vergeben.",
-      "extendStay": "Alle Zimmer sind bis zum Auschecken am Montag reserviert. Wenn Sie Ihren Aufenthalt über den Montag hinaus verlängern möchten, kontaktieren Sie uns und wir prüfen die Verfügbarkeit mit dem Hotel.",
+      "extendStay": "Alle Zimmer sind bis zum Auschecken am Montag reserviert. Wenn du deinen Aufenthalt über den Montag hinaus verlängern möchtest, kontaktiere uns und wir prüfen die Verfügbarkeit mit dem Hotel.",
       "checkInOut": "Check-in ab 15:00 Uhr am Anreisetag. Checkout bis 11:00 Uhr am Abreisetag.",
       "breakfast": "Frühstück ist für 34 € pro Person und Tag verfügbar (Aufpreis).",
       "dates": {
@@ -184,7 +184,7 @@
     },
     "alternatives": {
       "title": "Hotels in der Nähe",
-      "description": "Das nahe gelegene Geisenheim und die Umgebung bieten viele tolle Hotels und Pensionen zu erschwinglichen Preisen. Eine wunderbare Option, wenn Sie mehr Flexibilität bevorzugen oder die Region erkunden möchten.",
+      "description": "Das nahe gelegene Geisenheim und die Umgebung bieten viele tolle Hotels und Pensionen zu erschwinglichen Preisen. Eine wunderbare Option, wenn du mehr Flexibilität bevorzugst oder die Region erkunden möchtest.",
       "ourSuggestions": "Hier sind einige Hotels, die wir in der Gegend empfehlen:",
       "geisenheim": "Nächstgelegener Ort, viele erschwingliche Hotels und Pensionen",
       "ruedesheim": "Eine beliebte Weinstadt, etwa 15 Minuten von Burg Schwarzenstein entfernt, ideal als charmantes Sprungbrett in den Rheingau, um auch ohne Auto die historische Stadt mit ihren Weinschenken und kulturellen Orten wie dem Niederwalddenkmal zu erkunden",
@@ -197,7 +197,7 @@
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Für Zimmerreservierungen auf der Burg oder Fragen zur Unterkunft, rufen Sie uns an oder schreiben Sie uns:",
+      "description": "Für Zimmerreservierungen auf der Burg oder Fragen zur Unterkunft, ruf uns an oder schreib uns:",
       "email": "E-Mail",
       "phone": "Telefon/WhatsApp",
       "or": "oder"
@@ -207,7 +207,7 @@
     "introOption3": "Direkt auf Burg Schwarzenstein übernachten, wo die Hochzeit stattfindet",
     "airbnb": {
       "title": "Airbnb & Ferienwohnungen",
-      "description": "Die Rheingau-Weinregion bietet fantastische Airbnb-Optionen! Übernachten Sie in einem charmanten Winzerhäuschen, einem traditionellen deutschen Weingut oder einer gemütlichen Wohnung mit atemberaubendem Talblick. Eine großartige Möglichkeit, in die lokale Atmosphäre einzutauchen."
+      "description": "Die Rheingau-Weinregion bietet fantastische Airbnb-Optionen. Übernachte in einem charmanten Winzerhäuschen, einem traditionellen deutschen Weingut oder einer gemütlichen Wohnung mit atemberaubendem Talblick. Eine großartige Möglichkeit, in die lokale Atmosphäre einzutauchen."
     }
   },
   "gifts": {
@@ -221,44 +221,43 @@
       "bic": "BIC / SWIFT-Code",
       "cashOnSite": "Ein Briefumschlag mit Bargeld am Tag der Hochzeit ist ebenfalls völlig in Ordnung."
     },
-    "contact": "Fragen zu Geschenken? Melden Sie sich!",
-    "physicalGifts": "Wir werden auch bald eine Liste mit Geschenkideen hinzufügen, falls Sie lieber ein richtiges Geschenk machen möchten. Darüber würden wir uns genauso freuen!"
+    "contact": "Fragen zu Geschenken? Melde dich!"
   },
   "rsvp": {
     "title": "RSVP",
-    "subtitle": "Bitte teilen Sie uns mit, ob Sie dabei sein können",
-    "deadline": "Bitte antworten Sie bis zum 1. Juli 2026",
+    "subtitle": "Bitte teile uns mit, ob du dabei sein kannst",
+    "deadline": "Bitte antworte bis zum 1. Juli 2026",
     "form": {
-      "name": "Ihr Name",
+      "name": "Dein Name",
       "namePlaceholder": "Vollständiger Name",
       "phone": "Telefonnummer",
-      "phonePlaceholder": "Ihre Telefonnummer",
+      "phonePlaceholder": "Deine Telefonnummer",
       "email": "E-Mail-Adresse (optional)",
       "emailPlaceholder": "ihre@email.com",
-      "attending": "Werden Sie dabei sein?",
+      "attending": "Wirst du dabei sein?",
       "yes": "Ja, ich komme!",
       "no": "Leider kann ich nicht",
-      "guests": "Wie viele Gäste (Sie eingeschlossen)?",
-      "guestNames": "Namen Ihrer Gäste",
+      "guests": "Wie viele Gäste (dich eingeschlossen)?",
+      "guestNames": "Namen deiner Gäste",
       "guestNamesPlaceholder": "z. B. Anna Müller, Peter Schmidt",
       "arrivalDate": "Anreisedatum",
       "departureDate": "Abreisedatum",
       "roomBooking": "Ein Zimmer auf der Burg buchen?",
-      "roomBookingNote": "Begrenzte Zimmer verfügbar im Burg Schwarzenstein. Kontaktieren Sie uns für die Verfügbarkeit.",
+      "roomBookingNote": "Begrenzte Zimmer sind im Burg Schwarzenstein verfügbar. Kontaktiere uns gern zur Verfügbarkeit.",
       "noRoom": "Nein, ich organisiere meine Unterkunft selbst",
       "dietary": "Ernährungswünsche / Allergien",
       "dietaryPlaceholder": "Vegetarisch, vegan, Allergien usw.",
       "message": "Nachricht an das Brautpaar",
-      "messageHint": "Optional, aber wir freuen uns über ein paar Zeilen von Ihnen!",
-      "messagePlaceholder": "Eine Nachricht, die Sie teilen möchten...",
+      "messageHint": "Optional, aber wir freuen uns über ein paar Zeilen von dir!",
+      "messagePlaceholder": "Eine Nachricht, die du mit uns teilen möchtest...",
       "submit": "RSVP senden",
       "submitting": "Wird gesendet...",
-      "success": "Vielen Dank! Ihre Antwort wurde empfangen.",
-      "successDetail": "Wir melden uns bald mit weiteren Details bei Ihnen!",
-      "error": "Etwas ist schief gelaufen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+      "success": "Vielen Dank! Deine Antwort wurde empfangen.",
+      "successDetail": "Wir melden uns bald mit weiteren Details bei dir!",
+      "error": "Etwas ist schief gelaufen. Bitte versuche es erneut oder kontaktiere uns direkt.",
       "person": "Person",
       "people": "Personen",
-      "contactTrouble": "Probleme? Kontaktieren Sie uns direkt:",
+      "contactTrouble": "Probleme? Kontaktiere uns direkt:",
       "perNight": "/Nacht",
       "roomCategories": {
         "parkresidenz": "Parkresidenz",
@@ -266,9 +265,9 @@
         "guesthouse": "Gästehaus"
       },
       "roomBooked": "(Gebucht)",
-      "songRequests": "Songs, die euch die ganze Nacht tanzen lassen",
-      "songRequestsHint": "Helft unserem DJ die perfekte Playlist zusammenzustellen!",
-      "songRequestsPlaceholder": "z.B. Dancing Queen - ABBA, Superstition - Stevie Wonder..."
+      "songRequests": "Songwunsch für die Tanzfläche",
+      "songRequestsHint": "Schreib uns einen Song, zu dem du auf unserer Hochzeit gern tanzen würdest. So kann unser DJ die perfekte Playlist zusammenstellen.",
+      "songRequestsPlaceholder": "z. B. Dancing Queen - ABBA, Superstition - Stevie Wonder..."
     },
     "weddingDate": "Hochzeit: Samstag, 3. Oktober 2026",
     "rooms": {

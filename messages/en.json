@@ -35,21 +35,21 @@
   "schedule": {
     "title": "Wedding Schedule",
     "subtitle": "Join us for a weekend of celebration",
-    "timingNote": "The detailed timeline is still being finalized. We'll update this page as the day takes shape.",
+    "timingNote": "Here is the current plan for the day. We will update this page if anything changes.",
     "addressLabel": "Address",
     "addToCalendar": "Add to Calendar",
     "saturday": "Saturday, October 3rd",
     "sunday": "Sunday, October 4th",
     "ceremony": {
       "title": "Church Ceremony",
-      "time": "To be announced",
+      "time": "1:00 PM",
       "location": "Lutheran Church Geisenheim",
       "address": "Lutheran Church Geisenheim, Geisenheim",
       "description": "Join us for our church wedding ceremony at the beautiful Lutheran Church in Geisenheim."
     },
     "reception": {
       "title": "Reception & Celebration",
-      "time": "Following the ceremony",
+      "time": "2:30 PM",
       "location": "Burg Schwarzenstein",
       "address": "Rosengasse 32, 65366 Geisenheim, Germany",
       "description": "After a short drive, we'll continue the celebration at Burg Schwarzenstein with dinner, dancing, and festivities that will go deep into the night."
@@ -84,7 +84,7 @@
   "travel": {
     "title": "Getting There",
     "subtitle": "How to reach Burg Schwarzenstein",
-    "intro": "The venue is located approximately 30 minutes from Frankfurt, making it easily accessible by various means of transportation.",
+    "intro": "The venue is located approximately 50 minutes from Frankfurt, making it easily accessible by various means of transportation.",
     "byAir": {
       "title": "By Air",
       "description": "Fly into Frankfurt Airport (FRA), one of Europe's largest hubs with excellent international connections. The airport also has a major train station (Frankfurt Flughafen Fernbahnhof) for easy onward travel."
@@ -100,7 +100,7 @@
     },
     "lastMile": {
       "title": "Getting to the Venue",
-      "description": "Since the castle is about 30 minutes from Frankfurt, we recommend:",
+      "description": "Since the castle is about 50 minutes from Frankfurt, we recommend:",
       "options": {
         "rental": "Renting a car - gives you flexibility to explore the beautiful region",
         "taxi": "Taking a taxi or Uber from Frankfurt"
@@ -221,8 +221,7 @@
       "bic": "BIC / SWIFT code",
       "cashOnSite": "A letter with cash on the day is also completely fine."
     },
-    "contact": "Questions about gifts? Get in touch!",
-    "physicalGifts": "We will also soon add a list of gift ideas for those who prefer to give a physical present. That would be equally appreciated!"
+    "contact": "Questions about gifts? Get in touch!"
   },
   "rsvp": {
     "title": "RSVP",
@@ -266,8 +265,8 @@
         "guesthouse": "Guest House (Gästehaus)"
       },
       "roomBooked": "(Booked)",
-      "songRequests": "Songs that will make you dance all night",
-      "songRequestsHint": "Help our DJ build the perfect playlist!",
+      "songRequests": "Song request for the dance floor",
+      "songRequestsHint": "Add a song you would love to dance to at our wedding. This helps our DJ build the perfect playlist.",
       "songRequestsPlaceholder": "e.g., Dancing Queen - ABBA, Superstition - Stevie Wonder..."
     },
     "weddingDate": "Wedding: Saturday, October 3rd, 2026",

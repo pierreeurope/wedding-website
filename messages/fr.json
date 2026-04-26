@@ -35,21 +35,21 @@
   "schedule": {
     "title": "Programme du Mariage",
     "subtitle": "Rejoignez-nous pour un week-end de célébration",
-    "timingNote": "L'horaire détaillé est encore en cours de finalisation. Nous mettrons cette page à jour au fil de l'organisation.",
+    "timingNote": "Voici le programme actuel de la journée. Nous mettrons cette page à jour si quelque chose change.",
     "addressLabel": "Adresse",
     "addToCalendar": "Ajouter au calendrier",
     "saturday": "Samedi 3 octobre",
     "sunday": "Dimanche 4 octobre",
     "ceremony": {
       "title": "Cérémonie religieuse",
-      "time": "À confirmer",
+      "time": "13h00",
       "location": "Église luthérienne de Geisenheim",
       "address": "Église luthérienne de Geisenheim, Geisenheim",
       "description": "Rejoignez-nous pour notre cérémonie de mariage dans la magnifique église luthérienne de Geisenheim."
     },
     "reception": {
       "title": "Réception & Célébration",
-      "time": "Après la cérémonie",
+      "time": "14h30",
       "location": "Burg Schwarzenstein",
       "address": "Rosengasse 32, 65366 Geisenheim, Allemagne",
       "description": "Après un court trajet, nous continuerons la fête au Burg Schwarzenstein avec dîner, danse et festivités jusqu'au bout de la nuit."
@@ -84,7 +84,7 @@
   "travel": {
     "title": "Comment Venir",
     "subtitle": "Comment rejoindre Burg Schwarzenstein",
-    "intro": "Le lieu est situé à environ 30 minutes de Francfort, facilement accessible par différents moyens de transport.",
+    "intro": "Le lieu est situé à environ 50 minutes de Francfort, facilement accessible par différents moyens de transport.",
     "byAir": {
       "title": "En avion",
       "description": "Atterrissez à l'aéroport de Francfort (FRA), l'un des plus grands hubs d'Europe avec d'excellentes connexions internationales. L'aéroport dispose également d'une gare importante (Frankfurt Flughafen Fernbahnhof) pour faciliter la suite du voyage."
@@ -100,7 +100,7 @@
     },
     "lastMile": {
       "title": "Rejoindre le lieu",
-      "description": "Le château étant à environ 30 minutes de Francfort, nous recommandons :",
+      "description": "Le château étant à environ 50 minutes de Francfort, nous recommandons :",
       "options": {
         "rental": "Louer une voiture - vous donne la flexibilité d'explorer la belle région",
         "taxi": "Prendre un taxi ou Uber depuis Francfort"
@@ -221,8 +221,7 @@
       "bic": "BIC / SWIFT",
       "cashOnSite": "Une enveloppe avec un peu d'argent le jour J est aussi tout à fait bienvenue."
     },
-    "contact": "Des questions sur les cadeaux ? Contactez-nous !",
-    "physicalGifts": "Nous ajouterons bientôt une liste d'idées cadeaux pour ceux qui préfèrent offrir un cadeau physique. Cela nous ferait tout autant plaisir !"
+    "contact": "Des questions sur les cadeaux ? Contactez-nous !"
   },
   "rsvp": {
     "title": "RSVP",
@@ -266,8 +265,8 @@
         "guesthouse": "Maison des invités (Gästehaus)"
       },
       "roomBooked": "(Réservé)",
-      "songRequests": "Chansons qui vous feront danser toute la nuit",
-      "songRequestsHint": "Aidez notre DJ à créer la playlist parfaite !",
+      "songRequests": "Chanson que vous aimeriez danser à notre mariage",
+      "songRequestsHint": "Ajoutez une chanson sur laquelle vous aimeriez danser à notre mariage. Cela aidera notre DJ à créer la playlist parfaite.",
       "songRequestsPlaceholder": "ex. Dancing Queen - ABBA, Superstition - Stevie Wonder..."
     },
     "weddingDate": "Mariage : samedi 3 octobre 2026",

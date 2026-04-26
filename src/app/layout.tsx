@@ -2,8 +2,20 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Amalie & Pierre | Wedding',
-  description: 'Join us for our wedding celebration on October 3rd, 2026 at Burg Schwarzenstein, Germany',
+  title: 'Wedding Website',
+  description: 'Information for invited guests',
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+      noimageindex: true,
+      'max-snippet': -1,
+      'max-image-preview': 'none',
+      'max-video-preview': -1,
+    },
+  },
 };
 
 export default function RootLayout({

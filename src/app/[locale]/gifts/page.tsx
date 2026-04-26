@@ -54,15 +54,6 @@ export default function GiftsPage() {
         </div>
       </section>
 
-      {/* Physical gifts note */}
-      <section className="py-12 bg-white">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <p className="text-primary-600 text-lg italic">
-            🎁 {t('physicalGifts')}
-          </p>
-        </div>
-      </section>
-
       {/* Contact */}
       <section className="py-16 bg-primary-800 text-white">
         <div className="max-w-2xl mx-auto px-4 text-center">

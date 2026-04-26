@@ -112,7 +112,7 @@
     },
     "churchToVenue": {
       "title": "Von der Kirche zum Veranstaltungsort",
-      "description": "Wenn Sie mit dem Taxi oder Uber zur Kirche kommen, machen Sie sich keine Sorgen um den weiteren Weg: Wir kümmern uns darum, Sie zum Veranstaltungsort zu bringen. Es sind nur 5–10 Minuten Fahrt zwischen der Kirche und Burg Schwarzenstein, und jemand wird sich darum kümmern."
+      "description": "Wenn Sie mit dem Taxi oder Uber zur Kirche kommen, machen Sie sich keine Sorgen um den weiteren Weg: Wir kümmern uns darum, Sie zum Veranstaltungsort zu bringen. Es sind nur 15 Minuten Fahrt zwischen der Kirche und Burg Schwarzenstein, und jemand wird sich darum kümmern."
     }
   },
   "accommodation": {
@@ -187,11 +187,10 @@
       "description": "Das nahe gelegene Geisenheim und die Umgebung bieten viele tolle Hotels und Pensionen zu erschwinglichen Preisen. Eine wunderbare Option, wenn Sie mehr Flexibilität bevorzugen oder die Region erkunden möchten.",
       "ourSuggestions": "Hier sind einige Hotels, die wir in der Gegend empfehlen:",
       "geisenheim": "Nächstgelegener Ort, viele erschwingliche Hotels und Pensionen",
-      "ruedesheim": "Berühmte Weinstadt mit zahlreichen Unterkünften",
-      "wiesbaden": "Größere Stadt mit Luxushotels und Spa-Angeboten",
+      "ruedesheim": "Eine beliebte Weinstadt, etwa 15 Minuten von Burg Schwarzenstein entfernt, ideal als charmantes Sprungbrett in den Rheingau, um auch ohne Auto die historische Stadt mit ihren Weinschenken und kulturellen Orten wie dem Niederwalddenkmal zu erkunden",
+      "wiesbaden": "Eine weitere nahegelegene Stadt, kleiner als Frankfurt, aber sehr charmant, mit eleganter Architektur, schönen Straßen und entspannter Atmosphäre",
       "mainz": "Historische Stadt mit vielen Unterkunftsarten",
       "min5": "~5 Min. zum Veranstaltungsort",
-      "min10": "~10 Min. zum Veranstaltungsort",
       "min15": "~15 Min. zum Veranstaltungsort",
       "min25": "~25 Min. zum Veranstaltungsort",
       "min30": "~30 Min. zum Veranstaltungsort"

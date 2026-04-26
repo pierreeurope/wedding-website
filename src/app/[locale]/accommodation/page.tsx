@@ -119,7 +119,7 @@ function AccommodationPageClient() {
           <div className="mb-12">
             <h3 className="font-serif text-2xl text-primary-800 mb-2 flex items-center gap-2">
               Rüdesheim am Rhein
-              <span className="text-sm font-sans text-primary-500">({t('alternatives.min10')})</span>
+              <span className="text-sm font-sans text-primary-500">({t('alternatives.min15')})</span>
             </h3>
             <div className="h-px bg-primary-200 mb-6"></div>
             <div className="grid md:grid-cols-2 gap-4">

@@ -112,7 +112,7 @@
     },
     "churchToVenue": {
       "title": "From Church to the Venue",
-      "description": "If you come to the church by taxi or Uber, don't worry about the rest of the way: we will take care of getting you to the venue. It's only a 5–10 minute drive between the church and Burg Schwarzenstein, and someone will be there to help."
+      "description": "If you come to the church by taxi or Uber, don't worry about the rest of the way: we will take care of getting you to the venue. It's only a 15-minute drive between the church and Burg Schwarzenstein, and someone will be there to help."
     }
   },
   "accommodation": {
@@ -187,11 +187,10 @@
       "description": "The nearby town of Geisenheim and the surrounding area have many great hotels and guesthouses at affordable prices. This is a wonderful option if you prefer more flexibility or want to explore the region.",
       "ourSuggestions": "Here are some hotels we recommend in the area:",
       "geisenheim": "Closest town, many affordable hotels and guesthouses",
-      "ruedesheim": "Famous wine town with plenty of accommodation",
-      "wiesbaden": "Larger city with luxury hotels and spa options",
+      "ruedesheim": "A popular wine town, about 15 minutes from Burg Schwarzenstein, ideal as a charming base for exploring the Rheingau and discovering its historic streets, wine taverns, and cultural sights such as the Niederwald Monument, even without a car",
+      "wiesbaden": "Another nearby city worth considering, smaller than Frankfurt but very charming, with elegant architecture, lovely streets, and a relaxed atmosphere",
       "mainz": "Historic city with many accommodation types",
       "min5": "~5 min to venue",
-      "min10": "~10 min to venue",
       "min15": "~15 min to venue",
       "min25": "~25 min to venue",
       "min30": "~30 min to venue"

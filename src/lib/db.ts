@@ -36,9 +36,13 @@ export async function saveRSVP(rsvp: RSVPEntry): Promise<void> {
   if (!redis) return;
   const key = `rsvp:${rsvp.id}`;
   await redis.set(key, JSON.stringify(rsvp));
-  
+
   // Also add to the list of all RSVPs
-  const rsvpList = await redis.get<string[]>('rsvp:list') || [];
+  const rsvpListRaw = await redis.get<string | string[]>('rsvp:list');
+  const rsvpList: string[] = typeof rsvpListRaw === 'string'
+    ? JSON.parse(rsvpListRaw)
+    : (rsvpListRaw || []);
+
   if (!rsvpList.includes(rsvp.id)) {
     rsvpList.push(rsvp.id);
     await redis.set('rsvp:list', JSON.stringify(rsvpList));

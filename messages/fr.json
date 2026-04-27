@@ -227,6 +227,10 @@
     "title": "RSVP",
     "subtitle": "Merci de nous confirmer votre présence",
     "deadline": "Merci de répondre avant le 1er juillet 2026",
+    "constructionBanner": {
+      "title": "Le RSVP est actuellement en cours de maintenance",
+      "description": "Si vous souhaitez déjà nous répondre, merci d’écrire à pierre.blanchet.engineer@gmail.com ou à blanchetwilke@gmail.com avec toutes vos informations, y compris votre choix de menu, vos allergies ou contraintes alimentaires, vos souhaits d’hébergement, votre chanson et toutes vos questions."
+    },
     "form": {
       "name": "Votre nom",
       "namePlaceholder": "Nom complet",

@@ -227,6 +227,10 @@
     "title": "RSVP",
     "subtitle": "Bitte teile uns mit, ob du dabei sein kannst",
     "deadline": "Bitte antworte bis zum 1. Juli 2026",
+    "constructionBanner": {
+      "title": "Das RSVP ist gerade im Umbau",
+      "description": "Wenn du uns schon antworten möchtest, schreib bitte an pierre.blanchet.engineer@gmail.com oder blanchetwilke@gmail.com und sende uns alle Informationen, also zum Beispiel deine Menüwahl, eventuelle Allergien oder Ernährungswünsche, Übernachtungswünsche, deinen Songwunsch und alle Fragen."
+    },
     "form": {
       "name": "Dein Name",
       "namePlaceholder": "Vollständiger Name",

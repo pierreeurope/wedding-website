@@ -227,6 +227,10 @@
     "title": "RSVP",
     "subtitle": "Please let us know if you can join us",
     "deadline": "Please respond by July 1st, 2026",
+    "constructionBanner": {
+      "title": "RSVP is currently under construction",
+      "description": "If you would already like to reply, please email pierre.blanchet.engineer@gmail.com or blanchetwilke@gmail.com with all your information, including your menu choice, any allergies or dietary requirements, accommodation wishes, song request, and any questions."
+    },
     "form": {
       "name": "Your Name",
       "namePlaceholder": "Full name",

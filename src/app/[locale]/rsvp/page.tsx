@@ -368,6 +368,12 @@ export default function RSVPPage() {
                     <p className="text-sm text-primary-500 mb-3">
                       {t('form.roomBookingNote')}
                     </p>
+                    <div className="mb-4 rounded-lg bg-primary-50 border border-primary-100 p-4 text-sm text-primary-700 space-y-2">
+                      <p className="font-semibold">{t('form.roomAvailabilityIntro')}</p>
+                      <p><strong>{t('form.roomCategories.castle')}:</strong> {t('form.roomAvailabilityCastle')}</p>
+                      <p><strong>{t('form.roomCategories.parkresidenz')} + {t('form.roomCategories.guesthouse')}:</strong> {t('form.roomAvailabilityOther')}</p>
+                      <p className="text-primary-500">{t('form.roomAvailabilityConfirmation')}</p>
+                    </div>
                     <select
                       id="roomBooking"
                       name="roomBooking"
@@ -380,7 +386,7 @@ export default function RSVPPage() {
                         <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
                           {availableRoomGroups.parkresidenz.map((room) => (
                             <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFriday')}) - €{room.price}{t('form.perNight')}
                             </option>
                           ))}
                         </optgroup>
@@ -389,7 +395,7 @@ export default function RSVPPage() {
                         <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
                           {availableRoomGroups.castle.map((room) => (
                             <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagSaturday')}) - €{room.price}{t('form.perNight')}
                             </option>
                           ))}
                         </optgroup>
@@ -398,7 +404,7 @@ export default function RSVPPage() {
                         <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
                           {availableRoomGroups.guesthouse.map((room) => (
                             <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
+                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFriday')}) - €{room.price}{t('form.perNight')}
                             </option>
                           ))}
                         </optgroup>

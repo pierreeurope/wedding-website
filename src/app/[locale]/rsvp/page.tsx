@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 // Room definitions with availability dates
 // Castle building rooms: only available Sat Oct 3 - Mon Oct 5
 // Parkresidenz & Guest House: available Fri Oct 2 - Mon Oct 5
-const CASTLE_ROOMS = [
+const ROOMS = [
   // Parkresidenz (Fri Oct 2 - Mon Oct 5)
   { id: 'junior-suite', nameKey: 'rooms.juniorSuite', price: 340, category: 'parkresidenz', earliestArrival: '2026-10-02' },
   { id: 'deluxe', nameKey: 'rooms.deluxe', price: 270, category: 'parkresidenz', earliestArrival: '2026-10-02' },
@@ -62,17 +62,6 @@ export default function RSVPPage() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [bookedRooms, setBookedRooms] = useState<string[]>([]);
 
-  const availableRooms = CASTLE_ROOMS.filter((room) => {
-    const isBooked = bookedRooms.includes(room.id);
-    const isAvailableForArrival = formData.arrivalDate >= room.earliestArrival;
-    return !isBooked && isAvailableForArrival;
-  });
-
-  const availableRoomGroups = {
-    parkresidenz: availableRooms.filter((room) => room.category === 'parkresidenz'),
-    castle: availableRooms.filter((room) => room.category === 'castle'),
-    guesthouse: availableRooms.filter((room) => room.category === 'guesthouse'),
-  };
 
   // Fetch booked rooms on mount
   useEffect(() => {
@@ -136,22 +125,6 @@ export default function RSVPPage() {
         [name]: name === 'guestCount' ? parseInt(value) || 1 : value,
       };
 
-      if (name === 'arrivalDate' && next.roomBooking) {
-        const selectedRoom = CASTLE_ROOMS.find((room) => room.id === next.roomBooking);
-        const roomStillValid = selectedRoom
-          && !bookedRooms.includes(selectedRoom.id)
-          && next.arrivalDate >= selectedRoom.earliestArrival;
-        if (!roomStillValid) {
-          next.roomBooking = '';
-        }
-      }
-
-      if (name === 'roomBooking' && value) {
-        const selectedRoom = CASTLE_ROOMS.find((room) => room.id === value);
-        if (selectedRoom && next.arrivalDate < selectedRoom.earliestArrival) {
-          next.arrivalDate = selectedRoom.earliestArrival;
-        }
-      }
 
       return next;
     });
@@ -368,12 +341,6 @@ export default function RSVPPage() {
                     <p className="text-sm text-primary-500 mb-3">
                       {t('form.roomBookingNote')}
                     </p>
-                    <div className="mb-4 rounded-lg bg-primary-50 border border-primary-100 p-4 text-sm text-primary-700 space-y-2">
-                      <p className="font-semibold">{t('form.roomAvailabilityIntro')}</p>
-                      <p><strong>{t('form.roomCategories.castle')}:</strong> {t('form.roomAvailabilityCastle')}</p>
-                      <p><strong>{t('form.roomCategories.parkresidenz')} + {t('form.roomCategories.guesthouse')}:</strong> {t('form.roomAvailabilityOther')}</p>
-                      <p className="text-primary-500">{t('form.roomAvailabilityConfirmation')}</p>
-                    </div>
                     <select
                       id="roomBooking"
                       name="roomBooking"
@@ -382,29 +349,29 @@ export default function RSVPPage() {
                       className="input-field"
                     >
                       <option value="">{t('form.noRoom')}</option>
-                      {availableRoomGroups.parkresidenz.length > 0 && (
+                      {ROOMS.filter((room) => room.category === 'parkresidenz').length > 0 && (
                         <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
-                          {availableRoomGroups.parkresidenz.map((room) => (
+                          {ROOMS.filter((room) => room.category === 'parkresidenz' && !bookedRooms.includes(room.id)).map((room) => (
                             <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFriday')}) - €{room.price}{t('form.perNight')}
+                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFridayToSunday')}) - €{room.price}{t('form.perNight')}
                             </option>
                           ))}
                         </optgroup>
                       )}
-                      {availableRoomGroups.castle.length > 0 && (
+                      {ROOMS.filter((room) => room.category === 'castle').length > 0 && (
                         <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
-                          {availableRoomGroups.castle.map((room) => (
+                          {ROOMS.filter((room) => room.category === 'castle' && !bookedRooms.includes(room.id)).map((room) => (
                             <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagSaturday')}) - €{room.price}{t('form.perNight')}
+                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagSaturdayToSunday')}) - €{room.price}{t('form.perNight')}
                             </option>
                           ))}
                         </optgroup>
                       )}
-                      {availableRoomGroups.guesthouse.length > 0 && (
+                      {ROOMS.filter((room) => room.category === 'guesthouse').length > 0 && (
                         <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
-                          {availableRoomGroups.guesthouse.map((room) => (
+                          {ROOMS.filter((room) => room.category === 'guesthouse' && !bookedRooms.includes(room.id)).map((room) => (
                             <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFriday')}) - €{room.price}{t('form.perNight')}
+                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFridayToSunday')}) - €{room.price}{t('form.perNight')}
                             </option>
                           ))}
                         </optgroup>

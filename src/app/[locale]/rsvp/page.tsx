@@ -143,11 +143,6 @@ export default function RSVPPage() {
       {/* Form */}
       <section className="py-24 bg-white">
         <div className="max-w-2xl mx-auto px-4">
-          <div className="mb-8 bg-amber-50 border border-amber-300 p-6 text-center">
-            <p className="text-amber-900 font-semibold mb-2">🚧 {t('constructionBanner.title')}</p>
-            <p className="text-amber-800">{t('constructionBanner.description')}</p>
-          </div>
-
           <div className="text-center mb-12">
             <p className="text-gold-600 font-medium">{t('deadline')}</p>
             <p className="text-primary-600 mt-2">{t('weddingDate')}</p>

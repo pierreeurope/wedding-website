@@ -7,6 +7,13 @@ const redis = redisUrl && redisToken
   ? new Redis({ url: redisUrl, token: redisToken })
   : null;
 
+function requireRedis(): Redis {
+  if (!redis) {
+    throw new Error('RSVP storage is not configured');
+  }
+  return redis;
+}
+
 // Types
 export interface RSVPEntry {
   id: string;
@@ -33,25 +40,25 @@ export interface GiftClaim {
 
 // RSVP Functions
 export async function saveRSVP(rsvp: RSVPEntry): Promise<void> {
-  if (!redis) return;
+  const redisClient = requireRedis();
   const key = `rsvp:${rsvp.id}`;
-  await redis.set(key, JSON.stringify(rsvp));
+  await redisClient.set(key, JSON.stringify(rsvp));
 
   // Also add to the list of all RSVPs
-  const rsvpListRaw = await redis.get<string | string[]>('rsvp:list');
+  const rsvpListRaw = await redisClient.get<string | string[]>('rsvp:list');
   const rsvpList: string[] = typeof rsvpListRaw === 'string'
     ? JSON.parse(rsvpListRaw)
     : (rsvpListRaw || []);
 
   if (!rsvpList.includes(rsvp.id)) {
     rsvpList.push(rsvp.id);
-    await redis.set('rsvp:list', JSON.stringify(rsvpList));
+    await redisClient.set('rsvp:list', JSON.stringify(rsvpList));
   }
 }
 
 export async function getAllRSVPs(): Promise<RSVPEntry[]> {
-  if (!redis) return [];
-  const rsvpListRaw = await redis.get<string | string[]>('rsvp:list');
+  const redisClient = requireRedis();
+  const rsvpListRaw = await redisClient.get<string | string[]>('rsvp:list');
   const rsvpList: string[] = typeof rsvpListRaw === 'string' 
     ? JSON.parse(rsvpListRaw) 
     : (rsvpListRaw || []);
@@ -59,7 +66,7 @@ export async function getAllRSVPs(): Promise<RSVPEntry[]> {
   const rsvps: RSVPEntry[] = [];
   
   for (const id of rsvpList) {
-    const rsvpRaw = await redis.get<string | RSVPEntry>(`rsvp:${id}`);
+    const rsvpRaw = await redisClient.get<string | RSVPEntry>(`rsvp:${id}`);
     if (rsvpRaw) {
       const rsvp: RSVPEntry = typeof rsvpRaw === 'string' ? JSON.parse(rsvpRaw) : rsvpRaw;
       rsvps.push(rsvp);

@@ -43,3 +43,6 @@ amplify/
 aws-exports.js
 awsconfiguration.json
 amplifyconfiguration.json
+
+.env.preview
+backups/

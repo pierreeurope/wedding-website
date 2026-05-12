@@ -62,6 +62,18 @@ export default function RSVPPage() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [bookedRooms, setBookedRooms] = useState<string[]>([]);
 
+  const availableRooms = CASTLE_ROOMS.filter((room) => {
+    const isBooked = bookedRooms.includes(room.id);
+    const isAvailableForArrival = formData.arrivalDate >= room.earliestArrival;
+    return !isBooked && isAvailableForArrival;
+  });
+
+  const availableRoomGroups = {
+    parkresidenz: availableRooms.filter((room) => room.category === 'parkresidenz'),
+    castle: availableRooms.filter((room) => room.category === 'castle'),
+    guesthouse: availableRooms.filter((room) => room.category === 'guesthouse'),
+  };
+
   // Fetch booked rooms on mount
   useEffect(() => {
     const fetchBookedRooms = async () => {
@@ -105,7 +117,8 @@ export default function RSVPPage() {
           message: '',
         });
       } else {
-        throw new Error('Submission failed');
+        const data = await response.json().catch(() => null);
+        throw new Error(data?.error || 'Submission failed');
       }
     } catch (error) {
       console.error('RSVP error:', error);
@@ -117,10 +130,31 @@ export default function RSVPPage() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: name === 'guestCount' ? parseInt(value) || 1 : value,
-    }));
+    setFormData((prev) => {
+      const next = {
+        ...prev,
+        [name]: name === 'guestCount' ? parseInt(value) || 1 : value,
+      };
+
+      if (name === 'arrivalDate' && next.roomBooking) {
+        const selectedRoom = CASTLE_ROOMS.find((room) => room.id === next.roomBooking);
+        const roomStillValid = selectedRoom
+          && !bookedRooms.includes(selectedRoom.id)
+          && next.arrivalDate >= selectedRoom.earliestArrival;
+        if (!roomStillValid) {
+          next.roomBooking = '';
+        }
+      }
+
+      if (name === 'roomBooking' && value) {
+        const selectedRoom = CASTLE_ROOMS.find((room) => room.id === value);
+        if (selectedRoom && next.arrivalDate < selectedRoom.earliestArrival) {
+          next.arrivalDate = selectedRoom.earliestArrival;
+        }
+      }
+
+      return next;
+    });
   };
 
   return (
@@ -342,39 +376,33 @@ export default function RSVPPage() {
                       className="input-field"
                     >
                       <option value="">{t('form.noRoom')}</option>
-                      <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
-                        {CASTLE_ROOMS.filter(r => r.category === 'parkresidenz').map((room) => {
-                          const isBooked = bookedRooms.includes(room.id);
-                          return (
-                            <option key={room.id} value={room.id} disabled={isBooked}>
+                      {availableRoomGroups.parkresidenz.length > 0 && (
+                        <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
+                          {availableRoomGroups.parkresidenz.map((room) => (
+                            <option key={room.id} value={room.id}>
                               {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                              {isBooked ? ` ${t('form.roomBooked')}` : ''}
                             </option>
-                          );
-                        })}
-                      </optgroup>
-                      <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
-                        {CASTLE_ROOMS.filter(r => r.category === 'castle').map((room) => {
-                          const isBooked = bookedRooms.includes(room.id);
-                          return (
-                            <option key={room.id} value={room.id} disabled={isBooked}>
+                          ))}
+                        </optgroup>
+                      )}
+                      {availableRoomGroups.castle.length > 0 && (
+                        <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
+                          {availableRoomGroups.castle.map((room) => (
+                            <option key={room.id} value={room.id}>
                               {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                              {isBooked ? ` ${t('form.roomBooked')}` : ''}
                             </option>
-                          );
-                        })}
-                      </optgroup>
-                      <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
-                        {CASTLE_ROOMS.filter(r => r.category === 'guesthouse').map((room) => {
-                          const isBooked = bookedRooms.includes(room.id);
-                          return (
-                            <option key={room.id} value={room.id} disabled={isBooked}>
+                          ))}
+                        </optgroup>
+                      )}
+                      {availableRoomGroups.guesthouse.length > 0 && (
+                        <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
+                          {availableRoomGroups.guesthouse.map((room) => (
+                            <option key={room.id} value={room.id}>
                               {t(room.nameKey)}{room.suffix || ''} - €{room.price}{t('form.perNight')}
-                              {isBooked ? ` ${t('form.roomBooked')}` : ''}
                             </option>
-                          );
-                        })}
-                      </optgroup>
+                          ))}
+                        </optgroup>
+                      )}
                     </select>
                   </div>
 

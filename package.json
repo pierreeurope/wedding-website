@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "backup:rsvp": "node scripts/backup-rsvp.js"
   },
   "dependencies": {
     "@types/node": "^22.12.0",

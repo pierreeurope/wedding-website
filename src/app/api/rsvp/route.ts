@@ -24,6 +24,7 @@ export async function POST(request: NextRequest) {
       arrivalDate: data.arrivalDate || '',
       departureDate: data.departureDate || '',
       roomBooking: data.roomBooking || null,
+      sundayBrunch: data.sundayBrunch || '',
       dietary: data.dietary || '',
       songRequests: data.songRequests || '',
       message: data.message || '',

@@ -26,6 +26,7 @@ export interface RSVPEntry {
   arrivalDate: string;
   departureDate: string;
   roomBooking: string | null;
+  sundayBrunch: 'yes' | 'no' | '';
   dietary: string;
   songRequests: string;
   message: string;

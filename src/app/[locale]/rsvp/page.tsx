@@ -37,6 +37,7 @@ interface RSVPFormData {
   arrivalDate: string;
   departureDate: string;
   roomBooking: string;
+  sundayBrunch: 'yes' | 'no' | '';
   dietary: string;
   songRequests: string;
   message: string;
@@ -54,6 +55,7 @@ export default function RSVPPage() {
     arrivalDate: '2026-10-02',
     departureDate: '2026-10-04',
     roomBooking: '',
+    sundayBrunch: '',
     dietary: '',
     songRequests: '',
     message: '',
@@ -101,6 +103,7 @@ export default function RSVPPage() {
           arrivalDate: '2026-10-02',
           departureDate: '2026-10-04',
           roomBooking: '',
+          sundayBrunch: '',
           dietary: '',
           songRequests: '',
           message: '',
@@ -372,6 +375,54 @@ export default function RSVPPage() {
                         </optgroup>
                       )}
                     </select>
+                  </div>
+
+                  {/* Sunday brunch */}
+                  <div>
+                    <label className="block text-primary-700 font-medium mb-2">
+                      🥐 {t('form.sundayBrunch')}
+                    </label>
+                    <p className="text-sm text-primary-500 mb-3">{t('form.sundayBrunchNote')}</p>
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <label className={`flex-1 p-4 border-2 cursor-pointer transition-all ${
+                        formData.sundayBrunch === 'yes'
+                          ? 'border-sage-500 bg-sage-50'
+                          : 'border-primary-200 hover:border-primary-300'
+                      }`}>
+                        <input
+                          type="radio"
+                          name="sundayBrunch"
+                          value="yes"
+                          checked={formData.sundayBrunch === 'yes'}
+                          onChange={handleChange}
+                          className="sr-only"
+                        />
+                        <span className="flex items-center justify-center">
+                          <span className={formData.sundayBrunch === 'yes' ? 'text-sage-700 font-medium' : 'text-primary-600'}>
+                            {t('form.sundayBrunchYes')}
+                          </span>
+                        </span>
+                      </label>
+                      <label className={`flex-1 p-4 border-2 cursor-pointer transition-all ${
+                        formData.sundayBrunch === 'no'
+                          ? 'border-primary-500 bg-primary-50'
+                          : 'border-primary-200 hover:border-primary-300'
+                      }`}>
+                        <input
+                          type="radio"
+                          name="sundayBrunch"
+                          value="no"
+                          checked={formData.sundayBrunch === 'no'}
+                          onChange={handleChange}
+                          className="sr-only"
+                        />
+                        <span className="flex items-center justify-center">
+                          <span className={formData.sundayBrunch === 'no' ? 'text-primary-700 font-medium' : 'text-primary-600'}>
+                            {t('form.sundayBrunchNo')}
+                          </span>
+                        </span>
+                      </label>
+                    </div>
                   </div>
 
                   {/* Dietary Restrictions */}

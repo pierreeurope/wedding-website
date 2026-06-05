@@ -1,31 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
-// Room definitions with availability dates
-// Castle building rooms: only available Sat Oct 3 - Mon Oct 5
-// Parkresidenz & Guest House: available Fri Oct 2 - Mon Oct 5
-const ROOMS = [
-  // Parkresidenz (Fri Oct 2 - Mon Oct 5)
-  { id: 'junior-suite', nameKey: 'rooms.juniorSuite', price: 340, category: 'parkresidenz', earliestArrival: '2026-10-02' },
-  { id: 'deluxe', nameKey: 'rooms.deluxe', price: 270, category: 'parkresidenz', earliestArrival: '2026-10-02' },
-  { id: 'classic-1', nameKey: 'rooms.classic', price: 250, category: 'parkresidenz', earliestArrival: '2026-10-02', suffix: ' 1' },
-  { id: 'classic-2', nameKey: 'rooms.classic', price: 250, category: 'parkresidenz', earliestArrival: '2026-10-02', suffix: ' 2' },
-  { id: 'classic-3', nameKey: 'rooms.classic', price: 250, category: 'parkresidenz', earliestArrival: '2026-10-02', suffix: ' 3' },
-  // Castle Building (Sat Oct 3 - Mon Oct 5)
-  { id: 'turm-suite', nameKey: 'rooms.towerSuite', price: 340, category: 'castle', earliestArrival: '2026-10-03' },
-  { id: 'turmzimmer', nameKey: 'rooms.towerRoom', price: 260, category: 'castle', earliestArrival: '2026-10-03' },
-  { id: 'superior-1', nameKey: 'rooms.superior', price: 240, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 1' },
-  { id: 'superior-2', nameKey: 'rooms.superior', price: 240, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 2' },
-  { id: 'komfort-1', nameKey: 'rooms.comfort', price: 220, category: 'castle', earliestArrival: '2026-10-03' , suffix: ' 1' },
-  { id: 'komfort-2', nameKey: 'rooms.comfort', price: 220, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 2' },
-  { id: 'komfort-3', nameKey: 'rooms.comfort', price: 220, category: 'castle', earliestArrival: '2026-10-03', suffix: ' 3' },
-  // Guest House (Fri Oct 2 - Mon Oct 5)
-  { id: 'gaestehaus-160', nameKey: 'rooms.guestRoom160', price: 160, category: 'guesthouse', earliestArrival: '2026-10-02' },
-  { id: 'gaestehaus-140-1', nameKey: 'rooms.guestRoom140', price: 160, category: 'guesthouse', earliestArrival: '2026-10-02', suffix: ' 1' },
-  { id: 'gaestehaus-140-2', nameKey: 'rooms.guestRoom140', price: 160, category: 'guesthouse', earliestArrival: '2026-10-02', suffix: ' 2' },
-];
 
 interface RSVPFormData {
   name: string;
@@ -62,22 +38,6 @@ export default function RSVPPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [bookedRooms, setBookedRooms] = useState<string[]>([]);
-
-
-  // Fetch booked rooms on mount
-  useEffect(() => {
-    const fetchBookedRooms = async () => {
-      try {
-        const res = await fetch('/api/rsvp/rooms');
-        const data = await res.json();
-        setBookedRooms(data.bookedRooms || []);
-      } catch (error) {
-        console.error('Error fetching booked rooms:', error);
-      }
-    };
-    fetchBookedRooms();
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -329,52 +289,6 @@ export default function RSVPPage() {
                         className="input-field"
                       />
                     </div>
-                  </div>
-
-                  {/* Room Booking */}
-                  <div>
-                    <label htmlFor="roomBooking" className="block text-primary-700 font-medium mb-2">
-                      🏰 {t('form.roomBooking')}
-                    </label>
-                    <p className="text-sm text-primary-500 mb-3">
-                      {t('form.roomBookingNote')}
-                    </p>
-                    <select
-                      id="roomBooking"
-                      name="roomBooking"
-                      value={formData.roomBooking}
-                      onChange={handleChange}
-                      className="input-field"
-                    >
-                      <option value="">{t('form.noRoom')}</option>
-                      {ROOMS.filter((room) => room.category === 'parkresidenz').length > 0 && (
-                        <optgroup label={`🌳 ${t('form.roomCategories.parkresidenz')}`}>
-                          {ROOMS.filter((room) => room.category === 'parkresidenz' && !bookedRooms.includes(room.id)).map((room) => (
-                            <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFridayToSunday')}) - €{room.price}{t('form.perNight')}
-                            </option>
-                          ))}
-                        </optgroup>
-                      )}
-                      {ROOMS.filter((room) => room.category === 'castle').length > 0 && (
-                        <optgroup label={`🏰 ${t('form.roomCategories.castle')}`}>
-                          {ROOMS.filter((room) => room.category === 'castle' && !bookedRooms.includes(room.id)).map((room) => (
-                            <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagSaturdayToSunday')}) - €{room.price}{t('form.perNight')}
-                            </option>
-                          ))}
-                        </optgroup>
-                      )}
-                      {ROOMS.filter((room) => room.category === 'guesthouse').length > 0 && (
-                        <optgroup label={`🏠 ${t('form.roomCategories.guesthouse')}`}>
-                          {ROOMS.filter((room) => room.category === 'guesthouse' && !bookedRooms.includes(room.id)).map((room) => (
-                            <option key={room.id} value={room.id}>
-                              {t(room.nameKey)}{room.suffix || ''} ({t('form.roomAvailabilityTagFridayToSunday')}) - €{room.price}{t('form.perNight')}
-                            </option>
-                          ))}
-                        </optgroup>
-                      )}
-                    </select>
                   </div>
 
                   {/* Sunday brunch */}

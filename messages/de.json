@@ -58,7 +58,7 @@
       "title": "Sonntagsbrunch",
       "time": "11.30 Uhr",
       "location": "In der Nähe des Rheins",
-      "description": "Triff uns am nächsten Morgen zu einem entspannten Brunch in einem schönen Restaurant in der Nähe der Kirche mit Blick auf den Rhein. Eine perfekte Art, unsere Feier ausklingen zu lassen."
+      "description": "Triff uns am nächsten Morgen zu einem entspannten Brunch in der Klostermühle, einem schönen Restaurant mitten im Rheingau. Eine perfekte Art, unsere Feier ausklingen zu lassen."
     }
   },
   "venue": {
@@ -214,12 +214,12 @@
     "title": "Geschenkliste",
     "monetary": {
       "title": "Hochzeitsreise-Kasse",
-      "description": "Wir fahren direkt nach der Hochzeit in die Flitterwochen nach Japan und richten unsere neue Wohnung in Berlin ein. Ein Geldgeschenk ist definitiv am willkommensten.",
+      "description": "Wir freuen uns sehr über einen Beitrag zu unserem neuen Leben in Berlin und zu unseren Flitterwochen.",
       "bankDetails": "Bankdaten für Überweisung",
       "beneficiary": "Empfänger",
       "iban": "IBAN",
       "bic": "BIC / SWIFT-Code",
-      "cashOnSite": "Ein Briefumschlag mit Bargeld am Tag der Hochzeit ist ebenfalls völlig in Ordnung."
+      "cashOnSite": ""
     },
     "contact": "Fragen zu Geschenken? Melde dich!"
   },

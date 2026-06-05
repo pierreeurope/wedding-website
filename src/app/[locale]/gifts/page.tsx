@@ -46,9 +46,6 @@ export default function GiftsPage() {
                   <dd className="font-mono">REVONL22</dd>
                 </div>
               </dl>
-              <p className="text-primary-600 text-sm mt-6 text-center">
-                {t('monetary.cashOnSite')}
-              </p>
             </div>
           </div>
         </div>

@@ -58,7 +58,7 @@
       "title": "Sunday Brunch",
       "time": "11:30 AM",
       "location": "Near the Rhine River",
-      "description": "Join us the next morning for a relaxed brunch at a beautiful restaurant near the church, overlooking the Rhine River. A perfect way to extend our celebration and say farewell."
+      "description": "Join us the next morning for a relaxed brunch at Klostermühle, a beautiful restaurant nestled in the Rheingau. A perfect way to extend our celebration and say farewell."
     }
   },
   "venue": {
@@ -214,12 +214,12 @@
     "title": "Gift Registry",
     "monetary": {
       "title": "Honeymoon Fund",
-      "description": "We are going on our honeymoon in Japan right after the wedding, and we are furnishing our new apartment in Berlin. A monetary gift is definitely the most welcome.",
+      "description": "We would greatly appreciate a contribution to our new life in Berlin and our honeymoon.",
       "bankDetails": "Bank details for transfer",
       "beneficiary": "Beneficiary",
       "iban": "IBAN",
       "bic": "BIC / SWIFT code",
-      "cashOnSite": "A letter with cash on the day is also completely fine."
+      "cashOnSite": ""
     },
     "contact": "Questions about gifts? Get in touch!"
   },

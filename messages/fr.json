@@ -58,7 +58,7 @@
       "title": "Brunch du dimanche",
       "time": "11h30",
       "location": "Près du Rhin",
-      "description": "Retrouvez-nous le lendemain matin pour un brunch détendu dans un beau restaurant près de l'église, avec vue sur le Rhin. Une façon parfaite de prolonger notre célébration et de se dire au revoir."
+      "description": "Retrouvez-nous le lendemain matin pour un brunch détendu à la Klostermühle, un beau restaurant niché dans le Rheingau. Une façon parfaite de prolonger notre célébration et de se dire au revoir."
     }
   },
   "venue": {
@@ -214,12 +214,12 @@
     "title": "Liste de mariage",
     "monetary": {
       "title": "Cagnotte lune de miel",
-      "description": "Nous partons en lune de miel au Japon juste après le mariage et nous aménageons notre nouvel appartement à Berlin. Un cadeau en argent est ce qui nous convient le mieux.",
+      "description": "Nous apprécierions beaucoup une contribution à notre nouvelle vie à Berlin et à notre lune de miel.",
       "bankDetails": "Coordonnées bancaires pour virement",
       "beneficiary": "Bénéficiaire",
       "iban": "IBAN",
       "bic": "BIC / SWIFT",
-      "cashOnSite": "Une enveloppe avec un peu d'argent le jour J est aussi tout à fait bienvenue."
+      "cashOnSite": ""
     },
     "contact": "Des questions sur les cadeaux ? Contactez-nous !"
   },

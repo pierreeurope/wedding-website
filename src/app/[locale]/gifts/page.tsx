@@ -28,15 +28,19 @@ export default function GiftsPage() {
               {t('monetary.description')}
             </p>
 
-            <div className="space-y-6">
+            <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-gold-50 p-6 border border-gold-200">
-                <h3 className="text-primary-700 font-medium mb-4 text-center">
+                <h3 className="text-primary-700 font-serif text-2xl md:text-3xl font-medium mb-6 text-center">
                   {t('monetary.europeanTitle')}
                 </h3>
-                <dl className="max-w-sm mx-auto text-left space-y-2 text-primary-800">
+                <dl className="text-left space-y-3 text-primary-800">
                   <div>
                     <dt className="text-primary-500 text-sm">{t('monetary.beneficiary')}</dt>
                     <dd className="font-medium">Pierre Blanchet</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.bankName')}</dt>
+                    <dd>Revolut</dd>
                   </div>
                   <div>
                     <dt className="text-primary-500 text-sm">{t('monetary.iban')}</dt>
@@ -50,10 +54,10 @@ export default function GiftsPage() {
               </div>
 
               <div className="bg-gold-50 p-6 border border-gold-200">
-                <h3 className="text-primary-700 font-medium mb-4 text-center">
+                <h3 className="text-primary-700 font-serif text-2xl md:text-3xl font-medium mb-6 text-center">
                   {t('monetary.internationalTitle')}
                 </h3>
-                <dl className="max-w-sm mx-auto text-left space-y-2 text-primary-800">
+                <dl className="text-left space-y-3 text-primary-800">
                   <div>
                     <dt className="text-primary-500 text-sm">{t('monetary.beneficiary')}</dt>
                     <dd className="font-medium">Amalie-Margarete Wilke</dd>

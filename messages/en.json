@@ -215,10 +215,13 @@
     "monetary": {
       "title": "Honeymoon Fund",
       "description": "We would greatly appreciate a contribution to our new life in Berlin and our honeymoon.",
-      "bankDetails": "Bank details for transfer",
+      "europeanTitle": "European bank transfer",
+      "internationalTitle": "International / American bank transfer",
       "beneficiary": "Beneficiary",
       "iban": "IBAN",
       "bic": "BIC / SWIFT code",
+      "bankNameAddress": "Bank name and address",
+      "correspondentBankBic": "Correspondent bank BIC",
       "cashOnSite": ""
     },
     "contact": "Questions about gifts? Get in touch!"

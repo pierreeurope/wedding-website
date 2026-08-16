@@ -215,10 +215,13 @@
     "monetary": {
       "title": "Cagnotte lune de miel",
       "description": "Nous apprécierions beaucoup une contribution à notre nouvelle vie à Berlin et à notre lune de miel.",
-      "bankDetails": "Coordonnées bancaires pour virement",
+      "europeanTitle": "Virement bancaire européen",
+      "internationalTitle": "Virement bancaire international / américain",
       "beneficiary": "Bénéficiaire",
       "iban": "IBAN",
       "bic": "BIC / SWIFT",
+      "bankNameAddress": "Nom et adresse de la banque",
+      "correspondentBankBic": "BIC de la banque correspondante",
       "cashOnSite": ""
     },
     "contact": "Des questions sur les cadeaux ? Contactez-nous !"

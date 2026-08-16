@@ -215,10 +215,13 @@
     "monetary": {
       "title": "Hochzeitsreise-Kasse",
       "description": "Wir freuen uns sehr über einen Beitrag zu unserem neuen Leben in Berlin und zu unseren Flitterwochen.",
-      "bankDetails": "Bankdaten für Überweisung",
+      "europeanTitle": "Europäische Banküberweisung",
+      "internationalTitle": "Internationale / amerikanische Banküberweisung",
       "beneficiary": "Empfänger",
       "iban": "IBAN",
       "bic": "BIC / SWIFT-Code",
+      "bankNameAddress": "Name und Adresse der Bank",
+      "correspondentBankBic": "BIC der Korrespondenzbank",
       "cashOnSite": ""
     },
     "contact": "Fragen zu Geschenken? Melde dich!"

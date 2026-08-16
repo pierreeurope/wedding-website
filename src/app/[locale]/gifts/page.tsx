@@ -28,24 +28,54 @@ export default function GiftsPage() {
               {t('monetary.description')}
             </p>
 
-            <div className="bg-gold-50 p-6 border border-gold-200">
-              <p className="text-primary-700 font-medium mb-4 text-center">
-                {t('monetary.bankDetails')}
-              </p>
-              <dl className="max-w-sm mx-auto text-left space-y-2 text-primary-800">
-                <div>
-                  <dt className="text-primary-500 text-sm">{t('monetary.beneficiary')}</dt>
-                  <dd className="font-medium">Pierre Blanchet</dd>
-                </div>
-                <div>
-                  <dt className="text-primary-500 text-sm">{t('monetary.iban')}</dt>
-                  <dd className="font-mono tracking-wide">NL39 REVO 9166 3296 52</dd>
-                </div>
-                <div>
-                  <dt className="text-primary-500 text-sm">{t('monetary.bic')}</dt>
-                  <dd className="font-mono">REVONL22</dd>
-                </div>
-              </dl>
+            <div className="space-y-6">
+              <div className="bg-gold-50 p-6 border border-gold-200">
+                <h3 className="text-primary-700 font-medium mb-4 text-center">
+                  {t('monetary.europeanTitle')}
+                </h3>
+                <dl className="max-w-sm mx-auto text-left space-y-2 text-primary-800">
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.beneficiary')}</dt>
+                    <dd className="font-medium">Pierre Blanchet</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.iban')}</dt>
+                    <dd className="font-mono tracking-wide">NL39 REVO 9166 3296 52</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.bic')}</dt>
+                    <dd className="font-mono">REVONL22</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div className="bg-gold-50 p-6 border border-gold-200">
+                <h3 className="text-primary-700 font-medium mb-4 text-center">
+                  {t('monetary.internationalTitle')}
+                </h3>
+                <dl className="max-w-sm mx-auto text-left space-y-2 text-primary-800">
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.beneficiary')}</dt>
+                    <dd className="font-medium">Amalie-Margarete Wilke</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.iban')}</dt>
+                    <dd className="font-mono tracking-wide">NL31 REVO 6383 6631 51</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.bic')}</dt>
+                    <dd className="font-mono">REVONL22</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.bankNameAddress')}</dt>
+                    <dd>Revolut Bank UAB<br />Barbara Strozzilaan 201, 1083 HN, Amsterdam, Netherlands</dd>
+                  </div>
+                  <div>
+                    <dt className="text-primary-500 text-sm">{t('monetary.correspondentBankBic')}</dt>
+                    <dd className="font-mono">CHASGB2L</dd>
+                  </div>
+                </dl>
+              </div>
             </div>
           </div>
         </div>

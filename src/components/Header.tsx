@@ -11,6 +11,7 @@ const navItems = [
   { href: '/venue', label: 'venue' },
   { href: '/travel', label: 'travel' },
   { href: '/accommodation', label: 'accommodation' },
+  { href: '/dress-code', label: 'dressCode' },
   { href: '/gifts', label: 'gifts' },
   { href: '/rsvp', label: 'rsvp' },
 ] as const;

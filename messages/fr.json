@@ -5,6 +5,7 @@
     "venue": "Lieu & Région",
     "travel": "Comment venir",
     "accommodation": "Hébergement",
+    "dressCode": "Tenue vestimentaire",
     "gifts": "Liste de mariage",
     "rsvp": "RSVP"
   },
@@ -208,6 +209,26 @@
     "airbnb": {
       "title": "Airbnb & Locations de vacances",
       "description": "La région viticole du Rheingau offre d'incroyables options Airbnb ! Séjournez dans un charmant cottage de vignoble, un domaine viticole allemand traditionnel, ou un appartement cosy avec vue imprenable sur la vallée. Une excellente façon de vous immerger dans l'atmosphère locale."
+    }
+  },
+  "dressCode": {
+    "title": "Tenue vestimentaire",
+    "introduction": {
+      "one": "Il n’y a pas de code vestimentaire imposé pour notre mariage : portez simplement une tenue dans laquelle vous vous sentez à l’aise, en confiance, et prêt(e) à danser et à faire la fête avec nous tout au long de la journée et de la soirée.",
+      "two": "Si vous souhaitez vous inspirer, nous vous suggérons une tenue semi-formelle à formelle : élégante, festive et un peu habillée, tout en vous permettant de vous déplacer confortablement et de profiter des magnifiques environs.",
+      "three": "Notre journée de mariage commencera à 13 h par une cérémonie religieuse protestante, suivie d’une réception avec amuse-bouches, café, gâteau et découpe du gâteau dans les jardins du château de Burg Schwarzenstein. Le soir, un dîner assis en plusieurs services sera servi au château, puis la soirée se poursuivra avec de la danse."
+    },
+    "practicalTips": {
+      "title": "Conseils pratiques",
+      "one": "Burg Schwarzenstein se trouve au cœur de magnifiques vignobles, et le domaine comprend quelques surfaces irrégulières ainsi que des pavés, comme on en trouve dans de nombreuses villes et villages européens. Nous vous recommandons de choisir des chaussures adaptées aux sols souples ou irréguliers : des talons carrés, des compensés ou d’élégantes chaussures plates seront peut-être plus fiables que des talons aiguilles.",
+      "two": "Nous vous conseillons également de prendre le temps d’explorer les vignobles qui descendent depuis le château. Les bonnes chaussures rendront cette promenade bien plus agréable.",
+      "three": "Le début du mois d’octobre peut être frais et, même si nous espérons qu’il ne pleuvra pas, cela reste possible. Nous vous recommandons de prévoir une couche chaude, comme un blazer, une étole, un cardigan ou un manteau."
+    },
+    "styleSuggestions": {
+      "title": "Suggestions de style",
+      "one": "Le château est un lieu magnifique et élégant, qui mettra vos tenues en valeur de façon spectaculaire. Nous serions donc ravis de vous voir sur votre trente-et-un si vous en avez envie. Un costume, une robe allant du genou à la cheville, une combinaison élégante ou une tenue composée de pièces habillées seront de merveilleux choix.",
+      "two": "Les cravates et nœuds papillon sont les bienvenus, mais ne sont pas obligatoires. N’hésitez pas à vous amuser avec votre tenue et à vous habiller : vous vous promènerez au milieu de certains des plus anciens vignobles d’Europe et célébrerez notre mariage dans un château romantique offrant l’une de nos vues préférées sur la région viticole du Rheingau.",
+      "three": "Nous n’avons pas de palette de couleurs imposée. Nous vous demandons toutefois de réserver le blanc, l’ivoire, le crème et les teintes nuptiales très pâles à la mariée."
     }
   },
   "gifts": {

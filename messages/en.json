@@ -5,6 +5,7 @@
     "venue": "Venue & Region",
     "travel": "Getting There",
     "accommodation": "Accommodation",
+    "dressCode": "Dress code",
     "gifts": "Gift Registry",
     "rsvp": "RSVP"
   },
@@ -208,6 +209,26 @@
     "airbnb": {
       "title": "Airbnb & Vacation Rentals",
       "description": "The Rheingau wine region offers amazing Airbnb options! Stay in a charming vineyard cottage, a traditional German wine estate, or a cozy apartment with stunning valley views. A great way to immerse yourself in the local atmosphere."
+    }
+  },
+  "dressCode": {
+    "title": "Dress code",
+    "introduction": {
+      "one": "There is no fixed dress code for our wedding—please wear whatever makes you feel comfortable, confident, and ready to dance and celebrate with us throughout the day and into the evening.",
+      "two": "If you would like some inspiration, our suggestion is semi-formal to formal: polished, celebratory, and a little dressed up, while still allowing you to move comfortably and explore the beautiful surroundings.",
+      "three": "Our wedding day will begin at 13:00 with a Protestant church ceremony, followed by a reception with finger food, coffee, cake, and the cutting of the cake in the castle gardens at Burg Schwarzenstein. In the evening, there will be a seated, multi-course dinner at the castle, followed by dancing."
+    },
+    "practicalTips": {
+      "title": "Practical tips",
+      "one": "Burg Schwarzenstein is situated among beautiful vineyards, and the grounds include some uneven terrain and cobblestones, much like those found in many European cities and towns. We recommend choosing footwear that can handle soft or uneven ground: block heels, wedges, or elegant flats may be more reliable than thin heels.",
+      "two": "We also recommend taking some time to explore the vineyards sloping down from the castle. The right shoes will make this much more enjoyable.",
+      "three": "Early October can be cool and, although we hope it will not be rainy, it is always possible. We recommend bringing a warm layer, such as a blazer, shawl, cardigan, or coat."
+    },
+    "styleSuggestions": {
+      "title": "Style suggestions",
+      "one": "The castle is a beautiful and elegant venue that will show your finery to stunning effect, so we would be delighted to see you dressed up if you feel like it. A suit, a knee-length to ankle-length dress, an elegant jumpsuit, or polished separates would all be wonderful choices.",
+      "two": "Ties and bow ties are very welcome but not required. Feel free to have fun with your outfit and dress up—you will be wandering among some of Europe’s oldest vineyards and celebrating in a romantic castle with one of our favorite views in the Rheingau wine region.",
+      "three": "We have no set color scheme. However, we kindly ask you to reserve white, ivory, cream, and very pale bridal tones for the bride herself."
     }
   },
   "gifts": {

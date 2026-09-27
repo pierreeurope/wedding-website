@@ -101,6 +101,11 @@ function SchedulePageClient() {
                   </div>
                   <p className="text-primary-600 font-medium mb-2">{t('brunch.location')}</p>
                   <p className="text-primary-500">{t('brunch.description')}</p>
+                  <div className="mt-4 p-4 bg-white border border-primary-100">
+                    <p className="text-sm text-primary-600">
+                      <span className="font-medium">{t('addressLabel')}:</span> {t('brunch.address')}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

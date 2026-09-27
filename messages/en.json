@@ -58,7 +58,8 @@
     "brunch": {
       "title": "Sunday Brunch",
       "time": "11:30 AM",
-      "location": "Near the Rhine River",
+      "location": "Klostermühle",
+      "address": "An der Klostermühle 3, 65399 Kiedrich",
       "description": "Join us the next morning for a relaxed brunch at Klostermühle, a beautiful restaurant nestled in the Rheingau. A perfect way to extend our celebration and say farewell."
     }
   },
@@ -277,7 +278,7 @@
       "roomAvailabilityTagSaturdayToSunday": "Sat 3 Oct to Sun 4 Oct",
       "noRoom": "No, I'll arrange my own accommodation",
       "sundayBrunch": "Will you join the Sunday brunch at 11:30?",
-      "sundayBrunchNote": "We are planning a brunch on Sunday at 11:30. The exact place is not fixed yet, but it will be about 15 minutes by car from the wedding venue.",
+      "sundayBrunchNote": "Sunday brunch is at Klostermühle, An der Klostermühle 3, 65399 Kiedrich — about 15 minutes by car from the wedding venue.",
       "sundayBrunchYes": "Yes, I'd love to join",
       "sundayBrunchNo": "No, I won't join",
       "dietary": "Dietary Requirements",

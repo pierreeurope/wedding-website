@@ -58,7 +58,8 @@
     "brunch": {
       "title": "Sonntagsbrunch",
       "time": "11.30 Uhr",
-      "location": "In der Nähe des Rheins",
+      "location": "Klostermühle",
+      "address": "An der Klostermühle 3, 65399 Kiedrich",
       "description": "Triff uns am nächsten Morgen zu einem entspannten Brunch in der Klostermühle, einem schönen Restaurant mitten im Rheingau. Eine perfekte Art, unsere Feier ausklingen zu lassen."
     }
   },
@@ -277,7 +278,7 @@
       "roomAvailabilityTagSaturdayToSunday": "Sa., 3. Okt. bis So., 4. Okt.",
       "noRoom": "Nein, ich organisiere meine Unterkunft selbst",
       "sundayBrunch": "Kommst du am Sonntag um 11:30 Uhr auch zum Brunch?",
-      "sundayBrunchNote": "Wir planen am Sonntag um 11:30 Uhr einen Brunch. Der genaue Ort steht noch nicht fest, wird aber etwa 15 Minuten mit dem Auto von der Hochzeitslocation entfernt sein.",
+      "sundayBrunchNote": "Der Sonntagsbrunch ist in der Klostermühle, An der Klostermühle 3, 65399 Kiedrich — etwa 15 Minuten mit dem Auto von der Hochzeitslocation entfernt.",
       "sundayBrunchYes": "Ja, sehr gern",
       "sundayBrunchNo": "Nein, ich komme nicht",
       "dietary": "Ernährungswünsche / Allergien",
